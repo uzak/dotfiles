@@ -2,11 +2,14 @@
 
 # get rid of existing dotfile and create a symlink to dropbox
 function install {
-    fn=$1
-    dst=${2:-~}
-    backup=$(echo $fn.$RANDOM | tr '/' '_')
-    [[ -e ~/$fn ]] && mv -v ~/$fn /tmp/$backup
-    ln -vs ~/Dropbox/dotfiles/$fn $dst
+    src=$1
+    dst=${2:-`dirname ~/$src`}
+    backup=$(echo $src.$RANDOM | tr '/' '_')
+    dotfiles_dir=`pwd`
+    if [[ -e ~/$src ]]; then
+        mv -v ~/$src /tmp/$backup 
+    fi
+    ln -vs $dotfiles_dir/$src $dst
 }
 
 for fn in .xinitrc .Xresources .pystartup .vimrc .zshrc .irbrc .gitconfig; do
@@ -19,5 +22,7 @@ fi
 
 if [[ $OSTYPE == linux-gnu ]]; then
     [[ ! -e ~/.config ]] && mkdir ~/.config
-    install .config/i3 ~/.config
+    install .gtkrc-2.0
+    install .config/i3 #~/.config
+    install .config/gtk-3.0/settings.ini # ~/.config/gtk-3.0
 fi

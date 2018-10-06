@@ -61,12 +61,8 @@ https://linoxide.com/linux-how-to/install-dropbox-ubuntu/
     
     sudo apt install ttf-dejavu 
     cd ~/repos && git clone https://github.com/supermarin/YosemiteSanFranciscoFont
-    cd ~/r/YosemiteSanFranciscoFont
+    cd YosemiteSanFranciscoFont
     cp *ttf ~/.fonts
-    # replace the default font with "System San Francisco Display 11"
-    $EDITOR ~/.gtkrc-2.0
-    $EDITOR .config/gtk-3.0/settings.ini
-
 
 ## vim
 
@@ -142,4 +138,3 @@ download, uncompress as root and move to `/opt`, then create symlinks:
 ## TODO
 * virtualbox macosx, win?
 * make sure battery stuff always starts
-* .gtk config files in .config
