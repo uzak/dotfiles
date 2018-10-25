@@ -6,8 +6,9 @@
 
 ### Basic tools
 
-    sudo apt install git curl htop mc
+    sudo apt install git curl htop mc net-tools
     sudo apt install geeqie gimp
+    sudo apt install mpv # mplayer replacement
 
 ## Chrome
 
@@ -22,6 +23,11 @@ https://linoxide.com/linux-how-to/install-dropbox-ubuntu/
 
     sudo apt install nautilus-dropbox
 	sudo -s
+
+### As systemctl service
+
+When used as a systemctl service the icon in the i3tray doesn't work. 
+Threfore I start Dropbox from i3wm's config.
 
 	cat << EOF > /etc/systemd/system/dropbox@.service
 	[Unit]
@@ -75,7 +81,7 @@ Now start vim  and run  `VundleUpdate` in the command mode
 ## i3wm
 https://www.youtube.com/watch?v=j1I63wGcvU4
 
-    sudo apt install i3 i3blocks feh lxappearance arandr 
+    sudo apt install i3 i3blocks feh lxappearance arandr xautolock
     sudo apt install xserver-xorg-input-synaptics lm-sensors xbacklight
 
     mkdir ~/repos
@@ -90,19 +96,24 @@ https://github.com/Anthony25/gnome-terminal-colors-solarized
     cd gnome-terminal-colors-solarized
     ./install.sh
 
-## skype
+## Skype
 
     wget https://repo.skype.com/latest/skypeforlinux-64.deb
     sudo dpkg -i skypeforlinux-64.deb
     sudo apt install -f
 
-## java
+## Java
     sudo apt install default-jre
     sudo add-apt-repository ppa:webupd8team/java
     sudo apt install oracle-java8-installer
     sudo update-alternatives --config java
 
-## docker
+    sudo add-apt-repository ppa:linuxuprising/java
+    sudo apt-get update
+    sudo apt-get install oracle-java11-installer
+    sudo update-alternatives --config java
+
+## Docker
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
 
     sudo apt update
@@ -125,16 +136,29 @@ https://linrunner.de/en/tlp/docs/tlp-linux-advanced-power-management.html
     sudo tlp start 
     sudo tlp-stat -s 
 
-## virtualbox
+## Virtualbox
 
     sudo apt install virtualbox virtualbox-ext-pack
+    sudo apt install rdesktop
 
-## pycharm and idea
+## PyCharm and Idea
 download, uncompress as root and move to `/opt`, then create symlinks:
 
     sudo ln -s /opt/**/idea.sh /usr/local/bin/idea
     sudo ln -s /opt/**/pycharm.sh /usr/local/bin/pycharm
 
-## TODO
-* virtualbox macosx, win?
-* make sure battery stuff always starts
+## Keyboard layouts
+    
+    sudo apt install x11-xkb-utils
+    setxkbmap us
+    setxkbmap sk
+
+## Marble mouse
+
+https://unix.stackexchange.com/questions/367106/logitech-marble-mouse-linux-scroll-modifier-setup
+
+## Lock screen on lid close
+
+https://www.reddit.com/r/i3wm/comments/9ebemt/locking_i3_when_lid_of_laptop_is_closed/
+
+    apt-get install xss-lock

@@ -167,8 +167,12 @@ bar {
 bindsym $mod+shift+x exec i3lock 
 
 #exec_always feh --bg-max ~/Dropbox/Photos/hindu/Kurma\,_the_tortoise_incarnation_of_Vishnu.jpg 
+exec --no-startup-id nm-applet
 exec google-chrome
 exec_always ~/repos/i3-wpd/i3wpd.py --bg-max ~/Dropbox/Photos/backgrounds .jpg 
+#exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
+exec --no-startup-id xss-lock -- ~/.config/i3/lock.sh
+exec --no-startup-id dropbox start
 
 
 ## https://faq.i3wm.org/question/3747/enabling-multimedia-keys.1.html
@@ -189,3 +193,8 @@ bindsym XF86AudioPlay exec playerctl play
 bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+bindsym XF86Display exec systemctl suspend
+
+bindsym $mod+ctrl+e exec setxkbmap us
+bindsym $mod+ctrl+s exec setxkbmap sk
+

@@ -141,8 +141,8 @@ export GOROOT=/usr/local/opt/go/libexec
 #source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 export ANDROID_HOME=~/Library/Android/sdk/
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home
-export PATH=$JAVA_HOME/bin:$PATH
+#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home
+#export PATH=$JAVA_HOME/bin:$PATH
 export SECRET_KEY="zsDfcbldmfjsklmowMNTJT/bQR7QQWw4ersVBHr6dsg-457f(fNJKEYfr"
 
 export PATH=$ANDROID_HOME/platform-tools:$PATH
