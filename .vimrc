@@ -42,10 +42,6 @@ set splitbelow
 set splitright
 set foldmethod=indent           " Enable folding
 set foldlevel=99
-"colorscheme peachpuff
-colorscheme solarized
-"colorscheme zellner
-set background=light
 set nocompatible
 set encoding=utf-8
 set scrolloff=3
@@ -69,6 +65,9 @@ set incsearch
 set showmatch
 set hlsearch
 set autowrite
+set background=dark
+colorscheme zellner
+"colorscheme peachpuff
 
 set wrap
 set textwidth=79
@@ -177,7 +176,7 @@ set wildignore+=*/build/**
 let g:ctrlp_use_caching=0
 
 " aperezdc/vim-template
-let g:templates_directory='~/Dropbox/dotfiles/.vim-templates'
+let g:templates_directory='~/repos/dotfiles/.vim-templates'
 let g:email='martin.uzak@gmail.com'
 let g:username='Martin Užák'
 
@@ -235,3 +234,13 @@ autocmd FileType typescript syn clear foldBraces
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType json setlocal ts=2 sts=2 sw=2 expandtab
 autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
+
+"
+" host based settings
+" 
+let hostname = substitute(system('hostname'), '\n', '', '')
+if hostname == "t480s"
+    colorscheme solarized
+    set background=light
+endif
+

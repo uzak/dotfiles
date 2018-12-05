@@ -56,7 +56,7 @@ Threfore I start Dropbox from i3wm's config.
 
     sudo apt install zsh fonts-powerline
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-    cd Dropbox/dotfiles
+    cd ~/repos/dotfiles
     ./install.sh
 ### fonts
     mkdir ~/.local/share/fonts

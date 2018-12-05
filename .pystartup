@@ -12,7 +12,7 @@ import rlcompleter
 
 readline.parse_and_bind('tab:complete')
 
-historyPath = os.path.expanduser("~/Dropbox/dotfiles/.pyhistory")
+historyPath = os.path.expanduser("~/.pyhistory")
 
 def save_history(historyPath=historyPath):
     import readline

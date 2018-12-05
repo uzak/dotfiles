@@ -120,7 +120,7 @@ fi
 alias rf="python ~/work/sandbox/python/reformat.py"
 
 setopt auto_cd
-cdpath=($HOME/work $HOME $HOME/work/sandbox $HOME/Desktop $HOME/Dropbox)
+cdpath=($HOME $HOME/repos $HOME/Desktop $HOME/Dropbox)
 alias python=python3
 
 export LC_ALL="en_US.UTF-8"
