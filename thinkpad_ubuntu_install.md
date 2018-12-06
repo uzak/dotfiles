@@ -104,11 +104,11 @@ https://github.com/Anthony25/gnome-terminal-colors-solarized
 
 ## Java
     sudo apt install default-jre
-    sudo add-apt-repository ppa:webupd8team/java
+    sudo -E add-apt-repository ppa:webupd8team/java
     sudo apt install oracle-java8-installer
     sudo update-alternatives --config java
 
-    sudo add-apt-repository ppa:linuxuprising/java
+    sudo -E add-apt-repository ppa:linuxuprising/java
     sudo apt-get update
     sudo apt-get install oracle-java11-installer
     sudo update-alternatives --config java
@@ -119,7 +119,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-o
     sudo apt update
     sudo apt install apt-transport-https ca-certificates curl software-properties-common
     curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+    sudo -E add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
     sudo apt update
     sudo apt install docker-ce
     sudo systemctl status docker
