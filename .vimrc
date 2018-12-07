@@ -1,35 +1,46 @@
-"
-" VUNDLE
-"
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin() " let Vundle manage Vundle, required
+if !exists("g:os")
+    if has("win64") || has("win32") || has("win16")
+        let g:os = "Windows"
+    else
+        let g:os = substitute(system('uname'), '\n', '', '')
+    endif
+endif
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'rickhowe/diffchar.vim'
-"Plugin 'tmhedberg/SimpylFold'
-"Plugin 'Yggdroot/indentLine'
-Plugin 'vim-scripts/indentpython.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'nvie/vim-flake8'
-Plugin 'jnurmine/Zenburn'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'kien/ctrlp.vim'
-"Plugin 'python-mode/python-mode'
-Plugin 'tpope/vim-fugitive'
-Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
-Plugin 'scrooloose/nerdtree'
-Plugin 'aperezdc/vim-template'
-Plugin 'vim-voom/VOoM' " two pane outliner
-Plugin 'henrik/vim-indexed-search'
-Plugin 'leafgarland/typescript-vim'
-Plugin 'Quramy/vim-js-pretty-template'
-Plugin 'burnettk/vim-angular'
+if g:os != "Windows"
+    "
+    " VUNDLE
+    "
+    " set the runtime path to include Vundle and initialize
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin() " let Vundle manage Vundle, required
 
-call vundle#end()
+    Plugin 'gmarik/Vundle.vim'
+    Plugin 'scrooloose/nerdcommenter'
+    Plugin 'rickhowe/diffchar.vim'
+    "Plugin 'tmhedberg/SimpylFold'
+    "Plugin 'Yggdroot/indentLine'
+    Plugin 'vim-scripts/indentpython.vim'
+    Plugin 'scrooloose/syntastic'
+    Plugin 'nvie/vim-flake8'
+    Plugin 'jnurmine/Zenburn'
+    Plugin 'altercation/vim-colors-solarized'
+    Plugin 'kien/ctrlp.vim'
+    "Plugin 'python-mode/python-mode'
+    Plugin 'tpope/vim-fugitive'
+    Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+    Plugin 'scrooloose/nerdtree'
+    Plugin 'aperezdc/vim-template'
+    Plugin 'vim-voom/VOoM' " two pane outliner
+    Plugin 'henrik/vim-indexed-search'
+    Plugin 'leafgarland/typescript-vim'
+    Plugin 'Quramy/vim-js-pretty-template'
+    Plugin 'burnettk/vim-angular'
 
-" https://github.com/VundleVim/Vundle.vim/issues/679
+    call vundle#end()
+
+    " https://github.com/VundleVim/Vundle.vim/issues/679
+endif
+
 filetype plugin on
 filetype plugin indent on
 
@@ -140,9 +151,6 @@ nnoremap <leader>sk :setlocal spell spelllang=sk<CR>
 " http://vimdoc.sourceforge.net/htmldoc/spell.html
 " z= zG zg
 
-" syntastic checker
-nnoremap <leader>syn :SyntasticCheck<CR>
-
 "
 " FILETYPES
 "
@@ -180,10 +188,15 @@ let g:templates_directory='~/repos/dotfiles/.vim-templates'
 let g:email='martin.uzak@gmail.com'
 let g:username='Martin Užák'
 
-" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+if g:os != "Windows"
+    " syntastic
+    set statusline+=%#warningmsg#
+    set statusline+=%{SyntasticStatuslineFlag()}
+    set statusline+=%*
+    " syntastic checker
+    nnoremap <leader>syn :SyntasticCheck<CR>
+endif
+
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
