@@ -4,11 +4,21 @@
 * normal installation
 * use disk encryption
 
-### Basic tools
+## Basic tools
 
     sudo apt install git curl htop mc net-tools
     sudo apt install geeqie gimp
     sudo apt install mpv # mplayer replacement
+
+### Sudo
+
+    sudo -E visudo
+
+    `uzak    ALL=NOPASSWD: ALL`
+
+### Environment
+
+    sudo echo LC_ALL=en_US.UTF-8 >> /etc/environment
 
 ## Chrome
 
