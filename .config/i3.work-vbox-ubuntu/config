@@ -169,7 +169,7 @@ bindsym $mod+shift+x exec i3lock
 #exec_always feh --bg-max ~/Dropbox/Photos/hindu/Kurma\,_the_tortoise_incarnation_of_Vishnu.jpg 
 exec --no-startup-id nm-applet
 exec google-chrome
-exec_always ~/repos/i3-wpd/i3wpd.py --bg-max ~/Dropbox/Photos/backgrounds .jpg 
+exec_always ~/repos/i3-wpd/i3wpd.py --bg-max ~/grive/Photos/backgrounds .jpg 
 exec --no-startup-id /usr/lib/gnome-settings-daemon/gsd-xsettings
 exec --no-startup-id xss-lock -- ~/.config/i3/lock.sh
 #exec --no-startup-id dropbox start
