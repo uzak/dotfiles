@@ -188,5 +188,5 @@ https://www.fossmint.com/grive2-google-drive-client-for-linux/
 
 run `grive -P` for manual sync whenever needed. Or add crontab (`crontab -e`):
 
-    */5 * * * * ps ux | grep grive | grep -v grep || (cd ~/grive && /usr/bin/grive)
+    */5 * * * * ps ux | grep /usr/bin/grive | grep -v grep || (cd ~/grive && /usr/bin/grive)
 
