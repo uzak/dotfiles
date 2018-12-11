@@ -97,7 +97,6 @@ https://www.youtube.com/watch?v=j1I63wGcvU4
     mkdir ~/repos
     cd ~/repos && git clone https://github.com/jomiq/i3-wpd
 
-    echo FREETYPE_PROPERTIES="truetype:interpreter-version=35 cff:no-stem-darkening=1 autofitter:warping=1" >> /etc/environment
 ### Solarized terminal background
 https://github.com/Anthony25/gnome-terminal-colors-solarized
 
