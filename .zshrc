@@ -47,7 +47,7 @@ COMPLETION_WAITING_DOTS="true"
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
+HIST_STAMPS="yyyy-mm-dd"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -96,6 +96,13 @@ export EDITOR='vim'
 alias s="cd .."
 alias rm="rm -f"
 alias vi=vim
+alias vivekachudamani="/opt/foxitsoftware/foxitreader/FoxitReader ~/grive/docs/vedanta/Vivekachudaamani_SP.pdf"
+alias rf="python ~/repos/sandbox/python/reformat.py"
+alias python=python3
+alias pip=pip3
+alias glances="glances --theme-white"
+alias pysparkcli="(PYSPARK_DRIVER_PYTHON="" PYSPARK_DRIVER_PYTHON_OPTS="" && pyspark)"
+
 
 if [[ $OSTYPE == linux-gnu ]]; then
     alias ls="ls --color -N"
@@ -106,7 +113,6 @@ export PYTHONSTARTUP=~/.pystartup
 #export PYSPARK_DRIVER_PYTHON=ipython
 #export PYSPARK_PYTHON=/anaconda/bin/python
 #export PYSPARK_DRIVER_PYTHON_OPTS="notebook --NotebookApp.open_browser=False --NotebookApp.ip='*' --NotebookApp.port=8880"
-alias pysparkcli="(PYSPARK_DRIVER_PYTHON="" PYSPARK_DRIVER_PYTHON_OPTS="" && pyspark)"
 
 export PYTHONPATH=$PYTHONPATH:~/work/tapyr
 
@@ -115,13 +121,9 @@ if [[ -e $HOME/.motd ]]; then
 fi
 
 #pushd ~/work/sandbox/python
-#pushd ~/work/AptoideBigData/Social/src
-
-alias rf="python ~/work/sandbox/python/reformat.py"
 
 setopt auto_cd
 cdpath=($HOME $HOME/repos $HOME/Desktop $HOME/Dropbox)
-alias python=python3
 
 export LC_ALL="en_US.UTF-8"
 
@@ -143,10 +145,8 @@ export GOROOT=/usr/local/opt/go/libexec
 export ANDROID_HOME=~/Library/Android/sdk/
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home
 #export PATH=$JAVA_HOME/bin:$PATH
-export SECRET_KEY="zsDfcbldmfjsklmowMNTJT/bQR7QQWw4ersVBHr6dsg-457f(fNJKEYfr"
 
 export PATH=$ANDROID_HOME/platform-tools:$PATH
-#alias pip=pip3
 export ANSIBLE_VAULT_PASSWORD_FILE=~/.vault_pass
 
 setopt prompt_subst
@@ -159,15 +159,13 @@ export HELM_HOME=~/.helm
 export PATH=$PATH:~/go/bin:~/kops/bin
 
 export PATH=~/bin:$PATH
-alias glances="glances --theme-white"
 
 function td_docker_shell() {
     docker exec -ti $(docker ps | grep elsacorp/teacher-api/api | awk '{ print $1 }') /bin/bash
 }
 
-#alias java=/Library/Java/JavaVirtualMachines/jdk1.8.0_172.jdk/Contents/Home/bin/java
-
 bindkey "[D" backward-word
 bindkey "[C" forward-word
 bindkey "^[a" beginning-of-line
 bindkey "^[e" end-of-line
+
