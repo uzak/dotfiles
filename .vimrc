@@ -257,3 +257,8 @@ if hostname == "t480s"
     set background=light
 endif
 
+
+if g:os == "Windows"
+        let skip_defaults_vim=1
+        set viminfo=""
+endif
