@@ -14,7 +14,7 @@
 
     sudo -E visudo
 
-    `uzak    ALL=NOPASSWD: ALL`
+`uzak    ALL=NOPASSWD: ALL`
 
 ### Environment
 
@@ -172,3 +172,21 @@ https://unix.stackexchange.com/questions/367106/logitech-marble-mouse-linux-scro
 https://www.reddit.com/r/i3wm/comments/9ebemt/locking_i3_when_lid_of_laptop_is_closed/
 
     apt-get install xss-lock
+
+## Grive
+
+https://www.fossmint.com/grive2-google-drive-client-for-linux/
+
+    sudo -E add-apt-repository ppa:nilarimogard/webupd8
+    sudo apt-get update
+    sudo apt-get install grive
+
+    # run initially
+    mkdir -p ~/grive
+    cd ~/grive
+    grive -a
+
+run `grive -P` for manual sync whenever needed. Or add crontab (`crontab -e`):
+
+    */5 * * * * /usr/bin/grive                                                      
+
