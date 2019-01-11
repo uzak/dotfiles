@@ -96,8 +96,6 @@ export EDITOR='vim'
 alias s="cd .."
 alias rm="rm -f"
 alias vi=vim
-alias vivekachudamani="/opt/foxitsoftware/foxitreader/FoxitReader ~/grive/docs/vedanta/Vivekachudaamani_SP.pdf"
-alias rf="python ~/repos/sandbox/python/reformat.py"
 alias python=python3
 alias pip=pip3
 alias glances="glances --theme-white"
@@ -119,8 +117,6 @@ export PYTHONPATH=$PYTHONPATH:~/work/tapyr
 if [[ -e $HOME/.motd ]]; then
     cat $HOME/.motd
 fi
-
-#pushd ~/work/sandbox/python
 
 setopt auto_cd
 cdpath=($HOME $HOME/repos $HOME/Desktop $HOME/Dropbox)

@@ -119,7 +119,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-vmap <C-R> ! python /Users/uzak/work/sandbox/python/reformat.py <cr>
+vmap <C-R> ! python ~/repos/sandbox/python/reformat.py <cr>
 
 nnoremap th :tabfirst<CR>
 nnoremap tk :tabnext<CR>
