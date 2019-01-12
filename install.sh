@@ -1,5 +1,7 @@
 #! /bin/bash
 
+HOST=$(hostname -s)
+
 # get rid of existing dotfile and create a symlink to dotfiles
 function install {
     src=$1
@@ -12,9 +14,16 @@ function install {
     ln -vs $dotfiles_dir/$src $dst
 }
 
-for fn in .xinitrc .Xresources .pystartup .vimrc .zshrc .irbrc .gitconfig; do
-    install $fn
+for fn in .xinitrc .pystartup .vimrc .zshrc .irbrc .gitconfig; do
+    install $fn 
 done
+
+mv ~/.Xresources /tmp
+if [ -f .Xresources.$HOST ]; then
+    install .Xresources.$HOST ~/.Xresources
+else 
+    install .Xresources
+fi
 
 if [[ $OSTYPE == darwin* ]]; then
     install .hammerspoon
