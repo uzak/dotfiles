@@ -14,7 +14,7 @@ function install {
     ln -vs $dotfiles_dir/$src $dst
 }
 
-for fn in .xinitrc .pystartup .vimrc .zshrc .irbrc .gitconfig; do
+for fn in .xinitrc .pystartup .vimrc .zshrc .irbrc; do
     install $fn 
 done
 
