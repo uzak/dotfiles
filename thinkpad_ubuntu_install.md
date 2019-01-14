@@ -189,3 +189,9 @@ run `grive -P` for manual sync whenever needed. Or add crontab (`crontab -e`):
 
     */5 * * * * ps ux | grep /usr/bin/grive | grep -v grep || (cd ~/grive && /usr/bin/grive)
 
+## Wine
+
+https://vitux.com/how-to-install-wine-on-ubuntu/
+
+    sudo apt install wine64 winetricks
+    winetricks corefonts
