@@ -97,6 +97,16 @@ https://www.youtube.com/watch?v=j1I63wGcvU4
     mkdir ~/repos
     cd ~/repos && git clone https://github.com/jomiq/i3-wpd
 
+fix the backlight:
+
+    sudo cat >> /etc/X11/xorg.conf << EOF
+    Section "Device"
+        Identifier  "Intel Graphics" 
+        Driver      "intel"
+        Option      "Backlight"  "intel_backlight"
+    EndSection
+    EOF
+
 ### Solarized terminal background
 https://github.com/Anthony25/gnome-terminal-colors-solarized
 
