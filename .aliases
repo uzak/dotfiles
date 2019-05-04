@@ -1,0 +1,25 @@
+alias s="cd .."
+alias rm="rm -f"
+alias vi=vim
+alias python=python3
+alias pip=pip3
+alias glances="glances --theme-white"
+alias pysparkcli="(PYSPARK_DRIVER_PYTHON="" PYSPARK_DRIVER_PYTHON_OPTS="" && pyspark)"
+
+
+if [[ $OSTYPE == linux-gnu ]]; then
+    alias ls="ls --color -N"
+fi
+
+
+#https://stackoverflow.com/questions/33817282/auto-completion-not-work-for-command-du
+#alias du=gdu
+
+
+alias ga="git add"
+alias gs="git status"
+alias gc="git checkout"
+alias gp="git pull"
+alias gd="git diff"
+alias gg="git grep"
+alias go="git checkout"

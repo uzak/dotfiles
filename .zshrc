@@ -92,19 +92,8 @@ export EDITOR='vim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-alias s="cd .."
-alias rm="rm -f"
-alias vi=vim
-alias python=python3
-alias pip=pip3
-alias glances="glances --theme-white"
-alias pysparkcli="(PYSPARK_DRIVER_PYTHON="" PYSPARK_DRIVER_PYTHON_OPTS="" && pyspark)"
-
-
-if [[ $OSTYPE == linux-gnu ]]; then
-    alias ls="ls --color -N"
-fi
+#
+source $HOME/.aliases
 
 export PYTHONSTARTUP=~/.pystartup
 
@@ -122,9 +111,6 @@ setopt auto_cd
 cdpath=($HOME $HOME/repos $HOME/Desktop $HOME/Dropbox)
 
 export LC_ALL="en_US.UTF-8"
-
-#https://stackoverflow.com/questions/33817282/auto-completion-not-work-for-command-du
-#alias du=gdu
 
 # golang
 export GOPATH=~/go
