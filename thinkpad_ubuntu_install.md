@@ -7,8 +7,10 @@
 ## Basic tools
 
     sudo apt install git curl htop mc net-tools
+    sudo apt install vim-gtk3 keepass2
     sudo apt install geeqie gimp
-    sudo apt install mpv # mplayer replacement
+    sudo apt install vlc
+    sudo apt install gnome-tweak-tool
 
 ### Sudo
 
@@ -19,48 +21,13 @@
 ### Environment
 
     sudo echo LC_ALL=en_US.UTF-8 >> /etc/environment
+    sudo echo EDITOR=vi >> /etc/environment
 
 ## Chrome
 
     cd ~/Downloads
     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
     sudo dpkg -i google-chrome-stable_current_amd64.deb
-
-## Dropbox
-
-https://unix.stackexchange.com/questions/35624/how-to-run-dropbox-daemon-in-background
-https://linoxide.com/linux-how-to/install-dropbox-ubuntu/
-
-    sudo apt install nautilus-dropbox
-	sudo -s
-
-### As systemctl service
-
-When used as a systemctl service the icon in the i3tray doesn't work. 
-Threfore I start Dropbox from i3wm's config.
-
-	cat << EOF > /etc/systemd/system/dropbox@.service
-	[Unit]
-	Description=Dropbox as a system service user %i
-	
-	[Service]
-	Type=forking
-	ExecStart=/usr/bin/dropbox start
-	ExecStop=/usr/bin/dropbox stop
-	User=%i
-	Group=%i
-	# 'LANG' might be unnecessary, since systemd already sets the
-	# locale for all services according to "/etc/locale.conf".
-	# Run `systemctl show-environment` to make sure.
-	Environment=LANG=en_US.utf-8
-	
-	[Install]
-	WantedBy=multi-user.target
-	EOF
-	
-	sudo systemctl enable dropbox@${USER}.service  
-	sudo systemctl start dropbox@${USER}.service 
-	
 
 ## zsh
 
@@ -106,14 +73,6 @@ fix the backlight:
         Option      "Backlight"  "intel_backlight"
     EndSection
     EOF
-
-### Solarized terminal background
-https://github.com/Anthony25/gnome-terminal-colors-solarized
-
-    sudo apt-get install dconf-cli
-    git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git
-    cd gnome-terminal-colors-solarized
-    ./install.sh
 
 ## Skype
 
@@ -182,26 +141,13 @@ https://www.reddit.com/r/i3wm/comments/9ebemt/locking_i3_when_lid_of_laptop_is_c
 
     apt-get install xss-lock
 
-## Grive
+## Remove snapd
 
-https://www.fossmint.com/grive2-google-drive-client-for-linux/
+	sudo apt autoremove --purge snapd gnome-software-plugin-snap
+	sudo rm -rf /var/cache/snapd/
 
-    sudo -E add-apt-repository ppa:nilarimogard/webupd8
-    sudo apt-get update
-    sudo apt-get install grive
+## Git
 
-    # run initially
-    mkdir -p ~/grive
-    cd ~/grive
-    grive -a
+    git config --global user.email "martin.uzak@gmail.com"
+    git config --global user.name "Martin Uzak"
 
-run `grive -P` for manual sync whenever needed. Or add crontab (`crontab -e`):
-
-    */5 * * * * ps ux | grep /usr/bin/grive | grep -v grep || (cd ~/grive && /usr/bin/grive)
-
-## Wine
-
-https://vitux.com/how-to-install-wine-on-ubuntu/
-
-    sudo apt install wine64 winetricks
-    winetricks corefonts

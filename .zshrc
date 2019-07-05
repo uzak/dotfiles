@@ -1,6 +1,5 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/usr/local/Cellar/python3/3.7.0/bin/:/usr/local/bin:/Library/PostgreSQL/9.6/bin:~/.cabal/bin:$PATH:/Users/uzak/tools:/usr/local/texlive/2016/bin/x86_64-darwin:/usr/local/Cellar/rabbitmq/3.6.9_1/sbin/
 
 export ZSH_DISABLE_COMPFIX=true
 
@@ -95,55 +94,19 @@ export EDITOR='vim'
 #
 source $HOME/.aliases
 
-export PYTHONSTARTUP=~/.pystartup
-
-#export PYSPARK_DRIVER_PYTHON=ipython
-#export PYSPARK_PYTHON=/anaconda/bin/python
-#export PYSPARK_DRIVER_PYTHON_OPTS="notebook --NotebookApp.open_browser=False --NotebookApp.ip='*' --NotebookApp.port=8880"
-
-export PYTHONPATH=$PYTHONPATH:~/work/tapyr
-
-if [[ -e $HOME/.motd ]]; then
-    cat $HOME/.motd
-fi
-
 setopt auto_cd
 cdpath=($HOME $HOME/repos $HOME/Desktop $HOME/Dropbox)
 
 export LC_ALL="en_US.UTF-8"
 
-# golang
-export GOPATH=~/go
-export PATH=$PATH:/usr/local/opt/go/libexec/bin
-
 # for gnu sed
 #   PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
-
-export PATH=$PATH:/usr/local/Cellar/sphinx/2.2.11/bin/
-export GOROOT=/usr/local/opt/go/libexec
-
-#source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-export ANDROID_HOME=~/Library/Android/sdk/
-#export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-9.0.4.jdk/Contents/Home
-#export PATH=$JAVA_HOME/bin:$PATH
-
-export PATH=$ANDROID_HOME/platform-tools:$PATH
-export ANSIBLE_VAULT_PASSWORD_FILE=~/.vault_pass
 
 setopt prompt_subst
 
 # https://github.com/wesbos/Cobalt2-iterm/issues/15
 prompt_dir() {
     prompt_segment blue black $(shrink_path -f)
-}
-export HELM_HOME=~/.helm
-export PATH=$PATH:~/go/bin:~/kops/bin
-
-export PATH=~/bin:$PATH
-
-function td_docker_shell() {
-    docker exec -ti $(docker ps | grep elsacorp/teacher-api/api | awk '{ print $1 }') /bin/bash
 }
 
 bindkey "[D" backward-word
