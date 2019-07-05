@@ -153,8 +153,6 @@ endif
 
 if has("mac")
     set guifont=Inconsolata\ for\ Powerline:h14
-elseif has("unix")
-    set guifont=Inconsolata\ for\ Powerline\ 12
 elseif has("gui_win32")
     set guifont=Consolas:h11:cANSI
 endif
