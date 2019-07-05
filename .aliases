@@ -26,3 +26,5 @@ alias go="git checkout"
 
 alias open=xdg-open
 alias apt_install_suggest="sudo apt install -o APT::Install-Suggests=\"true\""
+
+alias install="sudo apt install"
