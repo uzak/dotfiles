@@ -3,4 +3,4 @@ creating symlinks to them.
 
 There are also the installation guides for my computers:
 
-* [Ubuntu 18.04 @ Thinkpad t480s](thinkpad_ubuntu_install.md)
+* [Ubuntu 19.04 Disco Dingo @ Thinkpad t480s](thinkpad_ubuntu_install.md)

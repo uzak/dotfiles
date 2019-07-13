@@ -12,6 +12,7 @@
     sudo apt install vim-gtk3 keepass2 vim zsh
     sudo apt install gimp vlc
     sudo apt install gnome-tweak-tool
+    sudo apt install aria2
 
 ### Sudo
 
@@ -80,3 +81,7 @@ https://unix.stackexchange.com/questions/367106/logitech-marble-mouse-linux-scro
 
     git config --global user.email "martin.uzak@gmail.com"
     git config --global user.name "Martin Uzak"
+
+## Mute beeping
+
+http://ubuntuhandbook.org/index.php/2019/03/disable-mute-alert-sound-ubuntu-19-04/
