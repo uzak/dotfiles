@@ -13,6 +13,8 @@
     sudo apt install gimp vlc
     sudo apt install gnome-tweak-tool
     sudo apt install aria2
+    sudo apt install mythes-sk libreoffice-l10n-sk hyphen-sk
+
 
 ### Sudo
 
