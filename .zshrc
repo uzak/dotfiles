@@ -116,3 +116,7 @@ bindkey "^[e" end-of-line
 
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/uzak/.sdkman"
+[[ -s "/home/uzak/.sdkman/bin/sdkman-init.sh" ]] && source "/home/uzak/.sdkman/bin/sdkman-init.sh"

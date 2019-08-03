@@ -14,6 +14,7 @@
     sudo apt install gnome-tweak-tool
     sudo apt install aria2
     sudo apt install mythes-sk libreoffice-l10n-sk hyphen-sk
+    sudo apt install cloc
 
 
 ### Sudo
@@ -87,3 +88,8 @@ https://unix.stackexchange.com/questions/367106/logitech-marble-mouse-linux-scro
 ## Mute beeping
 
 http://ubuntuhandbook.org/index.php/2019/03/disable-mute-alert-sound-ubuntu-19-04/
+
+## Apple keyboard
+Use keyboard layout _English (Macintosh)_
+
+    xmodmap ~/.Xmodmap

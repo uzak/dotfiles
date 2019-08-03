@@ -12,6 +12,6 @@ function install {
     ln -fvs "$dotfiles_dir/$src" "$dst"
 }
 
-for fn in .vimrc .aliases .bashrc .zshrc .pystartup; do
+for fn in .vimrc .aliases .bashrc .zshrc .pystartup .Xmodmap; do
     install $fn 
 done
