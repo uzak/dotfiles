@@ -24,7 +24,12 @@ alias gd="git diff"
 alias gg="git grep"
 alias go="git checkout"
 
-alias open=xdg-open
 
-alias backup="tar cf /media/uzak/KINGSTON/martinuzak.tar /martinuzak/"
 alias df='df -x"squashfs"'
+
+alias htop="TERM=linux htop"
+
+if [[ $OSTYPE == linux-gnu ]]; then
+    alias ls="ls --color -N"
+    alias open=xdg-open
+fi
