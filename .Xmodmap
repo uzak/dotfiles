@@ -27,5 +27,5 @@ keycode 232 = Insert
 
 keycode 191  =  Print Sys_Req
 keycode 192  =  Scroll_Lock
-keycode 193   =  Pause Break
+keycode 193  =  Pause Break
 

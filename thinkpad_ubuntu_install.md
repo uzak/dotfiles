@@ -9,8 +9,8 @@
     sudo apt update
     sudo apt dist-upgrade
     sudo apt install git curl htop mc net-tools
-    sudo apt install vim-gtk3 keepass2 vim zsh
-    sudo apt install gimp vlc
+    sudo apt install vim-gtk3 keepass2 vim zsh xdotool
+    sudo apt install gimp vlc mpv
     sudo apt install gnome-tweak-tool
     sudo apt install aria2
     sudo apt install mythes-sk libreoffice-l10n-sk hyphen-sk
@@ -25,8 +25,14 @@
 
 ### Environment
 
-    sudo echo LC_ALL=en_US.UTF-8 >> /etc/environment
-    sudo echo EDITOR=vi >> /etc/environment
+    cat /etc/environment
+
+
+    PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+
+    LC_ALL=en_US.UTF-8
+    MOZ_ENABLE_WAYLAND=1 thunderbird
+    EDITOR=vi
 
 ## Chrome
 
@@ -92,4 +98,30 @@ http://ubuntuhandbook.org/index.php/2019/03/disable-mute-alert-sound-ubuntu-19-0
 ## Apple keyboard
 Use keyboard layout _English (Macintosh)_
 
+Create an autostart script for Xmodmap and chmod a+x it
+
+    cat ~/.config/autostart/keyboard.sh
+    #!/bin/bash
     xmodmap ~/.Xmodmap
+
+hid\_apple module settings
+
+    cat /etc/modprobe.d/hid_apple.conf    
+    options hid_apple fnmode=2
+    options hid_apple swap_opt_cmd=0
+
+Disable wakup from USB (bluetooth keyboard). Press and hold ``fn`` to wakeup or
+use poweron button or open the lid.
+
+    echo XHC > /proc/acpi/wakeup
+
+## Misc
+
+https://askubuntu.com/questions/1085390/how-do-i-disable-the-touchpad-while-typing-ubuntu-18-04
+
+    sudo apt remove xserver-xorg-input-synaptics
+    sudo apt install xserver-xorg-input-libinput
+
+http://octavifs.me/post/hidpi-support-on-ubuntu-19-04/
+
+    xrandr --output eDP-1 --scale 1.5x1.5

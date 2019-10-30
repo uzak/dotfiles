@@ -26,6 +26,5 @@ alias go="git checkout"
 
 alias open=xdg-open
 
-alias install_suggest="sudo apt install -o APT::Install-Suggests=\"true\""
-
 alias backup="tar cf /media/uzak/KINGSTON/martinuzak.tar /martinuzak/"
+alias df='df -x"squashfs"'
