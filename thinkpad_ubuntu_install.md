@@ -21,7 +21,7 @@
 
     sudo -E visudo
 
-`uzak    ALL=NOPASSWD: ALL`
+`m    ALL=NOPASSWD: ALL`
 
 ### Environment
 
@@ -125,3 +125,8 @@ https://askubuntu.com/questions/1085390/how-do-i-disable-the-touchpad-while-typi
 http://octavifs.me/post/hidpi-support-on-ubuntu-19-04/
 
     xrandr --output eDP-1 --scale 1.5x1.5
+
+gnome extensions:
+
+    https://github.com/gTile/gTile
+    https://extensions.gnome.org/extension/104/netspeed/
