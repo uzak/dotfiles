@@ -1,3 +1,16 @@
+"
+" VUNDLE
+"
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin() " let Vundle manage Vundle, required
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'aperezdc/vim-template'
+
+call vundle#end()
+
+
 filetype plugin on
 filetype plugin indent on
 
@@ -89,8 +102,8 @@ nnoremap <space> za
 " add spellchecking on ,c
 nnoremap <leader>de :setlocal spell spelllang=de<cr>
 nnoremap <leader>en :setlocal spell spelllang=en<cr>
-nnoremap <leader>pt :setlocal spell spelllang=pt<cr>
 nnoremap <leader>sk :setlocal spell spelllang=sk<cr>
+nnoremap <leader>cz :setlocal spell spelllang=cz<cr>
 " http://vimdoc.sourceforge.net/htmldoc/spell.html
 " z= zg zg
 
@@ -171,3 +184,9 @@ if g:os == "Windows"
     "let skip_defaults_vim=1
     "set viminfo=""
 endif
+
+" aperezdc/vim-template
+let g:templates_directory='~/repos/dotfiles/.vim-templates'
+let g:email='martin.uzak+code@gmail.com'
+let g:username='Martin Užák'
+

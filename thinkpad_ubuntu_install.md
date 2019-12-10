@@ -8,9 +8,9 @@
 
     sudo apt update
     sudo apt dist-upgrade
-    sudo apt install git curl htop mc net-tools
+    sudo apt install git curl htop mc bmon net-tools
     sudo apt install vim-gtk3 keepass2 vim zsh xdotool
-    sudo apt install gimp vlc mpv
+    sudo apt install gimp mpv
     sudo apt install gnome-tweak-tool
     sudo apt install aria2
     sudo apt install mythes-sk libreoffice-l10n-sk hyphen-sk
@@ -36,7 +36,14 @@
 
 ## Chrome
 
-    sudo apt install chromium-browser
+    sudo snap install chromium
+
+## Vim
+
+    sudo apt install vim
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+Now start vim  and run  `VundleUpdate` in the command mode 
 
 
 ## Skype
@@ -129,4 +136,10 @@ http://octavifs.me/post/hidpi-support-on-ubuntu-19-04/
 gnome extensions:
 
     https://github.com/gTile/gTile
-    https://extensions.gnome.org/extension/104/netspeed/
+
+battery:
+
+    sudo apt-get install tlp tlp-rdw acpi-call-dkms tp-smapi-dkms acpi-call-dkms
+    sudo tlp start
+    tlp-stat -s
+    sudo tlp-stat -b
