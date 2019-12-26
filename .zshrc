@@ -9,7 +9,6 @@ export ZSH=~/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="powerlevel9k/powerlevel9k"
 ZSH_THEME="agnoster"
 ZSH_THEME="robbyrussell"
 
@@ -69,13 +68,11 @@ export LANG=en_US.utf8
 export LC_CTYPE=en_US.utf8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-export EDITOR='vim'
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='gvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -117,8 +114,14 @@ bindkey "^[e" end-of-line
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH:$HOME/repos/scripts"
 
+source ~/.backup.conf
+
+export PYTHONPATH=$PYTHONPATH:~/repos/
+export PYTHONSTARTUP=~/.pystartup
+export PATH=$PATH:$HOME/.local/bin # for pip installs
+
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/uzak/.sdkman"
-[[ -s "/home/uzak/.sdkman/bin/sdkman-init.sh" ]] && source "/home/uzak/.sdkman/bin/sdkman-init.sh"
+[[ -s "/home/uzak/.sdkman/bin/sdkman-init.sh" ]] && \
+    source "/home/uzak/.sdkman/bin/sdkman-init.sh"
 
-source ~/.backup.conf

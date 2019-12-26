@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Author   : %USER% %MAIL%
+# Author   : %USER% <%MAIL%>
 # Creation : %FDATE%
 
 """

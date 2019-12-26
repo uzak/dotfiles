@@ -9,38 +9,39 @@
     sudo apt update
     sudo apt dist-upgrade
     sudo apt install git curl htop mc bmon net-tools
-    sudo apt install vim-gtk3 keepass2 vim zsh xdotool
-    sudo apt install gimp mpv
+    sudo apt install vim-gtk3 keepass2 vim zsh 
+    sudo apt install gimp mpv moc
     sudo apt install gnome-tweak-tool
     sudo apt install aria2
     sudo apt install mythes-sk libreoffice-l10n-sk hyphen-sk
-    sudo apt install cloc
-
+    sudo apt install cloc tree
+    sudo apt install python3 python3-pip pipenv
 
 ### Sudo
 
     sudo -E visudo
-
-`m    ALL=NOPASSWD: ALL`
+    sudo sh -c "echo \"$USER ALL=NOPASSWD: ALL\" >> /etc/sudoers"
 
 ### Environment
 
-    cat /etc/environment
-
+    $ cat /etc/environment
 
     PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
     LC_ALL=en_US.UTF-8
-    MOZ_ENABLE_WAYLAND=1 thunderbird
     EDITOR=vi
 
-## Chrome
+## Snap
 
-    sudo snap install chromium
+    sudo snap install chromium insomnia intellij-idea-community kotlin pycharm-community
+
+### Alternatively remove snapd
+
+	sudo apt autoremove --purge snapd gnome-software-plugin-snap
+	sudo rm -rf /var/cache/snapd/
 
 ## Vim
 
-    sudo apt install vim
     git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 Now start vim  and run  `VundleUpdate` in the command mode 
@@ -78,25 +79,14 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-o
     sudo apt install virtualbox virtualbox-ext-pack
     sudo apt install rdesktop
 
-## PyCharm and Idea
-download, uncompress as root and move to `/opt`, then create symlinks:
-
-    sudo ln -s /opt/**/idea.sh /usr/local/bin/idea
-    sudo ln -s /opt/**/pycharm.sh /usr/local/bin/pycharm
-
 ## Marble mouse
 
 https://unix.stackexchange.com/questions/367106/logitech-marble-mouse-linux-scroll-modifier-setup
 
-## Remove snapd
-
-	sudo apt autoremove --purge snapd gnome-software-plugin-snap
-	sudo rm -rf /var/cache/snapd/
-
 ## Git
 
     git config --global user.email "martin.uzak@gmail.com"
-    git config --global user.name "Martin Uzak"
+    git config --global user.name "Martin Užák"
 
 ## Mute beeping
 
@@ -128,14 +118,6 @@ https://askubuntu.com/questions/1085390/how-do-i-disable-the-touchpad-while-typi
 
     sudo apt remove xserver-xorg-input-synaptics
     sudo apt install xserver-xorg-input-libinput
-
-http://octavifs.me/post/hidpi-support-on-ubuntu-19-04/
-
-    xrandr --output eDP-1 --scale 1.5x1.5
-
-gnome extensions:
-
-    https://github.com/gTile/gTile
 
 battery:
 

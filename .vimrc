@@ -23,7 +23,7 @@ set splitbelow
 set splitright
 set foldmethod=indent           " enable folding
 set foldlevel=99
-set nocompatible
+set nocompatible                " enter the current millenium
 set encoding=utf-8
 set scrolloff=3
 set showmode
@@ -49,9 +49,13 @@ colorscheme zellner
 "colorscheme peachpuff
 
 set wrap
-"set textwidth=79
+set textwidth=80
 set formatoptions=qrn1
-set colorcolumn=80
+
+set colorcolumn=+1
+" alternatively
+au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
+
 "set list
 set listchars=tab:▸\ ,eol:¬
 
@@ -187,6 +191,10 @@ endif
 
 " aperezdc/vim-template
 let g:templates_directory='~/repos/dotfiles/.vim-templates'
-let g:email='martin.uzak+code@gmail.com'
+let g:email='martin.uzak@gmail.com'
 let g:username='Martin Užák'
+
+
+" https://www.youtube.com/watch?v=XA2WjJbmmoM
+set path+=**
 
