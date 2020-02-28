@@ -3,5 +3,5 @@ HEADER
 
 :Author:    %USER% %MAIL%
 :Creation:  %FDATE%
-:Abstract:  PURPOSE
+:Abstract:  %HERE%
 

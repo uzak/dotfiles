@@ -7,6 +7,7 @@ set nocompatible
 syntax on
 colorscheme zellner
 
+
 " Plugins {{{1
 "
 call plug#begin("~/.vim/plugged") 
@@ -65,7 +66,7 @@ set hlsearch
 set ignorecase
 set incsearch
 set laststatus=2
-set listchars=extends:»,precedes:«,tab:▸\ ,trail:·,eol:¬
+set listchars=extends:»,precedes:«,trail:·,tab:⇥\ ,eol:↵
 set mouse=a
 set nobackup
 set nojoinspaces
@@ -84,7 +85,7 @@ set splitbelow
 set splitright
 set tabstop=4
 set timeoutlen=500      " how long we wait for another keypress
-set ttyfast
+"set ttyfast
 set wildignorecase
 set wildmenu
 set wildmode=list:longest,list:full
@@ -201,11 +202,6 @@ nnoremap <C-t> :tabnew<cr>
 nnoremap <expr> j v:count ? (v:count > 5 ? "m'" . v:count : '') . 'j' : 'gj'
 nnoremap <expr> k v:count ? (v:count > 5 ? "m'" . v:count : '') . 'k' : 'gk'
 
-" Search mappings: These will make it so that going to the next one in a
-" search will center on the line it's found in.
-nnoremap N Nzz
-nnoremap n nzz
-
 " deactivate stupid ex-mode 
 nnoremap Q <nop>
 
@@ -226,6 +222,8 @@ nnoremap <leader>en :setlocal spell spelllang=en<cr>
 nnoremap <leader>sk :setlocal spell spelllang=sk<cr>
 nnoremap <leader>cz :setlocal spell spelllang=cz<cr>
 
+" IDEA like search
+nnoremap <S-f> :Files<CR>
 
 " Leaders {{{1
 
@@ -240,7 +238,8 @@ nnoremap <leader>gf /\v^[<\|=>]{7}( .*\|$)<CR>
 nnoremap <leader>p p`[v`]=
 
 nnoremap <leader>q :q!<cr>
-nnoremap <leader>t :term ++curwin<cr>
+"nnoremap <leader>t :term ++curwin<cr>
+nnoremap <leader>t :terminal<cr>
 nnoremap <leader>vs :source $MYVIMRC<cr>
 
 nnoremap <leader>ve :e $MYVIMRC<cr>
@@ -281,9 +280,11 @@ let g:jedi#completions_enabled = 0
 " open the go-to function in tab, not another buffer
 let g:jedi#use_tabs_not_buffers = 1
 
+let g:jedi#show_call_signatures = 0
+
 " lightline {{{2
 set noshowmode "no show mode because of lightline
-"wombat, PaperClip theme is nice too
+"wombat, PaperClip, nord theme are nice too
 let g:lightline = {
       \ 'colorscheme': 'nord', 
       \ 'active' : {
