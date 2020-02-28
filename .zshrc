@@ -9,7 +9,6 @@ export ZSH=~/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="agnoster"
 ZSH_THEME="robbyrussell"
 
 # Uncomment the following line to use case-sensitive completion.
@@ -55,7 +54,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins
-plugins=(shrink-path git pip brew common-aliases jsontools osx web-search rand-quote)
+plugins=(aws autojump brew command-not-found common-aliases compleat copyfile docker docker-compose git jsontools kubectl npm pip python terraform yarn web-search)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -68,11 +67,11 @@ export LANG=en_US.utf8
 export LC_CTYPE=en_US.utf8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='gvim'
-fi
+# if [[ -n $SSH_CONNECTION ]]; then
+#   export EDITOR='vim'
+# else
+#   export EDITOR='gvim'
+# fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -92,7 +91,7 @@ fi
 source $HOME/.aliases
 
 setopt auto_cd
-cdpath=($HOME $HOME/repos $HOME/Desktop $HOME/Dropbox)
+cdpath=($HOME $HOME/repos $HOME/Desktop /martinuzak)
 
 export LC_ALL="en_US.UTF-8"
 
@@ -101,27 +100,23 @@ export LC_ALL="en_US.UTF-8"
 
 setopt prompt_subst
 
-# https://github.com/wesbos/Cobalt2-iterm/issues/15
-prompt_dir() {
-    prompt_segment blue black $(shrink_path -f)
-}
-
 bindkey "[D" backward-word
 bindkey "[C" forward-word
 bindkey "^[a" beginning-of-line
 bindkey "^[e" end-of-line
 
 export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH:$HOME/repos/scripts"
-
-source ~/.backup.conf
+export PATH="$HOME/gems/bin:$PATH:$HOME/repos/scripts:$HOME/repos/ttt"
 
 export PYTHONPATH=$PYTHONPATH:~/repos/
 export PYTHONSTARTUP=~/.pystartup
 export PATH=$PATH:$HOME/.local/bin # for pip installs
+export MYVIMRC=~/.vimrc
+export FZF_DEFAULT_OPTS='--layout=reverse --border'
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export BACKUP_DIRS="/martinuzak ~/repos ~/sandbox ~/work ~/Pictures ~/Documents ~/.mozilla/firefox/*/bookmarkbackups ~/Mail"
+#export FZF_DEFAULT_OPTS='--height 96% --reverse --preview "pygmentize -g {}"'
 
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/uzak/.sdkman"
-[[ -s "/home/uzak/.sdkman/bin/sdkman-init.sh" ]] && \
-    source "/home/uzak/.sdkman/bin/sdkman-init.sh"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

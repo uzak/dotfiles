@@ -1,20 +1,10 @@
 alias s="cd .."
 alias rm="rm -f"
-alias vi=vim
-alias python="python3.8 -Wd -b" # Wd = warnings default
+alias python="python3.8 -Wd -b"         # Wd = warnings default
 alias pip=pip3
 
 #https://stackoverflow.com/questions/33817282/auto-completion-not-work-for-command-du
 #alias du=gdu
-
-alias ga="git add"
-alias gs="git status"
-alias gc="git checkout"
-alias gp="git pull"
-alias gd="git diff"
-alias gg="git grep"
-alias go="git checkout"
-
 
 alias df='df -x"squashfs"'
 
@@ -28,3 +18,19 @@ fi
 alias mplayer=mpv
 
 alias googleearth="LIBGL_ALWAYS_SOFTWARE=1 /opt/google/earth/pro/googleearth"
+
+alias civ4="wine $HOME/.wine/drive_c/Program\ Files\ \(x86\)/2K\ Games/Firaxis\ Games/Sid\ Meier\'s\ Civilization\ 4\ Complete/Beyond\ the\ Sword/Civ4BeyondSword.exe"
+
+alias ttt="ttt.py /martinuzak/work/prusa3d/tt_prusa_`date +%Y-%m`.txt -hr"
+alias tt="ttt.py /martinuzak/work/prusa3d/tt_prusa_`date +%Y-%m`.txt -hr --from_date `date +%Y-%m-%d`"
+
+alias nvim="nvim -u ~/.vimrc"
+alias v=vim
+alias vi=vim
+
+alias feedly=newsboat
+alias abook="abook --datafile /martinuzak/addressbook && rm /martinuzak/contacts\~"
+
+alias F="| fzf"
+alias lt="ls -lct"          # override zsh / common-aliases
+alias ltr="ls -lctr"
