@@ -29,3 +29,6 @@ keycode 191  =  Print Sys_Req
 keycode 192  =  Scroll_Lock
 keycode 193  =  Pause Break
 
+! swap 49 and 94
+keycode 49 = grave asciitilde
+keycode 94 = less greater

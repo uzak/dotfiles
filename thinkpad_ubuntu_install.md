@@ -8,14 +8,24 @@
 
     sudo apt update
     sudo apt dist-upgrade
-    sudo apt install git curl htop mc bmon net-tools
-    sudo apt install vim-gtk3 keepass2 vim zsh 
+    sudo apt install git curl htop mc bmon net-tools ctags golang 
+    sudo apt install vim-gtk3 vim zsh 
     sudo apt install gimp mpv moc
     sudo apt install gnome-tweak-tool
     sudo apt install aria2
     sudo apt install mythes-sk libreoffice-l10n-sk hyphen-sk
-    sudo apt install cloc tree
-    sudo apt install python3 python3-pip pipenv
+    sudo apt install cloc tree fzf ripgrep
+    sudo apt install python3 python3-pip pipenv python3-sphinx
+    sudo apt install virtualbox virtualbox-ext-pack
+    sudo apt install plantuml dbeaver-ce
+    sudo apt install neofetch neomutt w3m
+    sudo apt install pass # upass
+    sudo apt install keepass2
+    
+    sudo apt install catimg autojump            # tools for zsh plugin 
+
+    sudo apt install texlive-fonts-recommended texlive-latex-recommended 
+    sudo apt install pandoc texlive-latex-base texlive-xetex
 
 ### Sudo
 
@@ -33,7 +43,7 @@
 
 ## Snap
 
-    sudo snap install chromium insomnia intellij-idea-community kotlin pycharm-community
+    sudo snap install chromium insomnia intellij-idea-community kotlin pycharm-community drawio code
 
 ### Alternatively remove snapd
 
@@ -42,9 +52,12 @@
 
 ## Vim
 
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ 
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    curl -fLo ~/.vim/colors/apprentice.vim --create-dirs \
+        https://raw.githubusercontent.com/romainl/Apprentice/master/colors/apprentice.vim
 
-Now start vim  and run  `VundleUpdate` in the command mode 
+Now start vim  and run `PlugInstall` in the command mode 
 
 
 ## Skype
@@ -54,11 +67,14 @@ Now start vim  and run  `VundleUpdate` in the command mode
     sudo apt install -f
 
 ## Java
-    sudo apt install openjdk-13-jre
+
+    sudo apt install openjdk-14-jre
+
+or alternatively:
 
     sudo -E add-apt-repository ppa:linuxuprising/java
     sudo apt-get update
-    sudo apt-get install oracle-java11-installer
+    sudo apt-get install oracle-java13-installer
     sudo update-alternatives --config java
 
 ## Docker
@@ -73,11 +89,6 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-o
     sudo systemctl status docker
     sudo usermod -aG docker ${USER}
     sudo apt install docker-compose
-
-## Virtualbox
-
-    sudo apt install virtualbox virtualbox-ext-pack
-    sudo apt install rdesktop
 
 ## Marble mouse
 
@@ -125,3 +136,13 @@ battery:
     sudo tlp start
     tlp-stat -s
     sudo tlp-stat -b
+    
+### vimpc
+
+https://github.com/boysetsfrog/vimpc
+
+    sudo apt install libcurl4-gnutls-dev libpcre++-dev 
+    sudo apt-get install build-essential autoconf \
+        libmpdclient2 libmpdclient-dev libpcre3 libpcre3-dev \
+        libncursesw5 libncursesw5-dev libncurses5-dev \
+        libtagc0 libtagc0-dev

@@ -5,7 +5,6 @@
 language en_US.UTF-8
 set nocompatible
 syntax on
-colorscheme zellner
 
 
 " Plugins {{{1
@@ -91,6 +90,9 @@ set wildmenu
 set wildmode=list:longest,list:full
 set wrap
 set wrapscan
+set background=dark
+
+" colorscheme zellner
 
 " deactivate syntax highlighting when diffing
 if &diff
@@ -117,6 +119,7 @@ if has("gui_running")
     set number
     set background=light
 endif
+
 
 
 " Autocommands {{{1

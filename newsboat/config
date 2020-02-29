@@ -1,0 +1,31 @@
+#auto-reload yes
+#max-items 50
+
+reload-threads 4
+
+# unbind keys
+# unbind-key ENTER
+#unbind-key j
+#unbind-key k
+#unbind-key J
+#unbind-key K
+
+# bind keys - vim style
+bind-key j down
+bind-key k up
+bind-key l open
+bind-key h quit
+
+# https://github.com/jonasjacek/colorcli
+# COLORS 
+# ==================
+# http://www.newsbeuter.org/doc/newsbeuter.html#_configuring_colors
+# https://newsboat.org/releases/<VERSION>/docs/newsboat.html#_configuring_colors
+# color <element> <foreground color> <background color> [<attribute> ...]
+color background          color15   black reverse   # changed 
+color listnormal          color59   color15
+color listfocus           white     color31         # changed
+color listnormal_unread   color31   color15  bold
+color listfocus_unread    color31   color254 bold
+color info                color15   color24  bold
+color article             color59   color15

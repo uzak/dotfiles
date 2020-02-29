@@ -34,3 +34,7 @@ alias abook="abook --datafile /martinuzak/addressbook && rm /martinuzak/contacts
 alias F="| fzf"
 alias lt="ls -lct"          # override zsh / common-aliases
 alias ltr="ls -lctr"
+
+alias gs="git status"
+
+alias mutt=neomutt
