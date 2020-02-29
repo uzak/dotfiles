@@ -1,0 +1,219 @@
+#############################
+###### Account gmail ########
+#############################
+
+IMAPAccount gmail
+Host imap.gmail.com
+User martin.uzak@gmail.com
+PassCmd "cat ~/repos/dotfiles/mail/accounts/gmail.pass"
+SSLType IMAPS
+SSLVersions TLSv1.2
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+# Remote storage
+IMAPStore gmail-remote
+Account gmail
+
+# Local storage
+MaildirStore gmail-local
+Path /martinuzak/.Mail/gmail/
+Inbox /martinuzak/.Mail/gmail/INBOX
+Flatten .
+SubFolders Verbatim
+
+Channel gmail-inbox
+Master :gmail-remote:"INBOX"
+Slave :gmail-local:INBOX
+Create Both
+Expunge Slave
+
+Channel gmail-archive
+Master :gmail-remote:"[Gmail]/All Mail"
+Slave :gmail-local:archive
+Create Both
+Expunge Slave
+
+
+Channel gmail-drafts
+Master :gmail-remote:"[Gmail]/Drafts"
+Slave :gmail-local:drafts
+Create Both
+Expunge Slave
+
+Channel gmail-sent
+Master :gmail-remote:"[Gmail]/Sent Mail"
+Slave :gmail-local:sent
+Create Both
+Expunge Slave
+
+Channel gmail-trash
+Master :gmail-remote:"[Gmail]/Trash"
+Slave :gmail-local:trash
+Create Both
+Expunge Slave
+
+Channel gmail-spam
+Master :gmail-remote:"[Gmail]/Spam"
+Slave :gmail-local:spam
+Create Both
+Expunge Slave
+
+#Channel gmail-labels
+#Master :gmail-remote:
+#Patterns * ![Gmail]*  !INBOX
+#Slave :gmail-local:
+#Create Both
+#Expunge Slave
+
+
+Group gmail
+Channel gmail-inbox
+Channel gmail-archive
+Channel gmail-drafts
+Channel gmail-sent
+Channel gmail-trash
+Channel gmail-spam
+#Channel gmail-labels
+
+
+
+#####################################
+######## Account prusa ########
+#####################################
+
+IMAPAccount prusa
+Host imap.gmail.com
+User martin.uzak@prusa3d.cz
+PassCmd "cat ~/repos/dotfiles/mail/accounts/prusa.pass"
+SSLType IMAPS
+SSLVersions TLSv1.2
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+# Remote storage
+IMAPStore prusa-remote
+Account prusa
+
+# Local storage
+MaildirStore prusa-local
+Path /martinuzak/.Mail/prusa/
+Inbox /martinuzak/.Mail/prusa/INBOX
+Flatten .
+SubFolders Verbatim
+
+Channel prusa-inbox
+Master :prusa-remote:"INBOX"
+Slave :prusa-local:INBOX
+Create Both
+Expunge Slave
+
+Channel prusa-drafts
+Master :prusa-remote:"[Gmail]/Drafts"
+Slave :prusa-local:drafts
+Create Both
+Expunge Slave
+
+Channel prusa-sent
+Master :prusa-remote:"[Gmail]/Sent Mail"
+Slave :prusa-local:sent
+Create Both
+Expunge Slave
+
+Channel prusa-trash
+Master :prusa-remote:"[Gmail]/Trash"
+Slave :prusa-local:trash
+Create Both
+Expunge Slave
+
+Channel prusa-spam
+Master :prusa-remote:"[Gmail]/Spam"
+Slave :prusa-local:spam
+Create Both
+Expunge Slave
+
+Channel prusa-archive
+Master :prusa-remote:"[Gmail]/All Mail"
+Slave :prusa-local:archive
+Create Both
+Expunge Slave
+
+#Channel prusa-labels
+#Master :prusa-remote:
+#Patterns * ![Gmail]*  !INBOX
+#Slave :prusa-local:
+#Create Both
+#Expunge Slave
+
+Group prusa
+Channel prusa-inbox
+Channel prusa-drafts
+Channel prusa-sent
+Channel prusa-trash
+Channel prusa-spam
+Channel prusa-archive
+
+
+
+#################################
+######## Account mailbox ########
+#################################
+
+IMAPAccount mailbox
+Host imap.mailbox.org
+User uzak@mailbox.org
+PassCmd "cat ~/repos/dotfiles/mail/accounts/mailbox.pass"
+SSLType IMAPS
+SSLVersions TLSv1.2
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+# Remote storage
+IMAPStore mailbox-remote
+Account mailbox
+
+# Local storage
+MaildirStore mailbox-local
+Path /martinuzak/.Mail/mailbox/
+Inbox /martinuzak/.Mail/mailbox/INBOX
+
+Channel mailbox-inbox
+Master :mailbox-remote:"INBOX"
+Slave :mailbox-local:INBOX
+Create Both
+Expunge Both
+
+Channel mailbox-archive
+Master :mailbox-remote:"Archive"
+Slave :mailbox-local:archive
+Create Both
+Expunge Both
+
+Channel mailbox-drafts
+Master :mailbox-remote:"Drafts"
+Slave :mailbox-local:drafts
+Create Both
+Expunge Both
+
+Channel mailbox-sent
+Master :mailbox-remote:"Sent"
+Slave :mailbox-local:sent
+Create Both
+Expunge Both
+
+Channel mailbox-trash
+Master :mailbox-remote:"Trash"
+Slave :mailbox-local:trash
+Create Both
+Expunge Both
+
+Channel mailbox-junk
+Master :mailbox-remote:"Junk"
+Slave :mailbox-local:junk
+Create Both
+Expunge Both
+
+Group mailbox
+Channel mailbox-inbox
+Channel mailbox-archive
+Channel mailbox-drafts
+Channel mailbox-sent
+Channel mailbox-trash
+Channel mailbox-junk

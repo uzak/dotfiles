@@ -1,0 +1,30 @@
+set from = "martin.uzak@prusa3d.cz"
+set sendmail = "msmtp -a prusa"
+
+# Set folders
+set spoolfile = "+prusa/INBOX"
+set mbox = "+prusa/archive"
+set postponed = "+prusa/drafts"
+set record = "+prusa/sent"
+set trash = "+prusa/trash"
+
+# custom signaure
+set signature = ~/.mutt/signatures/default
+
+#color status red default
+
+macro index o "<shell-escape>mbsync prusa<enter>" "run mbsync to sync mail for this account"
+
+macro index,pager s \
+  "<enter-command>set my_old_resolve=\$resolve noresolve<enter>\
+  <tag-prefix><clear-flag>n<enter-command>set resolve=\$my_old_resolve<enter>\
+  <save-message>+prusa/junk<enter>" \
+  "mark as read and move to junk folder"
+
+macro index,pager a \
+  "<save-message>+prusa/archive<enter>"  \
+  "move message to the archive"
+
+macro index,pager i \
+  "<save-message>+prusa/INBOX<enter>"  \
+  "move message to the inbox"
