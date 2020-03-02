@@ -17,12 +17,14 @@ application/vnd.stardivision.writer; libreoffice --writer %s
 application/vnd.stardivision.writer-global; libreoffice --writer %s
 application/x-starwriter; libreoffice --writer %s
 application/vnd.sun.xml.writer.template; libreoffice --writer %s
+application/vnd.oasis.opendocument.text; libreoffice --writer %s
 
 # Star/Open Office Calc
 application/vnd.sun.xml.calc; libreoffice --calc %s
 application/vnd.stardivision.calc; libreoffice --calc %s
 application/x-starcalc; libreoffice --calc %s
 application/vnd.sun.xml.calc.template; libreoffice --calc %s
+application/vnd.oasis.opendocument.spreadsheet; libreoffice --calc %s
 
 # Star/Open Office Draw
 application/vnd.sun.xml.draw; libreoffice --draw %s
@@ -57,14 +59,12 @@ application/vnd.ms-excel.addin.macroEnabled.12; libreoffice --writer %s
 application/vnd.ms-excel.sheet.binary.macroEnabled.12; libreoffice --writer %s
 
 # Images
-image/jpeg; sxiv %s
-image/pjpeg; sxiv %s
-image/png; sxiv %s
-image/gif; sxiv %s
-image/tiff; sxiv %s
+image/*; sxiv %s
+#image/*; xdg-open %s
 
 # PDF
 application/pdf; zathura %s
+#application/pdf; xdg-open %s
 
 # HTML
 #text/html; firefox '%s' & read; test=test -n "$DISPLAY"; needsterminal;

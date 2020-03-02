@@ -5,7 +5,7 @@
 IMAPAccount gmail
 Host imap.gmail.com
 User martin.uzak@gmail.com
-PassCmd "cat ~/repos/dotfiles/mail/accounts/gmail.pass"
+PassCmd "pass general/gmail-imap"
 SSLType IMAPS
 SSLVersions TLSv1.2
 CertificateFile /etc/ssl/certs/ca-certificates.crt
@@ -84,7 +84,7 @@ Channel gmail-spam
 IMAPAccount prusa
 Host imap.gmail.com
 User martin.uzak@prusa3d.cz
-PassCmd "cat ~/repos/dotfiles/mail/accounts/prusa.pass"
+PassCmd "pass general/prusa-imap"
 SSLType IMAPS
 SSLVersions TLSv1.2
 CertificateFile /etc/ssl/certs/ca-certificates.crt
@@ -160,7 +160,7 @@ Channel prusa-archive
 IMAPAccount mailbox
 Host imap.mailbox.org
 User uzak@mailbox.org
-PassCmd "cat ~/repos/dotfiles/mail/accounts/mailbox.pass"
+PassCmd "pass general/mailbox.org"
 SSLType IMAPS
 SSLVersions TLSv1.2
 CertificateFile /etc/ssl/certs/ca-certificates.crt
