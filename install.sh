@@ -34,6 +34,11 @@ ln ~/repos/dotfiles/mail/msmtprc ~/.msmtprc         # symlink doesn't work
 ln -s ~/repos/dotfiles/mail/mbsyncrc ~/.mbsyncrc
 ln -s ~/repos/dotfiles/mail/mutt ~/.mutt
 
+vdirsyncer discover
+vdirsyncer sync
+mbsync -a
+mu -m /martinuzak/.Mail index rebuild
+
 
 # contacts
 mkdir -p /martinuzak/.Contacts
