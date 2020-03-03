@@ -49,3 +49,21 @@ ln -s ~/repos/dotfiles/contacts/vdirsyncer/config ~/.vdirsyncer
 mkdir -p ~/.config/khard
 ln -s ~/repos/dotfiles/contacts/khard/khard.conf ~/.config/khard
 
+# mpd, vimpc
+sudo apt install mpd mpc
+sudo sevice mpd stop
+sudo update-rc.d mpd disable
+
+ln -s  ~/repos/dotfiles/mpd.conf ~/.mpdconf
+mkdir ~/.mpd
+mkdir -p ~/.mpd/playlists
+touch ~/.mpd/{mpd.db,mpd.log,mpd.pid,mpdstate}
+mpc update
+
+ln -s ~/repos/dotfiles/vimpcrc ~/.vimpcrc
+# git clone vimpc &&
+# build from the sources
+
+mkdir -p ~/.config/systemd/user
+ln -s ~/repos/dotfiles/systemd/user/mpd.service ~/.config/systemd/user/
+systemctl --user start mpd
