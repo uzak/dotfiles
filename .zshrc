@@ -54,7 +54,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins
-plugins=(aws autojump brew command-not-found common-aliases compleat copyfile docker docker-compose git jsontools kubectl npm pip python terraform yarn web-search)
+plugins=(aws autojump brew command-not-found common-aliases compleat copyfile docker docker-compose git jsontools kubectl npm pip python terraform yarn web-search pass)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,16 +107,24 @@ bindkey "^[e" end-of-line
 
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH:$HOME/repos/scripts:$HOME/repos/ttt"
+export PATH="$PATH:/snap/bin/"
 
 export PYTHONPATH=$PYTHONPATH:~/repos/
 export PYTHONSTARTUP=~/.pystartup
 export PATH=$PATH:$HOME/.local/bin # for pip installs
 export MYVIMRC=~/.vimrc
-export FZF_DEFAULT_OPTS='--layout=reverse --border'
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export BACKUP_DIRS="/martinuzak ~/repos ~/sandbox ~/work ~/Pictures ~/Documents ~/.mozilla/firefox/*/bookmarkbackups"
-#export FZF_DEFAULT_OPTS='--height 96% --reverse --preview "pygmentize -g {}"'
 
+export GNUPGHOME="/martinuzak/.gnupg"
+export PASSWORD_STORE_DIR="/martinuzak/.password-store"
+export PASSWORD_STORE_GIT="/martinuzak/.password-store"
+
+# Configure fzf, command line fuzzyf finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPTS="--no-mouse --height 50% -1 --reverse --multi --inline-info --preview='[[ \$(file --mime {}) =~ binary ]] && echo {} is a binary file || (bat --style=numbers --color=always {} || cat {}) 2> /dev/null | head -300' --preview-window='right:hidden:wrap' --bind='ctrl-f:execute(bat --style=numbers {} || less -f {}),ctrl-p:toggle-preview,ctrl-d:half-page-down,ctrl-u:half-page-up,ctrl-a:select-all+accept,ctrl-y:execute-silent(echo {+} | xsel -b),ctrl-x:execute(rm -i {+})+abort'"
+export FZF_DEFAULT_COMMAND="git ls-files --cached --others --exclude-standard || rg --files --no-ignore-vcs --hidden"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
+export BAT_PAGER="less -R"
+export BAT_THEME="Monokai Extended"
+
+export BACKUP_DIRS="/martinuzak ~/Pictures ~/.mozilla/firefox/*/bookmarkbackups"

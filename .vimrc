@@ -6,6 +6,8 @@ language en_US.UTF-8
 set nocompatible
 syntax on
 
+" fix gx command for gvim (https://github.com/vim/vim/issues/4738#issuecomment-521506447)
+nmap gx yiW:!firefox <cWORD><CR> <C-r>" & <CR><CR>
 
 " Plugins {{{1
 "
@@ -52,7 +54,7 @@ set autoindent
 set autoread
 set autowrite
 set backspace=indent,eol,start
-set clipboard=unnamed      " use system clipboard
+set clipboard=unnamed,unnamedplus       " use system clipboard
 set colorcolumn=80
 set complete+=kspell
 set encoding=utf-8
@@ -65,7 +67,7 @@ set hlsearch
 set ignorecase
 set incsearch
 set laststatus=2
-set listchars=extends:»,precedes:«,trail:·,tab:⇥\ ,eol:↵
+set listchars=extends:»,precedes:«,trail:·,tab:⇥\ ,eol:↵,space:␣
 set mouse=a
 set nobackup
 set nojoinspaces
@@ -92,7 +94,7 @@ set wrap
 set wrapscan
 set background=dark
 
-" colorscheme zellner
+colorscheme zellner
 
 " deactivate syntax highlighting when diffing
 if &diff
@@ -109,7 +111,7 @@ endif
 if has("mac")
     set guifont=Inconsolata\ for\ Powerline:h14
 elseif has("unix")
-    set guifont=Monospace\ 12
+    set guifont=Monospace\ 14
 elseif has("gui_win32")
     set guifont=Consolas:h11:cANSI
 endif
@@ -147,8 +149,10 @@ augroup init
 
     " special settings for writing emails, flowed text at 72 width
     autocmd FileType mail setlocal textwidth=72
+    autocmd FileType mail setlocal background=dark
     autocmd FileType mail setlocal comments+=nb:>
     autocmd FileType mail setlocal formatoptions+=awq
+    autocmd FileType mail colorscheme hybrid
 
     " add the dash to keywords -- makes better css/js/html search
     " do this for specific files only (not in php/rb e.g.) where dashes are
@@ -188,10 +192,10 @@ augroup init
     au focuslost * :wa
 augroup END
 
-autocmd BufNew,BufEnter *md colorscheme hybrid
 " fix colors after setting colorscheme
-autocmd BufNew,BufEnter * call lightline#enable() 
-autocmd BufLeave *md colorscheme zellner
+ autocmd BufNew,BufEnter *md colorscheme hybrid
+ autocmd BufNew,BufEnter * call lightline#enable() 
+ autocmd BufLeave *md colorscheme zellner
 
 " Keymaps {{{1
 
@@ -224,9 +228,6 @@ nnoremap <leader>de :setlocal spell spelllang=de<cr>
 nnoremap <leader>en :setlocal spell spelllang=en<cr>
 nnoremap <leader>sk :setlocal spell spelllang=sk<cr>
 nnoremap <leader>cz :setlocal spell spelllang=cz<cr>
-
-" IDEA like search
-nnoremap <S-f> :Files<CR>
 
 " Leaders {{{1
 
@@ -312,7 +313,6 @@ nnoremap <leader>, :Files<cr>
 nnoremap <leader>. :Buffers<cr>
 nnoremap <leader>l :Lines<cr>
 nnoremap <leader>a :Rg<cr>
-nnoremap <leader>h :History:<cr>
 
 
 "NERDtree {{{2
