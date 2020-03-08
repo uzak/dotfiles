@@ -73,16 +73,16 @@ alternative_order text/plain text/enriched text/html
 auto_view text/html
 
 # GPG/PGP 
-#set pgp_sign_as = 2F283D0D
-#set crypt_use_gpgme = yes
-#set crypt_autosign = no
-#set crypt_verify_sig = yes
-#set crypt_replysign = yes
-#set crypt_replyencrypt = yes
-#set crypt_replysignencrypted = yes
+set pgp_sign_as = 9054E917
+set crypt_use_gpgme = yes
+set crypt_autosign = no
+set crypt_verify_sig = yes
+set crypt_replysign = yes
+set crypt_replyencrypt = yes
+set crypt_replysignencrypted = yes
 
 # sidebar patch config
-set sidebar_visible
+unset sidebar_visible
 set sidebar_short_path
 set sidebar_folder_indent
 set sidebar_width = 25
@@ -102,7 +102,7 @@ mailboxes =prusa/INBOX =prusa/archive =prusa/sent =prusa/drafts =prusa/spam =pru
 
 # source colors and keybindings
 # keeping those in one place makes it easier for my brain
-source ~/repos/colorcli/colorcli.muttrc
+source ~/.mutt/colors
 source ~/.mutt/bindings
 
 set signature = ~/.mutt/signatures/default
@@ -110,7 +110,7 @@ set signature = ~/.mutt/signatures/default
 # And finally the account config for multiple accounts
 #############################################################
 
-# by default, use gmail
+# by default, use mailbox
 set realname = "Martin Užák"
 set spoolfile = "+mailbox/INBOX"
 source ~/.mutt/accounts/mailbox

@@ -10,16 +10,12 @@ bind pager G bottom
 bind index G last-entry
 
 # Sidebar Navigation
-#bind index,pager <down> sidebar-next
-#bind index,pager <up> sidebar-prev
-#bind index,pager <right> sidebar-open
-
-# XXX useful?
 bind index,pager \Ch sidebar-prev-new
 bind index,pager \Cl sidebar-next-new
 bind index,pager \Ck sidebar-prev
 bind index,pager \Cj sidebar-next
 bind index,pager \Co sidebar-open
+bind index,pager \Ct sidebar-toggle-visible
 
 
 # index and pager shortcuts
@@ -45,4 +41,3 @@ bind index p recall-message
 bind editor <tab> complete-query
 macro index F "<shell-escape>mu find --clearlinks --format=links --linksdir=~/.mu/results " "mu find"
 macro index \cf "<change-folder-readonly>~/.mu/results<enter>" "mu find results"
-
