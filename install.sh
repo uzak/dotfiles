@@ -20,11 +20,8 @@ done
 # do this only after vim and its modules have been installed
 curl -fLo ~/.vim/plugged/lightline.vim/autoload/lightline/colorscheme/colorcli.vim https://raw.githubusercontent.com/jonasjacek/colorcli/master/colorcli.vim
 
+
 ln -s ~/repos/dotfiles/tmux.conf ~/.tmux.conf
-
-ln -s ~/repos/dotfiles/cmus  ~/.config
-
-
 
 
 ### mail
