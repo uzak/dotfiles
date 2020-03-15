@@ -128,3 +128,5 @@ export BAT_PAGER="less -R"
 export BAT_THEME="Monokai Extended"
 
 export BACKUP_DIRS="/martinuzak ~/Pictures ~/.mozilla/firefox/*/bookmarkbackups"
+
+unset MOZ_NO_REMOTE

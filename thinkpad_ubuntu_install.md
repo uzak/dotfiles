@@ -1,6 +1,6 @@
-# Ubuntu on T480s
+Ubuntu on T480s
 
-## Install
+# Install
 * normal installation
 * use disk encryption
 
@@ -8,7 +8,7 @@
 
     sudo apt update
     sudo apt dist-upgrade
-    sudo apt install git curl htop mc bmon net-tools ctags golang 
+    sudo apt install git tig curl htop mc bmon net-tools ctags golang 
     sudo apt install vim-gtk3 vim zsh 
     sudo apt install gimp mpv moc
     sudo apt install gnome-tweak-tool
@@ -17,10 +17,11 @@
     sudo apt install cloc tree fzf ripgrep
     sudo apt install python3 python3-pip pipenv python3-sphinx
     sudo apt install virtualbox virtualbox-ext-pack
-    sudo apt install plantuml dbeaver-ce
+    sudo apt install plantuml dbeaver-ce # alternative: datagrip
     sudo apt install neofetch neomutt w3m
-    sudo apt install pass # upass
+    sudo apt install pass gnupg upass
     sudo apt install keepass2
+    sudo apt install bat ack
     
     sudo apt install catimg autojump            # tools for zsh plugin 
 
@@ -146,3 +147,19 @@ https://github.com/boysetsfrog/vimpc
         libmpdclient2 libmpdclient-dev libpcre3 libpcre3-dev \
         libncursesw5 libncursesw5-dev libncurses5-dev \
         libtagc0 libtagc0-dev
+        
+### Firefox
+
+    adblock plus
+    facebook container
+    google container
+    https everywhere
+    vue.js devtools
+    
+### Slack 
+
+install manually not from snap. Snap is slower and has problem opening links in firefox once it is running. [Download](https://slack.com/intl/en-cz/downloads/instructions/ubuntu)
+
+and then run:
+
+    sudo apt --fix-broken install

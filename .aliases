@@ -25,20 +25,19 @@ alias ttt="ttt.py /martinuzak/work/prusa3d/tt_prusa_`date +%Y-%m`.txt -hr"
 alias tt="ttt.py /martinuzak/work/prusa3d/tt_prusa_`date +%Y-%m`.txt -hr --from_date `date +%Y-%m-%d`"
 
 alias nvim="nvim -u ~/.vimrc"
+alias vim=nvim
 alias v=vim
 alias vi=vim
 
 alias feedly=newsboat
 
-alias lt="ls -lct"          # override zsh / common-aliases
+alias lt="ls -lct"                      # override zsh/common-aliases
 alias ltr="ls -lctr"
 
-alias gs="git status"
-
 alias mutt=neomutt
+alias neomutt="(cd ~/Desktop && neomutt)"  # to save attachments in ~/Desktop
 alias passmenu=/usr/share/doc/pass/examples/dmenu/passmenu
 
 if [ -n "$ZSH_VERSION" ]; then
 	alias -g F='| fzf'
-    unalias gl              # enable `gitless` again
 fi
