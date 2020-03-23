@@ -1,5 +1,8 @@
 #! /bin/bash
 
+#TODO use a variable instead of '~/repos/dotfiles' all the time
+DOTFILES=~/repos/dotfiles
+
 # get rid of existing dotfile and create a symlink to dotfiles
 function install {
     src=$1
@@ -64,3 +67,8 @@ ln -s ~/repos/dotfiles/vimpcrc ~/.vimpcrc
 mkdir -p ~/.config/systemd/user
 ln -s ~/repos/dotfiles/systemd/user/mpd.service ~/.config/systemd/user/
 systemctl --user start mpd
+
+ln -s ~/repos/dotfiles/ideavimrc ~/.ideavimrc
+
+# emacs
+ln -s $DOTFILES/emacs.d ~/.emacs.d
