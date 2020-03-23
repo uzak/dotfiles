@@ -72,3 +72,6 @@ ln -s ~/repos/dotfiles/ideavimrc ~/.ideavimrc
 
 # emacs
 ln -s $DOTFILES/emacs.d ~/.emacs.d
+
+# git
+git config --global core.excludesfile $DOTFILES/gitignore 
