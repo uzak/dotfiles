@@ -130,3 +130,4 @@ export BAT_THEME="Monokai Extended"
 export BACKUP_DIRS="/martinuzak ~/Pictures ~/.mozilla/firefox/*/bookmarkbackups"
 
 unset MOZ_NO_REMOTE
+export CONNECT_DB_NAME=connect_uzak

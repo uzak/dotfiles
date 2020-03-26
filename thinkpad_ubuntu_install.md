@@ -8,20 +8,22 @@ Ubuntu on T480s
 
     sudo apt update
     sudo apt dist-upgrade
-    sudo apt install git tig curl htop mc bmon net-tools ctags golang 
-    sudo apt install vim-gtk3 vim zsh 
+    sudo apt install git tig curl mc net-tools ctags golang 
+    sudo apt install iotop iftop htop bmon
+    sudo apt install vim-gtk3 vim neovim zsh 
     sudo apt install gimp mpv moc
     sudo apt install gnome-tweak-tool
     sudo apt install aria2
     sudo apt install mythes-sk libreoffice-l10n-sk hyphen-sk
-    sudo apt install cloc tree fzf ripgrep
+    sudo apt install cloc tree 
     sudo apt install python3 python3-pip pipenv python3-sphinx
     sudo apt install virtualbox virtualbox-ext-pack
     sudo apt install plantuml dbeaver-ce # alternative: datagrip
     sudo apt install neofetch neomutt w3m
     sudo apt install pass gnupg upass
     sudo apt install keepass2
-    sudo apt install bat ack
+    sudo apt install bat ack fzf ripgrep
+    sudo apt install emacs emacs-gtk
     
     sudo apt install catimg autojump            # tools for zsh plugin 
 
@@ -107,6 +109,8 @@ http://ubuntuhandbook.org/index.php/2019/03/disable-mute-alert-sound-ubuntu-19-0
 ## Apple keyboard
 Use keyboard layout _English (Macintosh)_
 
+https://wiki.archlinux.org/index.php/Apple_Keyboard
+
 Create an autostart script for Xmodmap and chmod a+x it
 
     cat ~/.config/autostart/keyboard.sh
@@ -116,8 +120,10 @@ Create an autostart script for Xmodmap and chmod a+x it
 hid\_apple module settings
 
     cat /etc/modprobe.d/hid_apple.conf    
-    options hid_apple fnmode=2
+    options hid_apple fnmode=1
     options hid_apple swap_opt_cmd=0
+    options hid_apple iso_layout=0
+    
 
 Disable wakup from USB (bluetooth keyboard). Press and hold ``fn`` to wakeup or
 use poweron button or open the lid.
@@ -155,6 +161,7 @@ https://github.com/boysetsfrog/vimpc
     google container
     https everywhere
     vue.js devtools
+    tridactyl
     
 ### Slack 
 

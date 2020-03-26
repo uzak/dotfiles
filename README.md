@@ -6,8 +6,9 @@ Install guide:
 
 Inspiration & Kudos:
 
-* [samoshkin](https://github.com/samoshkin/dotfiles)
+* [samoshkin](https://github.com/samoshkin/dotfiles) (tmux)
+* [cbracken](https://github.com/cbracken/mutt) (mutt)
 * [webgefrickel](https://github.com/webgefrickel/dotfiles)
 * [connermcd](https://github.com/connermcd/dotfiles)
-* [cbracken](https://github.com/cbracken/mutt)
 * https://github.com/fisadev/fisa-vim-config/blob/master/config.vim
+* https://github.com/nickjj/dotfiles (toolset on windows)

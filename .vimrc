@@ -1,7 +1,5 @@
 " Setup {{{1
 
-" TODO mappings for ack, fzf, jedi?
- 
 language en_US.UTF-8
 set nocompatible
 syntax on
@@ -38,16 +36,6 @@ Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 "   sudo apt install xdg-utils curl nodejs
 "   npm -g install instant-markdown-d
 
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-Plug 'deoplete-plugins/deoplete-jedi'
-Plug 'davidhalter/jedi-vim'
-
 Plug 'aperezdc/vim-template'
 Plug 'ap/vim-css-color'
 Plug 'dense-analysis/ale'
@@ -55,10 +43,9 @@ Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
-Plug 'preservim/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'vimwiki/vimwiki'
-Plug 'w0ng/vim-hybrid'
+Plug 'w0ng/vim-hybrid'                  " hybrid colorscheme
 
 Plug 'valloric/MatchTagAlways'          " highlight enclosing html/xml tags 
 Plug 'google/vim-searchindex'           " shows  'M/N' matches found
@@ -71,9 +58,28 @@ Plug 'mileszs/ack.vim'                  " Ack code search (requires ack)
 Plug 't9md/vim-choosewin'               " Window chooser
 Plug 'fisadev/FixedTaskList.vim'        " Pending tasks list
 
-" Plug 'mattn/emmet-vim'
-" Plug 'tpope/vim-surround'
-" Plug 'tpope/vim-dadbod'
+Plug 'gruvbox-community/gruvbox'        " gruvbox colorscheme
+
+Plug 'tpope/vim-obsession'              " better :mksession
+Plug 'plasticboy/vim-markdown'
+Plug 'tpope/vim-surround'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'bronson/vim-visual-star-search'   " search for visual sel. by */#
+Plug 'tpope/vim-vividchalk'             " another nice colorschme
+Plug 'tpope/vim-commentary'             " comment stuff out (`gcc`/`gc`+motion)
+
+"Plug 'tpope/vim-eunuch'                 " VIM sugar for basix UNIX cmds
+"Plug 'mattn/emmet-vim'                " powerful HTML/CSS/JS completion
+"Plug 'tpope/vim-dadbod'                 " SQL (modern DB interface) 
+"if has('nvim')
+  "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"else
+  "Plug 'Shougo/deoplete.nvim'
+  "Plug 'roxma/nvim-yarp'
+  "Plug 'roxma/vim-hug-neovim-rpc'
+"endif
+"Plug 'deoplete-plugins/deoplete-jedi'
+"Plug 'davidhalter/jedi-vim'
 
 call plug#end()
 
@@ -82,6 +88,7 @@ if vim_plug_just_installed
     echo "Installing Bundles, please ignore key map error messages"
     :PlugInstall
 endif
+
 
 
 " Options {{{1
@@ -165,7 +172,7 @@ endif
 if has("mac")
     set guifont=Inconsolata\ for\ Powerline:h14
 elseif has("unix")
-    set guifont=Monospace\ 14
+    set guifont=Monospace\ 13
 elseif has("gui_win32")
     set guifont=Consolas:h11:cANSI
 endif
@@ -258,8 +265,6 @@ autocmd BufWritePre *.py :%s/\s\+$//e
 " Keymaps {{{1
 
 " tabs
-nnoremap t<S-Tab> :tabprev<CR>
-nnoremap t<Tab> :tabnext<CR>
 nnoremap <C-t> :tabnew<cr>
 
 " jk nice behaviour (screen lines vs. shown lines)
@@ -271,8 +276,6 @@ nnoremap Q <nop>
 
 " For when you forget to sudo.. Really Write the file.
 cmap w!! w !sudo tee % >/dev/null
-
-" nnoremap Q :qa!<cr>
 
 " command mode shortcuts to often used dirs
 cnoremap %% <C-R>=fnameescape(expand("%:p:h")."/")<CR>
@@ -286,9 +289,7 @@ nnoremap <leader>en :setlocal spell spelllang=en<cr>
 nnoremap <leader>sk :setlocal spell spelllang=sk<cr>
 nnoremap <leader>cz :setlocal spell spelllang=cz<cr>
 
-" clear search results
-nnoremap <silent> // :noh<CR>
-
+nnoremap Q :qa!<cr>
 
 " Leaders {{{1
 
@@ -310,8 +311,6 @@ nnoremap <leader>vs :source $MYVIMRC<cr>
 nnoremap <leader>ve :e $MYVIMRC<cr>
 nnoremap <expr><leader>tt ':e /martinuzak/work/prusa3d/tt_prusa_' . strftime('%Y-%m') . '.txt<CR>'
 nnoremap <leader>td :e /martinuzak/todo.txt<CR>
-nnoremap <leader>p  :cd ~/repos/prusa<C-d>
-nnoremap <leader>b  :cd /home/m/repos/blog/_posts/<CR>
 
 " Opens an edit command with the path of the currently edited file filled in
 nnoremap <leader>o :e <C-R>=expand("%:p:h") . "/" <CR>
@@ -319,7 +318,7 @@ nnoremap <leader>o :e <C-R>=expand("%:p:h") . "/" <CR>
 " insert mode mappings
 inoremap <leader>D <C-r>=strftime('%Y-%m-%d')<cr>
 inoremap <leader>d <C-r>=strftime('%Y-%m-%d %H:%M')<cr>
-inoremap <leader>i import code; code.interact(local=dict(globals(), **locals()))<esc>
+inoremap <leader>py import code; code.interact(local=dict(globals(), **locals()))<esc>
 
 " Plugin Settings {{{1
 
@@ -334,13 +333,13 @@ nnoremap <silent> <leader>gb :Gblame<CR><C-w>20+
 " deoplete {{{2
 
 " deoplete doesn't start up with normal gvim
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_smart_case=1
-let g:deoplete#auto_complete_delay=150
-
+"let g:deoplete#enable_at_startup = 1
+"let g:deoplete#enable_smart_case=1
+"let g:deoplete#auto_complete_delay=150
+"
 " try to fix too slow autocompletion
-let g:pymode_rope = 0
-
+"let g:pymode_rope = 0
+"
 
 " needed so deoplete can auto select the first suggestion
 set completeopt+=noinsert
@@ -351,15 +350,15 @@ autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
 
 " jedi.vim {{{2
 " disable autocompletion, cause we use deoplete for completion?
-let g:jedi#completions_enabled = 1
+"let g:jedi#completions_enabled = 0
 
 " open the go-to function in tab, not another buffer
-let g:jedi#use_tabs_not_buffers = 0
+"let g:jedi#use_tabs_not_buffers = 0
 
-let g:jedi#show_call_signatures = 0
+"let g:jedi#show_call_signatures = 0
 
 " completion too slow?
-let g:pymode_rope = 0
+"let g:pymode_rope = 0
 
 " lightline {{{2
 set noshowmode "no show mode because of lightline
@@ -381,19 +380,6 @@ nnoremap <leader>. :Buffers<cr>
 nnoremap <leader>rg :Rg<cr>
 nnoremap <leader>l :Lines<cr>
 
-
-"NERDtree {{{2
-let g:NERDTreeIgnore = ['^__pycache__$']
-nnoremap <C-n> :NERDTreeToggle<cr>
-
-" Autorefresh on tree focus
-function! NERDTreeRefresh()
-    if &filetype == "nerdtree"
-        silent exe substitute(mapcheck("R"), "<CR>", "", "")
-    endif
-endfunction
-
-autocmd BufEnter * call NERDTreeRefresh()
 
 " aperezdc/vim-template {{{2
 let g:templates_directory='~/repos/dotfiles/.vim-templates'

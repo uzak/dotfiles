@@ -15,5 +15,4 @@ fileext = ".vcf"
 type = "carddav"
 url = "https://dav.mailbox.org"
 username = "uzak@mailbox.org"
-#password.fetch = ["command", "cat", "~/repos/dotfiles/mail/accounts/mailbox.pass"]
-password.fetch = ["prompt", "Password for `mailbox`"]
+password.fetch = ["command", "~/repos/dotfiles/contacts/vdirsyncer/get-pass.sh"]

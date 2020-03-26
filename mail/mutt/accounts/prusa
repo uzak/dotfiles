@@ -11,15 +11,9 @@ set trash = "+prusa/trash"
 # custom signaure
 set signature = ~/.mutt/signatures/default
 
-#color status red default
+color status black color214
 
-macro index o "<shell-escape>mbsync prusa<enter>" "run mbsync to sync mail for this account"
-
-macro index,pager s \
-  "<enter-command>set my_old_resolve=\$resolve noresolve<enter>\
-  <tag-prefix><clear-flag>n<enter-command>set resolve=\$my_old_resolve<enter>\
-  <save-message>+prusa/junk<enter>" \
-  "mark as read and move to junk folder"
+macro index <tab> "<shell-escape>mbsync prusa<enter>" "run mbsync to sync mail for this account"
 
 macro index,pager a \
   "<save-message>+prusa/archive<enter>"  \

@@ -11,15 +11,9 @@ set trash = "+gmail/trash"
 # custom signaure
 set signature = ~/.mutt/signatures/default
 
-#color status cyan default
+color status white red
 
-macro index o "<shell-escape>mbsync gmail<enter>" "run mbsync to sync mail for this account"
-
-#macro index,pager s \
-#  "<enter-command>set my_old_resolve=\$resolve noresolve<enter>\
-#  <tag-prefix><clear-flag>n<enter-command>set resolve=\$my_old_resolve<enter>\
-#  <save-message>+gmail/junk<enter>" \
-#  "mark as read and move to junk folder"
+macro index <tab> "<shell-escape>mbsync gmail<enter>" "run mbsync to sync mail for this account"
 
 macro index,pager a \
   "<save-message>+gmail/archive<enter>"  \

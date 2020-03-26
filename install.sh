@@ -75,3 +75,6 @@ ln -s $DOTFILES/emacs.d ~/.emacs.d
 
 # git
 git config --global core.excludesfile $DOTFILES/gitignore 
+
+# ack
+ln -s $DOTFILES/ackrc /.ackrc
