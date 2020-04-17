@@ -32,8 +32,6 @@ alias feedly=newsboat
 alias lt="ls -lct"                      # override zsh/common-aliases
 alias ltr="ls -lctr"
 
-alias mutt=neomutt
-alias neomutt="(cd ~/Desktop && neomutt)"  # to save attachments in ~/Desktop
 alias passmenu=/usr/share/doc/pass/examples/dmenu/passmenu
 
 if [ -n "$ZSH_VERSION" ]; then
@@ -41,3 +39,11 @@ if [ -n "$ZSH_VERSION" ]; then
 fi
 
 alias halt=poweroff
+
+alias emacs="emacsclient -a '' -c"
+
+alias ydl=youtube-dl
+
+alias mutt=neomutt
+alias install="sudo apt install --install-suggests"
+alias mpv=celluloid

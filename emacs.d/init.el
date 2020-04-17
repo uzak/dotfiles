@@ -29,7 +29,7 @@
  '(package-hidden-regexps (quote ("\\`0blayout")))
  '(package-selected-packages
    (quote
-    (iedit expand-region hungry-delete beacon undo-tre elpy jedi flycheck evil-org zenburn-theme which-key use-package try orgalist org-bullets evil counsel color-theme auto-complete ace-window)))
+    (web-mode iedit expand-region hungry-delete beacon undo-tre elpy jedi flycheck evil-org zenburn-theme which-key use-package try orgalist org-bullets evil counsel color-theme auto-complete ace-window)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(vc-annotate-background "#2B2B2B")
  '(vc-annotate-color-map

@@ -1,2 +1,14 @@
+# global gitignore file
+
 # emacs tmp file
 \#*\#
+
+# vim backup files
+*.*~
+
+# jetbrains IDEs
+.idea/
+
+.mypy_cache/
+
+__pycache__

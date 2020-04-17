@@ -91,13 +91,11 @@ set sidebar_indent_string = '  ''
 set sidebar_format = "%B %* [%?N?%N / ?%S]"
 
 # Mailboxes to show in the sidebar.
-mailboxes ="=== mailbox ======="
+mailboxes "=== mailbox ======="
 mailboxes =mailbox/INBOX =mailbox/archive =mailbox/sent =mailbox/drafts =mailbox/junk =mailbox/trash
-mailboxes ="=== gmail ========="
-mailboxes =gmail
+mailboxes "=== gmail ========="
 mailboxes =gmail/INBOX =gmail/archive =gmail/sent =gmail/drafts =gmail/spam =gmail/trash
-mailboxes ="=== prusa ========="
-mailboxes =prusa
+mailboxes "=== prusa ========="
 mailboxes =prusa/INBOX =prusa/archive =prusa/sent =prusa/drafts =prusa/spam =prusa/trash
 
 # source colors and keybindings

@@ -24,6 +24,10 @@ Ubuntu on T480s
     sudo apt install keepass2
     sudo apt install bat ack fzf ripgrep
     sudo apt install emacs emacs-gtk
+    sudo apt install translate-shell
+    sudo apt install ddgr googler nnn
+    sudo apt install ddgr googler nnn
+    sudo apt install gnome-mpv
     
     sudo apt install catimg autojump            # tools for zsh plugin 
 

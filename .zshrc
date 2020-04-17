@@ -127,7 +127,18 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export BAT_PAGER="less -R"
 export BAT_THEME="Monokai Extended"
 
-export BACKUP_DIRS="/martinuzak ~/Pictures ~/.mozilla/firefox/*/bookmarkbackups"
+export BACKUP_DIRS="/martinuzak ~/Pictures ~/.mozilla/firefox/*/bookmarkbackups ~/repos ~/.ssh"
 
 unset MOZ_NO_REMOTE
 export CONNECT_DB_NAME=connect_uzak
+
+export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>\/:\"'\'
+
+# https://www.thregr.org/~wavexx/rnd/20141010-zsh_show_ambiguity/index.html
+zstyle ':completion:*' show-ambiguity true
+zstyle ':completion:*' show-ambiguity "$color[bg-red]"
+
+function o {
+    dir=${1:-.}
+    (cd $dir && open `fzf`)
+}

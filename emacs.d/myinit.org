@@ -10,7 +10,7 @@
 (setq auto-revert-verbose nil)
 (global-set-key (kbd "<f5>") 'revert-buffer)
 
-(global-hl-line-mode t)
+;(global-hl-line-mode t)
 
 (setq save-interpgoram-paste-before-kill t)
 
@@ -30,6 +30,11 @@
 ;    (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
     
 ; C-c C-x - (insert timer item); next M-return
+
+;(custom-set-variables
+;'(org-directory "/martinuzak")
+;'(org-startup-indented t)
+;)
 #+END_SRC
 
 * EVIL
@@ -274,10 +279,13 @@ disable yasnippet-snippets for faster startup
     :ensure t
     :init (yas-global-mode 1))
 
-;(use-package yasnippet-snippets
-;    :ensure t
-;    :defer t)
+(use-package yasnippet-snippets
+    :ensure t
+    :defer t)
 #+END_SRC
+
+#+RESULTS:
+
 * Undo Tree
 great with `artist-mode` (for which disable evil first)
 shortcut: C-x u
@@ -299,5 +307,18 @@ shortcut: C-x u
       (load-file f)))
 #+END_SRC
 
-#+RESULTS:
-: load-if-exists
+* Web Mode
+#+BEGIN_SRC emacs-lisp
+(use-package web-mode
+:ensure t
+:config
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(setq web-mode-engines-alist
+'(("django"    . "\\.html\\'")))
+(setq web-mode-ac-sources-alist
+'(("css" . (ac-source-css-property))
+("html" . (ac-source-words-in-buffer ac-source-abbrev))))
+
+(setq web-mode-enable-auto-closing t)
+(setq web-mode-enable-auto-quoting t)) ; this fixes the quote problem I mentioned
+#+END_SRC
