@@ -45,5 +45,4 @@ alias emacs="emacsclient -a '' -c"
 alias ydl=youtube-dl
 
 alias mutt=neomutt
-alias install="sudo apt install --install-suggests"
 alias mpv=celluloid

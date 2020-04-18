@@ -406,7 +406,7 @@ nnoremap <leader>l :Lines<cr>
 
 
 " aperezdc/vim-template {{{2
-let g:templates_directory='~/repos/dotfiles/.vim-templates'
+let g:templates_directory='~/repos/dotfiles/vim/templates'
 let g:email='martin.uzak@gmail.com'
 let g:username='Martin Užák'
 

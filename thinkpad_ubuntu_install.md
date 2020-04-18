@@ -1,45 +1,15 @@
-Ubuntu on T480s
+# Ubuntu 20.04 on T480s
 
-# Install
+## Install
+
 * normal installation
 * use disk encryption
-
-## Basic tools
-
-    sudo apt update
-    sudo apt dist-upgrade
-    sudo apt install git tig curl mc net-tools ctags golang 
-    sudo apt install iotop iftop htop bmon
-    sudo apt install vim-gtk3 vim neovim zsh 
-    sudo apt install gimp mpv moc
-    sudo apt install gnome-tweak-tool
-    sudo apt install aria2
-    sudo apt install mythes-sk libreoffice-l10n-sk hyphen-sk
-    sudo apt install cloc tree 
-    sudo apt install python3 python3-pip pipenv python3-sphinx
-    sudo apt install virtualbox virtualbox-ext-pack
-    sudo apt install plantuml dbeaver-ce # alternative: datagrip
-    sudo apt install neofetch neomutt w3m
-    sudo apt install pass gnupg upass
-    sudo apt install keepass2
-    sudo apt install bat ack fzf ripgrep
-    sudo apt install emacs emacs-gtk
-    sudo apt install translate-shell
-    sudo apt install ddgr googler nnn
-    sudo apt install ddgr googler nnn
-    sudo apt install gnome-mpv
-    
-    sudo apt install catimg autojump            # tools for zsh plugin 
-
-    sudo apt install texlive-fonts-recommended texlive-latex-recommended 
-    sudo apt install pandoc texlive-latex-base texlive-xetex
-
-### Sudo
-
-    sudo -E visudo
-    sudo sh -c "echo \"$USER ALL=NOPASSWD: ALL\" >> /etc/sudoers"
-
-### Environment
+* disk layout
+    * 1GB /boot
+    * 100 MB efi (already created by windows)
+    * / encrypted
+     
+## Environment
 
     $ cat /etc/environment
 
@@ -48,41 +18,61 @@ Ubuntu on T480s
     LC_ALL=en_US.UTF-8
     EDITOR=vi
 
+## Basic tools
+
+    sudo apt update
+    sudo apt dist-upgrade
+    sudo apt install zsh catimg autojump            # zsh + tools for plugins
+    sudo apt install vim-gtk3 vim neovim emacs emacs-gtk
+    sudo apt install git tig ctags cloc bat ack fzf ripgrep
+    sudo apt install tmux mc tree curl net-tools 
+    sudo apt install iotop iftop htop bmon
+    sudo apt install gimp geeqie 
+    sudo apt install gnome-mpv mpv
+    sudo apt install gnome-tweak-tool
+    sudo apt install python3 python3-pip pipenv python3-sphinx
+    sudo apt install neomutt w3m isync msmtp urlscan ripmime mime-support 
+    sudo apt install pass gnupg upass
+    sudo apt install ddgr googler translate-shell
+    sudo apt install newsboat
+    sudo apt install aria2
+    sudo apt install neofetch 
+
+    sudo apt install plantuml 
+    sudo apt install mythes-sk libreoffice-l10n-sk hyphen-sk
+    sudo apt install texlive-fonts-recommended texlive-latex-recommended 
+    sudo apt install pandoc texlive-latex-base texlive-xetex
+
+### Sudo
+
+    sudo -E visudo
+    sudo sh -c "echo \"$USER ALL=NOPASSWD: ALL\" >> /etc/sudoers"
+    
+### zsh
+
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 ## Snap
 
-    sudo snap install chromium insomnia intellij-idea-community kotlin pycharm-community drawio code
+    sudo snap install insomnia 
+    sudo snap install --classic chromium
+    sudo snap install --classic kotlin
+    sudo snap install --classic pycharm-community
+    sudo snap install --classic intellij-idea-community
 
 ### Alternatively remove snapd
 
 	sudo apt autoremove --purge snapd gnome-software-plugin-snap
 	sudo rm -rf /var/cache/snapd/
 
-## Vim
-
-    curl -fLo ~/.vim/autoload/plug.vim --create-dirs \ 
-        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    curl -fLo ~/.vim/colors/apprentice.vim --create-dirs \
-        https://raw.githubusercontent.com/romainl/Apprentice/master/colors/apprentice.vim
-
-Now start vim  and run `PlugInstall` in the command mode 
-
 
 ## Skype
 
+    cd ~/Downloads
     wget https://repo.skype.com/latest/skypeforlinux-64.deb
     sudo dpkg -i skypeforlinux-64.deb
     sudo apt install -f
 
-## Java
-
-    sudo apt install openjdk-14-jre
-
-or alternatively:
-
-    sudo -E add-apt-repository ppa:linuxuprising/java
-    sudo apt-get update
-    sudo apt-get install oracle-java13-installer
-    sudo update-alternatives --config java
 
 ## Docker
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
@@ -97,80 +87,98 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-o
     sudo usermod -aG docker ${USER}
     sudo apt install docker-compose
 
-## Marble mouse
+## vimpc
 
-https://unix.stackexchange.com/questions/367106/logitech-marble-mouse-linux-scroll-modifier-setup
-
-## Git
-
-    git config --global user.email "martin.uzak@gmail.com"
-    git config --global user.name "Martin Užák"
-
-## Mute beeping
-
-http://ubuntuhandbook.org/index.php/2019/03/disable-mute-alert-sound-ubuntu-19-04/
-
-## Apple keyboard
-Use keyboard layout _English (Macintosh)_
-
-https://wiki.archlinux.org/index.php/Apple_Keyboard
-
-Create an autostart script for Xmodmap and chmod a+x it
-
-    cat ~/.config/autostart/keyboard.sh
-    #!/bin/bash
-    xmodmap ~/.Xmodmap
-
-hid\_apple module settings
-
-    cat /etc/modprobe.d/hid_apple.conf    
-    options hid_apple fnmode=1
-    options hid_apple swap_opt_cmd=0
-    options hid_apple iso_layout=0
+    cd ~/repos
+    git clone https://github.com/boysetsfrog/vimpc
+    sudo apt install libcurl4-gnutls-dev libpcre++-dev 
+    sudo apt-get install build-essential autoconf \
+        libmpdclient2 libmpdclient-dev libpcre3 libpcre3-dev \
+        libncursesw5 libncursesw5-dev libncurses5-dev \
+        libtagc0 libtagc0-dev
+    cd vimpc
+    ./autogen.sh
+    ./configure
+    make -j 8
+    sudo make install clean
     
+    sudo apt install mpd mpc
+    sudo service mpd stop
+    sudo update-rc.d mpd disable
 
-Disable wakup from USB (bluetooth keyboard). Press and hold ``fn`` to wakeup or
-use poweron button or open the lid.
+    
+## Slack 
 
-    echo XHC > /proc/acpi/wakeup
+Install manually and not from snap. Snap is slower and has problem opening links in firefox once it is running. [Download](https://slack.com/intl/en-cz/downloads/instructions/ubuntu), install and then run:
+
+    sudo apt --fix-broken install
+    
+    
+## Jekyll/blog
+
+    cd ~/repos/blog
+    sudo apt install jekyll ruby-bundler
+    bundler install
+    bundle exec jekyll serve
+
+        
+## Firefox
+
+Plugins:
+* adblock plus
+* facebook container
+* google container
+* https everywhere
+* vue.js devtools
+ 
+Settings:
+* ddrg search engine
+* 1.1x zoom
+
+    
+## Gnome
+
+* super-t - terminal
+* 1.25x fonts via tweaks
+* slacks and skype in autostart
+
 
 ## Misc
 
+### Mute beeping
+
+    sudo apt install dconf-editor
+    dconf-editor
+    
+Then go to `org/gnome/desktop/sound` and disable `event-sounds`.
+
+
+### Dispable touchpad
 https://askubuntu.com/questions/1085390/how-do-i-disable-the-touchpad-while-typing-ubuntu-18-04
 
     sudo apt remove xserver-xorg-input-synaptics
     sudo apt install xserver-xorg-input-libinput
 
-battery:
+### Battery
 
     sudo apt-get install tlp tlp-rdw acpi-call-dkms tp-smapi-dkms acpi-call-dkms
     sudo tlp start
     tlp-stat -s
     sudo tlp-stat -b
     
-### vimpc
-
-https://github.com/boysetsfrog/vimpc
-
-    sudo apt install libcurl4-gnutls-dev libpcre++-dev 
-    sudo apt-get install build-essential autoconf \
-        libmpdclient2 libmpdclient-dev libpcre3 libpcre3-dev \
-        libncursesw5 libncursesw5-dev libncurses5-dev \
-        libtagc0 libtagc0-dev
-        
-### Firefox
-
-    adblock plus
-    facebook container
-    google container
-    https everywhere
-    vue.js devtools
-    tridactyl
     
-### Slack 
+### Marble mouse
 
-install manually not from snap. Snap is slower and has problem opening links in firefox once it is running. [Download](https://slack.com/intl/en-cz/downloads/instructions/ubuntu)
+https://unix.stackexchange.com/questions/367106/logitech-marble-mouse-linux-scroll-modifier-setup
 
-and then run:
 
-    sudo apt --fix-broken install
+### Java
+
+    sudo apt install openjdk-13-jre
+
+or alternatively:
+
+    sudo -E add-apt-repository ppa:linuxuprising/java
+    sudo apt-get update
+    sudo apt-get install oracle-java13-installer
+    sudo update-alternatives --config java

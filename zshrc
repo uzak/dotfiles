@@ -142,3 +142,5 @@ function o {
     dir=${1:-.}
     (cd $dir && open `fzf`)
 }
+
+export HISTFILE=/martinuzak/.zsh_history
