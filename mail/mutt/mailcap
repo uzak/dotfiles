@@ -63,8 +63,8 @@ image/*; sxiv %s
 #image/*; xdg-open %s
 
 # PDF
-application/pdf; zathura %s
-#application/pdf; xdg-open %s
+#application/pdf; zathura %s
+application/pdf; xdg-open %s
 
 # HTML
 #text/html; firefox '%s' & read; test=test -n "$DISPLAY"; needsterminal;

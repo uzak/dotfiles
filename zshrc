@@ -54,7 +54,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins
-plugins=(aws autojump brew command-not-found common-aliases compleat copyfile docker docker-compose git jsontools kubectl npm pip python terraform yarn web-search pass)
+plugins=(aws autojump brew command-not-found common-aliases compleat copyfile docker docker-compose git jsontools kubectl npm pip python terraform yarn web-search pass fzf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -127,10 +127,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export BAT_PAGER="less -R"
 export BAT_THEME="Monokai Extended"
 
-export BACKUP_DIRS="/martinuzak ~/Pictures ~/.mozilla/firefox/*/bookmarkbackups ~/repos ~/.ssh"
-
 unset MOZ_NO_REMOTE
-export CONNECT_DB_NAME=connect_uzak
 
 export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>\/:\"'\'
 
@@ -144,3 +141,8 @@ function o {
 }
 
 export HISTFILE=/martinuzak/.zsh_history
+
+export MYSQL_DB_NAME=connect_uzak
+export CONFFILE=~/repos/Prusa-Connect-API/etc/application.ini
+
+export PATH="$(yarn global bin):$PATH"

@@ -24,12 +24,12 @@
     sudo apt dist-upgrade
     sudo apt install zsh catimg autojump            # zsh + tools for plugins
     sudo apt install vim-gtk3 vim neovim emacs emacs-gtk
-    sudo apt install git tig ctags cloc bat ack fzf ripgrep
-    sudo apt install tmux mc tree curl net-tools 
+    sudo apt install git tig universal-ctags cloc bat ack fzf ripgrep cscope
+    sudo apt install tmux mc tree curl net-tools jq
     sudo apt install iotop iftop htop bmon
-    sudo apt install gimp geeqie 
+    sudo apt install gimp geeqie sixv
     sudo apt install gnome-mpv mpv
-    sudo apt install gnome-tweak-tool
+    sudo apt install gnome-tweak-tool gnome-shell-extension-suspend-button
     sudo apt install python3 python3-pip pipenv python3-sphinx
     sudo apt install neomutt w3m isync msmtp urlscan ripmime mime-support 
     sudo apt install pass gnupg upass
@@ -37,11 +37,15 @@
     sudo apt install newsboat
     sudo apt install aria2
     sudo apt install neofetch 
+    sudo apt install influxdb-client
+    sudo apt install nodejs node-typescript
+    sudo apt install colordiff
 
-    sudo apt install plantuml 
+    sudo apt install plantuml drawio
     sudo apt install mythes-sk libreoffice-l10n-sk hyphen-sk
     sudo apt install texlive-fonts-recommended texlive-latex-recommended 
     sudo apt install pandoc texlive-latex-base texlive-xetex
+    sudo apt install postix mailutils       # local mail cfg
 
 ### Sudo
 
@@ -117,7 +121,7 @@ Install manually and not from snap. Snap is slower and has problem opening links
 ## Jekyll/blog
 
     cd ~/repos/blog
-    sudo apt install jekyll ruby-bundler
+    sudo apt install ruby-bundler
     bundler install
     bundle exec jekyll serve
 

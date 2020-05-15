@@ -33,6 +33,9 @@ ln -s $DOTFILES/vimpcrc ~/.vimpcrc
 git config --global core.excludesfile $DOTFILES/gitignore 
 git config --global user.email "martin.uzak@gmail.com"
 git config --global user.name "Martin Užák"
+git config --global pull.ff only
+git config --global merge.ff only
+git config --global pull.rebase true
 
 # ssh
 rmdir ~/.ssh
