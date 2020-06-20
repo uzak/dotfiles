@@ -57,13 +57,10 @@ Plug 'sheerun/vim-polyglot'             " Better language packs
 Plug 'mileszs/ack.vim'                  " Ack code search (requires ack)
 Plug 'fisadev/FixedTaskList.vim'        " Pending tasks list
 
-Plug 'gruvbox-community/gruvbox'        " gruvbox colorscheme
-
 Plug 'tpope/vim-obsession'              " better :mksession
 Plug 'plasticboy/vim-markdown'
 Plug 'tpope/vim-surround'
 Plug 'bronson/vim-visual-star-search'   " search for visual sel. by */#
-Plug 'tpope/vim-vividchalk'             " another nice colorschme
 Plug 'tpope/vim-commentary'             " comment stuff out (`gcc`/`gc`+motion)
 
 Plug 'terryma/vim-multiple-cursors' 
@@ -104,6 +101,8 @@ Plug 'vifm/vifm.vim'
 "endif
 "Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'davidhalter/jedi-vim'
+
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
@@ -166,7 +165,8 @@ set wrapscan
 set background=dark
 set number
 
-colorscheme zellner
+colorscheme vim-monokai-tasty
+"colorscheme hybrid
 
 " deactivate syntax highlighting when diffing
 if &diff
@@ -229,6 +229,8 @@ augroup init
     autocmd FileType mail,markdown setlocal spelllang=en,sk,de,cs
 
     " Spell-check Git messages
+    " goto 1st line
+    autocmd FileType gitcommit au! BufEnter COMMIT_EDITMSG exe 0
     autocmd FileType gitcommit setlocal spell
     autocmd FileType gitcommit setlocal spelllang=en
 
@@ -237,7 +239,7 @@ augroup init
     autocmd FileType mail setlocal background=dark
     autocmd FileType mail setlocal comments+=nb:>
     autocmd FileType mail setlocal formatoptions+=awq
-    autocmd FileType mail colorscheme hybrid
+    " autocmd FileType mail colorscheme hybrid
 
     " add the dash to keywords -- makes better css/js/html search
     " do this for specific files only (not in php/rb e.g.) where dashes are
@@ -281,9 +283,9 @@ augroup init
 augroup END
 
 " fix colors after setting colorscheme
-autocmd BufNew,BufEnter *md colorscheme hybrid
-autocmd BufNew,BufEnter * call lightline#enable() 
-autocmd BufLeave *md colorscheme zellner
+" autocmd BufNew,BufEnter *md colorscheme hybrid
+" autocmd BufNew,BufEnter * call lightline#enable() 
+" autocmd BufLeave *md colorscheme zellner
 
 " clear empty spaces at the end of lines on save of python files
 autocmd BufWritePre *.py :%s/\s\+$//e
@@ -454,11 +456,27 @@ let g:ale_fixers = {
 " vimwiki {{{2
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 "let g:vimwiki_ext2syntax = {'.wiki': 'markdown'}
-let g:vimwiki_list = [
-    \ {'path' : '~/repos/wiki/it', 'syntax' : 'markdown', 'ext' : '.md'}, 
-    \ {'path' : '~/repos/wiki/vedanta', 'syntax' : 'markdown', 'ext' : '.md'},
-    \ {'path' : '~/repos/wiki/cooking', 'syntax' : 'markdown', 'ext' : '.md'},
-\]
+" pip install vimwiki-markdown      # for the html export
+
+let g:vimwiki_list = [{
+    \ 'path' : '~/repos/wiki/it', 
+    \ 'syntax' : 'markdown', 
+    \ 'ext' : '.md', 
+    \ 'template_ext' : '.tpl', 
+    \ 'path_html' : '~/repos/uzak.github.io/wiki/it', 
+    \ 'custom_wiki2html': 'vimwiki_markdown'},  
+    \ {'path' : '~/repos/wiki/vedanta', 
+    \ 'syntax' : 'markdown', 
+    \ 'template_ext' : '.tpl', 
+    \ 'path_html' : '~/repos/uzak.github.io/wiki/vedanta', 
+    \ 'custom_wiki2html': 'vimwiki_markdown',  
+    \ 'ext' : '.md'},
+    \ {'path' : '~/repos/wiki/cooking', 
+    \ 'syntax' : 'markdown', 
+    \ 'template_ext' : '.tpl', 
+    \ 'path_html' : '~/repos/uzak.github.io/wiki/cooking', 
+    \ 'custom_wiki2html': 'vimwiki_markdown',  
+    \ 'ext' : '.md'}]
 
 " vim-instant-markdown - Instant Markdown previews from Vim  {{{2
 let g:instant_markdown_autostart = 0 " disable auto preview

@@ -40,6 +40,7 @@
     sudo apt install influxdb-client
     sudo apt install nodejs node-typescript
     sudo apt install colordiff
+    sudo apt install csvtool
 
     sudo apt install plantuml drawio
     sudo apt install mythes-sk libreoffice-l10n-sk hyphen-sk
