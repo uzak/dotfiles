@@ -146,3 +146,4 @@ export MYSQL_DB_NAME=connect_uzak
 export CONFFILE=~/repos/Prusa-Connect-API/etc/application.ini
 
 export PATH="$(yarn global bin):$PATH"
+export PATH="/usr/lib/cargo/bin:$PATH"

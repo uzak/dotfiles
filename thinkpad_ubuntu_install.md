@@ -25,7 +25,7 @@
     sudo apt install zsh catimg autojump            # zsh + tools for plugins
     sudo apt install vim-gtk3 vim neovim emacs emacs-gtk
     sudo apt install git tig universal-ctags cloc bat ack fzf ripgrep cscope
-    sudo apt install tmux mc tree curl net-tools jq
+    sudo apt install tmux mc tree curl net-tools jq fd-find tldr
     sudo apt install iotop iftop htop bmon
     sudo apt install gimp geeqie sixv
     sudo apt install gnome-mpv mpv

@@ -47,3 +47,5 @@ alias ydl=youtube-dl
 alias mutt=neomutt
 alias mpv=celluloid
 alias balsamiq="wine-stable C:\\\\Program\\ Files\\ \\(x86\\)\\\\Balsamiq\\ Mockups\\ 3\\\\Balsamiq\\ Mockups\\ 3.exe "
+
+unalias fd

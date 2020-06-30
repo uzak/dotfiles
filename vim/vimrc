@@ -102,7 +102,7 @@ Plug 'vifm/vifm.vim'
 "Plug 'deoplete-plugins/deoplete-jedi'
 Plug 'davidhalter/jedi-vim'
 
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 
