@@ -3,29 +3,11 @@ alias rm="rm -f"
 alias python="python3.8 -Wd -b"         # Wd = warnings default
 alias pip=pip3
 
-#https://stackoverflow.com/questions/33817282/auto-completion-not-work-for-command-du
-#alias du=gdu
-
-alias df='df -x"squashfs"'
-
-alias htop="TERM=linux htop"
-
-if [[ $OSTYPE == linux-gnu ]]; then
-    alias ls="ls --color -N"
-    alias open=xdg-open
-fi
-
-alias mplayer=mpv
-
-alias googleearth="LIBGL_ALWAYS_SOFTWARE=1 /opt/google/earth/pro/googleearth"
-
 alias ttt="ttt.py /martinuzak/work/prusa3d/tt_prusa_`date +%Y-%m`.txt -hr"
 alias tt="ttt.py /martinuzak/work/prusa3d/tt_prusa_`date +%Y-%m`.txt -hr --from_date `date +%Y-%m-%d`"
 
-alias nvim="nvim -u ~/.vimrc"
 alias vim=nvim
-alias v=vim
-alias vi=vim
+alias vi=nvim
 
 alias feedly=newsboat
 
@@ -44,8 +26,19 @@ alias emacs="emacsclient -a '' -c"
 
 alias ydl=youtube-dl
 
-alias mutt=neomutt
-alias mpv=celluloid
-alias balsamiq="wine-stable C:\\\\Program\\ Files\\ \\(x86\\)\\\\Balsamiq\\ Mockups\\ 3\\\\Balsamiq\\ Mockups\\ 3.exe "
-
 unalias fd
+
+if [[ $OSTYPE == linux-gnu ]]; then
+    alias htop="TERM=linux htop"
+    alias df='df -x"squashfs"'
+    alias ls="ls --color -N"
+    alias mplayer=mpv
+    alias open=xdg-open
+    alias mpv=celluloid
+    alias balsamiq="wine-stable C:\\\\Program\\ Files\\ \\(x86\\)\\\\Balsamiq\\ Mockups\\ 3\\\\Balsamiq\\ Mockups\\ 3.exe "
+    alias googleearth="LIBGL_ALWAYS_SOFTWARE=1 /opt/google/earth/pro/googleearth"
+fi
+
+if [[ $OSTYPE == darwin* ]]; then
+    alias htop="TERM=iterm htop"
+fi

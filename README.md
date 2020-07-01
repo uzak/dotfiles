@@ -3,7 +3,8 @@ Here are the dotfiles I'm using.
 Install guide:
 
 * [Ubuntu 19.04 Disco Dingo @ Thinkpad t480s](thinkpad_ubuntu_install.md)
-
+* [Air](air_install.md)
+  
 Inspiration & Kudos:
 
 * [samoshkin](https://github.com/samoshkin/dotfiles) (tmux)

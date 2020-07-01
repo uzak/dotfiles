@@ -115,8 +115,8 @@ export PATH=$PATH:$HOME/.local/bin # for pip installs
 export MYVIMRC=~/.vimrc
 
 export GNUPGHOME="/martinuzak/.gnupg"
-export PASSWORD_STORE_DIR="/martinuzak/.password-store"
-export PASSWORD_STORE_GIT="/martinuzak/.password-store"
+export PASSWORD_STORE_DIR="$HOME/repos/password-store"
+export PASSWORD_STORE_GIT=$PASSWORD_STORE_DIR
 
 # Configure fzf, command line fuzzyf finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
@@ -135,15 +135,17 @@ export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>\/:\"'\'
 zstyle ':completion:*' show-ambiguity true
 zstyle ':completion:*' show-ambiguity "$color[bg-red]"
 
+# open
 function o {
     dir=${1:-.}
     (cd $dir && open `fzf`)
 }
 
-export HISTFILE=/martinuzak/.zsh_history
+#export HISTFILE=/martinuzak/.zsh_history
 
 export MYSQL_DB_NAME=connect_uzak
 export CONFFILE=~/repos/Prusa-Connect-API/etc/application.ini
 
 export PATH="$(yarn global bin):$PATH"
 export PATH="/usr/lib/cargo/bin:$PATH"
+export EDITOR=nvim
