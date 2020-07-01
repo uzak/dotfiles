@@ -1,6 +1,7 @@
 Brew
 
     brew install \
+        tig \
         aria2 \
         autojump \
         cloc \
