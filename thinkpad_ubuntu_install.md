@@ -61,6 +61,7 @@
 
     sudo snap install insomnia 
     sudo snap install --classic chromium
+    sudo snap install --classic skype
     sudo snap install --classic kotlin
     sudo snap install --classic pycharm-community
     sudo snap install --classic intellij-idea-community
@@ -69,14 +70,6 @@
 
 	sudo apt autoremove --purge snapd gnome-software-plugin-snap
 	sudo rm -rf /var/cache/snapd/
-
-
-## Skype
-
-    cd ~/Downloads
-    wget https://repo.skype.com/latest/skypeforlinux-64.deb
-    sudo dpkg -i skypeforlinux-64.deb
-    sudo apt install -f
 
 
 ## Docker
