@@ -1,9 +1,10 @@
 " config inspired by https://github.com/connermcd/dotfiles
 
-hi tab default white
-hi status default white
+hi tab default black
+hi status default red
 hi current default green
 hi id default yellow
+hi song default black
 
 set window playlist
 set autoscroll

@@ -165,8 +165,9 @@ set wrapscan
 set background=dark
 set number
 
-colorscheme vim-monokai-tasty
+"colorscheme vim-monokai-tasty
 "colorscheme hybrid
+colorscheme zellner
 
 " deactivate syntax highlighting when diffing
 if &diff
@@ -333,7 +334,7 @@ nnoremap <leader>p p`[v`]=
 
 nnoremap <leader>q :q!<cr>
 "nnoremap <leader>t :term ++curwin<cr>
-nnoremap <leader>t :terminal<cr>
+nnoremap <leader>term :terminal<cr>
 nnoremap <leader>vs :source $MYVIMRC<cr>
 
 nnoremap <leader>ve :e $MYVIMRC<cr>
@@ -476,7 +477,14 @@ let g:vimwiki_list = [{
     \ 'template_ext' : '.tpl', 
     \ 'path_html' : '~/repos/uzak.github.io/wiki/cooking', 
     \ 'custom_wiki2html': 'vimwiki_markdown',  
-    \ 'ext' : '.md'}]
+    \ 'ext' : '.md'},
+    \ {'path' : '~/repos/wiki/exercises', 
+    \ 'syntax' : 'markdown', 
+    \ 'template_ext' : '.tpl', 
+    \ 'path_html' : '~/repos/uzak.github.io/wiki/exercises', 
+    \ 'custom_wiki2html': 'vimwiki_markdown',  
+    \ 'ext' : '.md'}
+    \ ]
 
 " vim-instant-markdown - Instant Markdown previews from Vim  {{{2
 let g:instant_markdown_autostart = 0 " disable auto preview

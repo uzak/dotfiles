@@ -93,7 +93,7 @@ source $HOME/.aliases
 setopt auto_cd
 cdpath=($HOME $HOME/repos $HOME/Desktop /martinuzak)
 
-export LC_ALL="en_US.UTF-8"
+#export LC_ALL="fr_FR.UTF-8"
 
 # for gnu sed
 #   PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
@@ -143,7 +143,7 @@ function o {
 
 #export HISTFILE=/martinuzak/.zsh_history
 
-export MYSQL_DB_NAME=connect_uzak
+#export MYSQL_DB_NAME=connect_uzak2
 export CONFFILE=~/repos/Prusa-Connect-API/etc/application.ini
 
 export PATH="$(yarn global bin):$PATH"

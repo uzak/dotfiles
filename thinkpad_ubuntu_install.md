@@ -41,12 +41,14 @@
     sudo apt install nodejs node-typescript
     sudo apt install colordiff
     sudo apt install csvtool
+    sudo apt install lm-sensors
 
     sudo apt install plantuml drawio
     sudo apt install mythes-sk libreoffice-l10n-sk hyphen-sk
     sudo apt install texlive-fonts-recommended texlive-latex-recommended 
     sudo apt install pandoc texlive-latex-base texlive-xetex
     sudo apt install postix mailutils       # local mail cfg
+    sudo apt install fonts-firacode
 
 ### Sudo
 

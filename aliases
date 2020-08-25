@@ -26,8 +26,6 @@ alias emacs="emacsclient -a '' -c"
 
 alias ydl=youtube-dl
 
-unalias fd
-
 if [[ $OSTYPE == linux-gnu ]]; then
     alias htop="TERM=linux htop"
     alias df='df -x"squashfs"'
@@ -42,3 +40,7 @@ fi
 if [[ $OSTYPE == darwin* ]]; then
     alias htop="TERM=iterm htop"
 fi
+
+alias ack="ack -i"
+
+alias insomnia="LC_ALL=en_US.utf8 insomnia"
