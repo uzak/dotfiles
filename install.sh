@@ -3,6 +3,7 @@
 if [[ "DELETE" == "DELETE" ]]; then
     rm -f ~/.zshrc
     rm -f ~/.vimrc
+    rm -f ~/.spacemacs
     rm -f ~/.aliases
     rm -f ~/.bashrc
     rm -f ~/.pystartup
@@ -17,6 +18,7 @@ DOTFILES=~/repos/dotfiles
 
 ln -s $DOTFILES/zshrc ~/.zshrc
 ln -s $DOTFILES/vim/vimrc ~/.vimrc
+ln -s $DOTFILES/spacemacs ~/.spacemacs
 ln -s $DOTFILES/aliases ~/.aliases
 ln -s $DOTFILES/bashrc ~/.bashrc
 ln -s $DOTFILES/pystartup ~/.pystartup

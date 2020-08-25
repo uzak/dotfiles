@@ -1,13 +1,18 @@
-# Ubuntu 20.04 on T480s
+# Ubuntu 20.04 on Thinkpad
 
 ## Install
 
 * normal installation
 * use disk encryption
-* disk layout
+* disk layout for dual boot:
     * 1GB /boot
     * 100 MB efi (already created by windows)
     * / encrypted
+
+## Sudo
+
+    sudo -E visudo
+    sudo sh -c "echo \"$USER ALL=NOPASSWD: ALL\" >> /etc/sudoers"
      
 ## Environment
 
@@ -49,15 +54,20 @@
     sudo apt install pandoc texlive-latex-base texlive-xetex
     sudo apt install postix mailutils       # local mail cfg
     sudo apt install fonts-firacode
-
-### Sudo
-
-    sudo -E visudo
-    sudo sh -c "echo \"$USER ALL=NOPASSWD: ALL\" >> /etc/sudoers"
     
-### zsh
+    sudo apt autoremove
+
+## zsh
 
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    
+    
+## Slack 
+
+Install manually and not from snap. Snap is slower and has problem opening links in firefox once it is running. [Download](https://slack.com/intl/en-cz/downloads/instructions/ubuntu), install and then run:
+
+    sudo apt --fix-broken install
+    
 
 ## Snap
 
@@ -68,13 +78,9 @@
     sudo snap install --classic pycharm-community
     sudo snap install --classic intellij-idea-community
 
-### Alternatively remove snapd
-
-	sudo apt autoremove --purge snapd gnome-software-plugin-snap
-	sudo rm -rf /var/cache/snapd/
-
 
 ## Docker
+
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
 
     sudo apt update
@@ -107,13 +113,6 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-o
     sudo update-rc.d mpd disable
 
     
-## Slack 
-
-Install manually and not from snap. Snap is slower and has problem opening links in firefox once it is running. [Download](https://slack.com/intl/en-cz/downloads/instructions/ubuntu), install and then run:
-
-    sudo apt --fix-broken install
-    
-    
 ## Jekyll/blog
 
     cd ~/repos/blog
@@ -121,28 +120,7 @@ Install manually and not from snap. Snap is slower and has problem opening links
     bundler install
     bundle exec jekyll serve
 
-        
-## Firefox
-
-Plugins:
-* adblock plus
-* facebook container
-* google container
-* https everywhere
-* vue.js devtools
- 
-Settings:
-* ddrg search engine
-* 1.1x zoom
-
     
-## Gnome
-
-* super-t - terminal
-* 1.25x fonts via tweaks
-* slacks and skype in autostart
-
-
 ## Misc
 
 ### Mute beeping

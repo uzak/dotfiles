@@ -149,3 +149,5 @@ export CONFFILE=~/repos/Prusa-Connect-API/etc/application.ini
 export PATH="$(yarn global bin):$PATH"
 export PATH="/usr/lib/cargo/bin:$PATH"
 export EDITOR=nvim
+
+export $(cat ~/repos/Prusa-Connect-API/env | grep -v '^#' | xargs)
