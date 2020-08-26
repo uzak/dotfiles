@@ -30,13 +30,6 @@ ln -s $DOTFILES/newsboat ~/.newsboat
 mkdir -p ~/.config/nvim
 ln -s $DOTFILES/vim/vimrc ~/.config/nvim/init.vim
 
-### mail
-# mkdir -p /martinuzak/.Mail/mailbox
-# ln $DOTFILES/mail/msmtprc ~/.msmtprc         # symlink doesn't work
-# ln -s $DOTFILES/mail/mbsyncrc ~/.mbsyncrc
-# ln -s $DOTFILES/mail/mutt ~/.mutt
-# ln -s /martinuzak/.mbsync ~/
-
 # mpd, vimpc
 # ln -s  $DOTFILES/mpd.conf ~/.mpdconf
 # mkdir ~/.mpd

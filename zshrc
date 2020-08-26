@@ -141,7 +141,7 @@ function o {
     (cd $dir && open `fzf`)
 }
 
-#export HISTFILE=/martinuzak/.zsh_history
+export HISTFILE=/martinuzak/.zsh_history
 
 #export MYSQL_DB_NAME=connect_uzak2
 export CONFFILE=~/repos/Prusa-Connect-API/etc/application.ini
