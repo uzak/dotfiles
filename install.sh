@@ -36,7 +36,7 @@ ln -s $DOTFILES/vim/vimrc ~/.config/nvim/init.vim
 # mkdir -p ~/.mpd/playlists
 # touch ~/.mpd/{mpd.db,mpd.log,mpd.pid,mpdstate}
 # mpc update
-# ln -s $DOTFILES/vimpcrc ~/.vimpcrc
+ln -s $DOTFILES/vimpcrc ~/.vimpcrc
 
 # git
 (cd; 

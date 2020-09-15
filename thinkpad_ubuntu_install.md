@@ -97,15 +97,15 @@ https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-o
 
     cd ~/repos
     git clone https://github.com/boysetsfrog/vimpc
-    sudo apt install libcurl4-gnutls-dev libpcre++-dev 
-    sudo apt-get install build-essential autoconf \
+    sudo apt install -y libcurl4-gnutls-dev libpcre++-dev 
+    sudo apt install -y build-essential autoconf \
         libmpdclient2 libmpdclient-dev libpcre3 libpcre3-dev \
         libncursesw5 libncursesw5-dev libncurses5-dev \
         libtagc0 libtagc0-dev
     cd vimpc
     ./autogen.sh
     ./configure
-    make -j 8
+    make -j 6
     sudo make install clean
     
     sudo apt install mpd mpc

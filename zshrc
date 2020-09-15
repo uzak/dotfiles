@@ -111,7 +111,6 @@ export PATH="$PATH:/snap/bin/"
 
 export PYTHONPATH=$PYTHONPATH:~/repos/
 export PYTHONSTARTUP=~/.pystartup
-export PATH=$PATH:$HOME/.local/bin # for pip installs
 export MYVIMRC=~/.vimrc
 
 export GNUPGHOME="/martinuzak/.gnupg"
@@ -148,6 +147,7 @@ export CONFFILE=~/repos/Prusa-Connect-API/etc/application.ini
 
 export PATH="$(yarn global bin):$PATH"
 export PATH="/usr/lib/cargo/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH" # pip installs
 export EDITOR=nvim
 
 export $(cat ~/repos/Prusa-Connect-API/env | grep -v '^#' | xargs)

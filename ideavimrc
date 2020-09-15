@@ -1,8 +1,5 @@
 set clipboard+=ideaput
 
-"pane switching done easily
-nmap <tab> <C-w><C-w>
-
 " center current search result
 nmap n nzz
 nmap N Nzz
