@@ -47,6 +47,7 @@
     sudo apt install colordiff
     sudo apt install csvtool
     sudo apt install lm-sensors
+    sudo apt install redis-tools
 
     sudo apt install plantuml drawio
     sudo apt install mythes-sk libreoffice-l10n-sk hyphen-sk
