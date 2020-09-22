@@ -129,6 +129,7 @@ export BAT_THEME="Monokai Extended"
 unset MOZ_NO_REMOTE
 
 export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>\/:\"'\'
+export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>:\"'\'
 
 # https://www.thregr.org/~wavexx/rnd/20141010-zsh_show_ambiguity/index.html
 zstyle ':completion:*' show-ambiguity true
