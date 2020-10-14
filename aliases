@@ -46,3 +46,8 @@ alias ack="ack -i"
 alias insomnia="LC_ALL=en_US.utf8 insomnia"
 alias yarn=yarnpkg
 alias yapf=yapf3
+
+unalias fd          # defined by the common-aliases zsh plugin
+
+alias dmesg="dmesg -H"
+alias scp="scp -C"

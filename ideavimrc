@@ -4,4 +4,6 @@ set clipboard+=ideaput
 nmap n nzz
 nmap N Nzz
 
+nmap <tab> <C-w><C-w>
+
 source ~/.vimrc
