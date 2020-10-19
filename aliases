@@ -47,6 +47,7 @@ alias insomnia="LC_ALL=en_US.utf8 insomnia"
 alias yarn=yarnpkg
 alias yapf=yapf3
 
+alias fd=foobar
 unalias fd          # defined by the common-aliases zsh plugin
 
 alias dmesg="dmesg -H"
