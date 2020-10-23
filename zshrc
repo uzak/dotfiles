@@ -133,7 +133,7 @@ export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>:\"'\'
 
 # https://www.thregr.org/~wavexx/rnd/20141010-zsh_show_ambiguity/index.html
 zstyle ':completion:*' show-ambiguity true
-zstyle ':completion:*' show-ambiguity "$color[bg-red]"
+zstyle ':completion:*' show-ambiguity "$color[bg-white]"
 
 # open
 function o {
@@ -143,7 +143,6 @@ function o {
 
 export HISTFILE=/martinuzak/.zsh_history
 
-#export MYSQL_DB_NAME=connect_uzak2
 export CONFFILE=~/repos/Prusa-Connect-API/etc/application.ini
 
 export PATH="$(yarn global bin):$PATH"

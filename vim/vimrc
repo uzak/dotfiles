@@ -255,6 +255,7 @@ let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown'
 let g:vimwiki_list = [{
     \ 'path' : '~/repos/wiki/it', 
     \ 'syntax' : 'markdown', 
+    \ 'auto_toc' : 1,
     \ 'ext' : '.md', 
     \ 'template_ext' : '.tpl', 
     \ 'template_path' : '~/repos/wiki', 
@@ -263,6 +264,7 @@ let g:vimwiki_list = [{
     \ 'custom_wiki2html': 'vimwiki_markdown'},  
     \ {'path' : '~/repos/wiki/vedanta', 
     \ 'syntax' : 'markdown', 
+    \ 'auto_toc' : 1,
     \ 'template_ext' : '.tpl', 
     \ 'template_path' : '~/repos/wiki', 
     \ 'template_default' : 'default', 
@@ -271,6 +273,7 @@ let g:vimwiki_list = [{
     \ 'ext' : '.md'},
     \ {'path' : '~/repos/wiki/lang', 
     \ 'syntax' : 'markdown', 
+    \ 'auto_toc' : 1,
     \ 'template_ext' : '.tpl', 
     \ 'template_path' : '~/repos/wiki', 
     \ 'template_default' : 'default', 
@@ -279,6 +282,7 @@ let g:vimwiki_list = [{
     \ 'ext' : '.md'},
     \ {'path' : '~/repos/wiki/cooking', 
     \ 'syntax' : 'markdown', 
+    \ 'auto_toc' : 1,
     \ 'template_ext' : '.tpl', 
     \ 'template_path' : '~/repos/wiki', 
     \ 'template_default' : 'default', 
@@ -287,6 +291,7 @@ let g:vimwiki_list = [{
     \ 'ext' : '.md'},
     \ {'path' : '~/repos/wiki/exercises', 
     \ 'syntax' : 'markdown', 
+    \ 'auto_toc' : 1,
     \ 'template_ext' : '.tpl', 
     \ 'template_path' : '~/repos/wiki', 
     \ 'template_default' : 'default', 
@@ -294,6 +299,8 @@ let g:vimwiki_list = [{
     \ 'custom_wiki2html': 'vimwiki_markdown',  
     \ 'ext' : '.md'}
     \ ]
+
+nnoremap <leader>toc :VimwikiTO<esc>
 
 " add the pre tag for inserting code snippets
 let g:vimwiki_valid_html_tags = 'b,i,s,u,sub,sup,kbd,br,hr,pre,script'
@@ -305,16 +312,7 @@ xmap ga <Plug>(EasyAlign)
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
 
-" vim-markdown
-" let g:vim_markdown_conceal = 2
-" let g:vim_markdown_conceal_code_blocks = 0
-" let g:vim_markdown_math = 1
-" let g:vim_markdown_toml_frontmatter = 1
-" let g:vim_markdown_frontmatter = 1
-" let g:vim_markdown_strikethrough = 1
-" let g:vim_markdown_autowrite = 1
-" let g:vim_markdown_edit_url_in = 'tab'
-" let g:vim_markdown_follow_anchor = 1
+" mkdx
 
 " iamco/markdown-preview
 let g:mkdp_auto_start = 0
