@@ -1,0 +1,25 @@
+#+TITLE: foo
+#+AUTHOR: bar
+Here we go presentation
+
+Another slide below
+
+What the hell?
+* slide 1
+  slide one ofc
+* slide 2
+** subslide 1
+   one
+** subslidde 2
+   two
+* slide 3
+  - list item 1
+  - list item 2
+* slide 4
+  #+BEGIN_SRC python
+  def f(x):
+      return x + 1
+  print f(5)
+  #+END_SRC
+   
+  
