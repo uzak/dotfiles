@@ -8,7 +8,7 @@ import time
 import os
 import os
 
-EDITOR = os.getenv('EDITOR')
+EDITOR = os.getenv('EDITOR', vi)
 BLOG_DIR = os.path.expanduser('~/repos/blog/_posts')
 
 date = time.strftime('%Y-%m-%d')

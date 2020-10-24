@@ -3,7 +3,6 @@
 if [[ "DELETE" == "DELETE" ]]; then
     rm -f ~/.zshrc
     rm -f ~/.vimrc
-    rm -f ~/.spacemacs
     rm -f ~/.aliases
     rm -f ~/.bashrc
     rm -f ~/.pystartup
@@ -16,9 +15,11 @@ fi
 
 DOTFILES=~/repos/dotfiles
 
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 ln -s $DOTFILES/zshrc ~/.zshrc
 ln -s $DOTFILES/vim/vimrc ~/.vimrc
-ln -s $DOTFILES/spacemacs ~/.spacemacs
 ln -s $DOTFILES/aliases ~/.aliases
 ln -s $DOTFILES/bashrc ~/.bashrc
 ln -s $DOTFILES/pystartup ~/.pystartup
