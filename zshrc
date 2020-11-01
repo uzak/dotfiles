@@ -106,7 +106,7 @@ bindkey "^[a" beginning-of-line
 bindkey "^[e" end-of-line
 
 export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH:$HOME/repos/scripts:$HOME/repos/ttt"
+export PATH="$HOME/gems/bin:$PATH:$HOME/repos/dotfiles/bin"
 export PATH="$PATH:/snap/bin/"
 
 export PYTHONPATH=$PYTHONPATH:~/repos/
