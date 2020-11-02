@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+if [ ! "$#" -eq 2 ]; then
+    echo "Usage: $0 backup.txt output_dir"
+    exit 1
+fi
+
 INPUT_FILE=$1
 WORK_DIR=${2:-.}
 OLD_WD=`pwd`
