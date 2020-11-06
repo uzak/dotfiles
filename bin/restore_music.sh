@@ -5,12 +5,14 @@ if [ ! "$#" -eq 2 ]; then
     exit 1
 fi
 
-INPUT_FILE=$1
+INPUT_FILE=`realpath $1`
 WORK_DIR=${2:-.}
 OLD_WD=`pwd`
 
 mkdir -p $WORK_DIR
 cd $WORK_DIR
+
+youtube-dl --rm-cache-dir
 
 cat $INPUT_FILE | while read line; do
     echo Processing: $line
@@ -20,8 +22,8 @@ cat $INPUT_FILE | while read line; do
 
     # create the dir download the song
     (
-        mkdir -p $dir
-        cd $dir
+        mkdir -p "$dir"
+        cd "$dir"
         youtube-dl -i -x --audio-format mp3 https://www.youtube.com/watch\?v\=$id
     )
 done
