@@ -12,7 +12,7 @@
 
 dir=/martinuzak/config/$(hostname)
 mkdir -p $dir
-~/repos/scripts/backup_music.sh > $dir/music.txt
+~/repos/dotfiles/bin/backup_music.sh > $dir/music.txt
 pip3 freeze > $dir/pip_pkgs.txt
 snap list > $dir/snap_pkgs.txt
 dpkg -l > $dir/dpkg_list.txt
@@ -27,7 +27,7 @@ fi
 export GNUPGHOME=/martinuzak/.gnupg
 export PASSWORD_STORE_DIR=/home/m/repos/password-store
 
-BACKUP_DIRS=`echo /martinuzak ~/.mozilla/firefox/*/bookmarkbackups ~/.config/rclone ~/repos/blog ~/repos/wiki`
+BACKUP_DIRS=`echo /martinuzak ~/.mozilla/firefox/*/bookmarkbackups ~/.config/rclone ~/repos/blog`
 
 # TAR to usb stick
 if [ -d /media/m/ADATA ] 
