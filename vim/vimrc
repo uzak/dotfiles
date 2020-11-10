@@ -101,6 +101,7 @@ set wrap
 set wrapscan
 set background=dark
 set number
+set spelllang=en_us,de_at,sk,cs,pt_br
 
 colorscheme zellner
 
