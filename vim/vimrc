@@ -63,7 +63,7 @@ set backspace=indent,eol,start
 set clipboard=unnamed,unnamedplus       " use system clipboard
 set colorcolumn=80
 set complete+=kspell
-set completeopt=menuone
+set completeopt=menuone,preview
 set encoding=utf-8
 set expandtab
 set fileformat=unix
@@ -246,7 +246,7 @@ nnoremap <leader>h :History<cr>
 
 " aperezdc/vim-template {{{2
 let g:templates_directory='~/repos/dotfiles/vim/templates'
-let g:email='martin.uzak@gmail.com'
+let g:email='uzak+git@mailbox.org'
 let g:username='Martin Užák'
 
 " vimwiki {{{2

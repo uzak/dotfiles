@@ -18,3 +18,10 @@ mysql -h $HOST -u $USER -p$PW $DB <<EOF
     update user set default_team_id=(select id from team where name='martin') where username='martin';
     insert into user_team(user_id, team_id, rights_ro, rights_rw, rights_use) values((select id from user where username='martin'), (select id from team where name='martin'), 1, 1, 1);
 EOF
+
+# INFLUX
+DB=connect_uzak
+
+echo "drop database $DB" | influx -host $INFLUX_HOST
+echo "create database $DB" | influx -host $INFLUX_HOST
+

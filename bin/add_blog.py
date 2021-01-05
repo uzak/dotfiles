@@ -15,16 +15,19 @@ date = time.strftime('%Y-%m-%d')
 
 template = """---
 layout: post
-title: "%s"
-lang: %s
+title: "%(title)s"
+lang: %(lang)s
 tags: ['diary']
-date: %s
+date: %(date)s
 ---
 
 Table of contents:
 * TOC
 {:toc}
 
+<!--
+    vim:spell spelllang=%(lang)s
+-->
 """
 
 
@@ -46,7 +49,8 @@ def main(title, lang):
         raise IOError("File %s already exists" % fn_abs)
     f = open(fn_abs, "w")
     with f:
-        f.write(template % (title, lang, date))
+        d = dict(title=title, lang=lang, date=date)
+        f.write(template % d)
 
 
 parser = argparse.ArgumentParser(description='Add new blog post')

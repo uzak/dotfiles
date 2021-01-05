@@ -24,7 +24,8 @@ cat $INPUT_FILE | while read line; do
     (
         mkdir -p "$dir"
         cd "$dir"
-        youtube-dl -i -x --audio-format mp3 https://www.youtube.com/watch\?v\=$id
+        # download if not yet present 
+        ls *$id*.mp3 || youtube-dl -i -x --audio-format mp3 https://www.youtube.com/watch\?v\=$id
     )
 done
 

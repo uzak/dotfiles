@@ -13,7 +13,7 @@ if [[ "DELETE" == "DELETE" ]]; then
     rm -f ~/.ssh
 fi
 
-DOTFILES=~/repos/dotfiles
+DOTFILES=/martinuzak/dotfiles
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

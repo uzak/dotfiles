@@ -106,14 +106,14 @@ bindkey "^[a" beginning-of-line
 bindkey "^[e" end-of-line
 
 export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH:$HOME/repos/dotfiles/bin"
+export PATH="$HOME/gems/bin:$PATH:/martinuzak/dotfiles/bin"
 export PATH="$PATH:/snap/bin/"
 
 export PYTHONPATH=$PYTHONPATH:~/repos/
 export PYTHONSTARTUP=~/.pystartup
 export MYVIMRC=~/.vimrc
 
-export GNUPGHOME="/martinuzak/.gnupg"
+export GNUPGHOME="~/.gnupg"
 export PASSWORD_STORE_DIR="$HOME/repos/password-store"
 export PASSWORD_STORE_GIT=$PASSWORD_STORE_DIR
 
@@ -151,3 +151,9 @@ export PATH="$HOME/.local/bin:$PATH" # pip installs
 export EDITOR=nvim
 
 export $(cat ~/repos/Prusa-Connect-API/env | grep -v '^#' | xargs)
+
+function upgrade () {
+    sudo apt update
+    sudo apt -y dist-upgrade 
+    sudo apt -y autoremove
+}
