@@ -52,3 +52,4 @@ unalias fd          # defined by the common-aliases zsh plugin
 
 alias dmesg="dmesg -H"
 alias scp="scp -C"
+alias gqview=geeqie

@@ -114,7 +114,7 @@ export PYTHONSTARTUP=~/.pystartup
 export MYVIMRC=~/.vimrc
 
 export GNUPGHOME="~/.gnupg"
-export PASSWORD_STORE_DIR="$HOME/repos/password-store"
+export PASSWORD_STORE_DIR="/martinuzak/password-store"
 export PASSWORD_STORE_GIT=$PASSWORD_STORE_DIR
 
 # Configure fzf, command line fuzzyf finder
