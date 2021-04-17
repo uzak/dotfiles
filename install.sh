@@ -5,6 +5,7 @@ if [[ "DELETE" == "DELETE" ]]; then
     rm -f ~/.vimrc
     rm -f ~/.aliases
     rm -f ~/.bashrc
+    rm -f ~/.gitconfig
     rm -f ~/.pystartup
     rm -f ~/.tmux.conf
     rm -f ~/.ackrc
@@ -22,6 +23,7 @@ ln -s $DOTFILES/zshrc ~/.zshrc
 ln -s $DOTFILES/vim/vimrc ~/.vimrc
 ln -s $DOTFILES/aliases ~/.aliases
 ln -s $DOTFILES/bashrc ~/.bashrc
+ln -s $DOTFILES/gitconfig ~/.gitconfig
 ln -s $DOTFILES/pystartup ~/.pystartup
 
 ln -s $DOTFILES/tmux.conf ~/.tmux.conf
@@ -38,16 +40,6 @@ ln -s $DOTFILES/vim/vimrc ~/.config/nvim/init.vim
 # touch ~/.mpd/{mpd.db,mpd.log,mpd.pid,mpdstate}
 # mpc update
 ln -s $DOTFILES/vimpcrc ~/.vimpcrc
-
-# git
-(cd; 
-	git config --global core.excludesfile $DOTFILES/gitignore 
-	git config --global user.email "martin.uzak@gmail.com"
-	git config --global user.name "Martin Užák"
-	git config --global pull.ff only
-	git config --global merge.ff only
-	git config --global pull.rebase true
-)
 
 # ssh
 rmdir ~/.ssh

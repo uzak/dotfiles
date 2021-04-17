@@ -6,7 +6,7 @@
 # File     : ttt.py
 
 """
-driver and main class for `Time Tracking Tool` (also known as TTT)
+plain text file based Time Tracking Tool
 """
 
 import argparse
@@ -15,6 +15,8 @@ import logging
 import datetime
 import collections
 import re
+
+# TODO split formatting from computting
 
 
 # default date formats
@@ -207,7 +209,7 @@ class TTT:
                 total  = functools.reduce(lambda a, b: a+b, values)
                 print("%d,%d,%s,%d" % (year, month, cc, total))
 
-    def output_human_readable(self):
+    def output_human_readable(self, norm=None):
         "output read data in human readable form"
         data = self.data
         fmt = "\t{:<10} {:>10}"
@@ -229,21 +231,36 @@ class TTT:
                 start.date.strftime(DATE_FMT), end.date.strftime(DATE_FMT)))
             print("-" * 30)
             for cc, entries_by_cc in self.by_cost_center(data).items():
-                print(fmt.format(cc, self.sum(entries_by_cc)))
+                print(fmt.format(cc, self.sum(entries_by_cc, norm=norm)))
             print("=" * 30)
-            print("Total %17s" % self.sum(data))
+            print("Total %+23s" % self.sum(data))
 
 
-    def sum(self, data):
+    def sum(self, data, norm=None):
         """return human readble sum of all values in data"""
         val = 0
         for row in data:
             val += int(row.value)
+
         h = val // 60
         m = val % 60
+        result = "{:>3}h".format(h)
         if m:
-            return "{:>3}h {:>2}min".format(h, m)
-        return "{:>3}h        ".format(h)
+            result +=" {:>2}m".format(m)
+
+        if norm is not None:
+            dates = set()
+            for entry in data:
+                dates.add(entry.date)
+            target_min = val - (len(dates) * norm * 60)
+            if target_min == 0:
+                return result
+            if target_min > 0:
+                fmt = " (+%s min)"
+            else:
+                fmt = " (%s min)"
+            result += fmt % target_min
+        return result
 
     def by_cost_center(self, data):
         """split `data` by cost centers and return as dictionary"""
@@ -278,6 +295,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--from_date")
     parser.add_argument("--to_date")
+    parser.add_argument("--norm", default=6, type=int, help="daily norm")
     parser.add_argument("filename", nargs="+", help="input text file")
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("-hr", dest="output_hr", action='store_true')
@@ -296,7 +314,7 @@ def main():
 
     # output
     if args.output_hr:
-        ttt.output_human_readable()
+        ttt.output_human_readable(norm=args.norm)
     elif args.output_csv:
         ttt.output_csv()
 

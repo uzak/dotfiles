@@ -1,0 +1,10 @@
+[user]
+	email = uzak+git@mailbox.org
+	name = MU
+[core]
+	excludesfile = /home/m/repos/dotfiles/gitignore
+[pull]
+	ff = only
+	rebase = true
+[merge]
+	ff = only

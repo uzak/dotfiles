@@ -54,7 +54,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins
-plugins=(aws autojump brew command-not-found common-aliases compleat copyfile docker docker-compose git jsontools kubectl npm pip python terraform yarn web-search pass fzf)
+plugins=(aws autojump command-not-found common-aliases compleat copyfile docker docker-compose git jsontools kubectl npm pip python terraform yarn web-search pass fzf rsync urltools encode64)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -156,4 +156,15 @@ function upgrade () {
     sudo apt update
     sudo apt -y dist-upgrade 
     sudo apt -y autoremove
+    pip install -U youtube-dl
+}
+
+export PYTHONPATH=~/repos/Prusa-Connect-SDK-Printer
+
+function fe_deploy_dev () {
+    cd ~/repos/Prusa-Connect-Web
+    git checkout master
+    git checkout .
+    git pull
+    HOST=dev.connect.prusa make deploy
 }

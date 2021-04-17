@@ -1,6 +1,7 @@
 alias s="cd .."
 alias rm="rm -f"
-alias python="python3.8 -Wd -b"         # Wd = warnings default
+#alias python="python3 -Wd -b"         # Wd = warnings default
+alias python="python3 -b"
 alias pip=pip3
 
 alias ttt="ttt.py /martinuzak/work/prusa3d/tt_prusa_`date +%Y-%m`.txt -hr"
@@ -50,6 +51,11 @@ alias yapf=yapf3
 alias fd=foobar
 unalias fd          # defined by the common-aliases zsh plugin
 
-alias dmesg="dmesg -H"
+alias dmesg="sudo dmesg -H"
 alias scp="scp -C"
 alias gqview=geeqie
+alias exa="exa -l"
+
+alias pytest="pytest -rsxfE"
+
+alias pydev="pytest --dev -v"
