@@ -168,3 +168,10 @@ function fe_deploy_dev () {
     git pull
     HOST=dev.connect.prusa make deploy
 }
+
+export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
+
+fpath=(~/.zsh-completions $fpath)
+autoload -U compinit
+compinit
+zstyle ':completion:*' menu select=2
