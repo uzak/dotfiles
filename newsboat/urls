@@ -7,25 +7,25 @@ https://martinheinz.dev/rss/
 https://www.youtube.com/feeds/videos.xml?channel_id=UC51aOZF5nnderbuar5D5ifw # SF Python
 http://calpaterson.com/calpaterson.rss
 https://blog.miguelgrinberg.com/feed
-https://cernyedtech.wordpress.com/feeds/posts/default?alt=rss
 https://blog.alexellis.io/rss/
 https://world.hey.com/jason/feed.atom       # jason fried (signal vs. noise)
 
 
 # vedanta, sanskrit
 https://vediccafe.blogspot.com/feeds/posts/default
-http://decodehindumythology.blogspot.com/feeds/posts/default
-http://gita-grammar.blogspot.com/feeds/posts/default
-http://heritageinwords.blogspot.com/feeds/posts/default?alt=rss
-http://nynjbengali.com/feed/
+# http://decodehindumythology.blogspot.com/feeds/posts/default
+# http://gita-grammar.blogspot.com/feeds/posts/default
+#http://heritageinwords.blogspot.com/feeds/posts/default?alt=rss
+#http://nynjbengali.com/feed/
 http://practicalphilosophy.in/feed/
 #https://www.youtube.com/feeds/videos.xml?channel_id=UCyurta_Rz_12SQqQE_hbBTg # arsha vidya gurukulam
-https://www.youtube.com/feeds/videos.xml?channel_id=UCcNGwmNaSxhdsB1ibjBTqdw # McComas Taylor
 #https://www.youtube.com/feeds/videos.xml?channel_id=UC1IebQP1egDkI7Cy8LhSRyA # Arsha Vidya Parampara - Swami Sarvananda
-https://www.youtube.com/feeds/videos.xml?channel_id=UCgpYjFav9sk-v-l8-LAxo_w   # McComas Taylor
-https://www.youtube.com/feeds/videos.xml?channel_id=UCwLj7OrlmFr98R-MTDVhNIA   # Bangaru Nageshwar Rao
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCcNGwmNaSxhdsB1ibjBTqdw # McComas Tayloer
+https://www.youtube.com/feeds/videos.xml?channel_id=UCgpYjFav9sk-v-l8-LAxo_w   # Bangaru Nageshwar Rao
+https://www.youtube.com/feeds/videos.xml?channel_id=UCoA1ubKGgJLkjlhaAQFtIwQ # Vedanta Adhyayana Kendram Kakinada
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCwLj7OrlmFr98R-MTDVhNIA   # Vedanta Phoenix Camp
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCMEaA_Ge_BAFxz35POmlZpA
-https://www.youtube.com/feeds/videos.xml?channel_id=UCjtRpi8zMz5O54x-9qTPn1A    # Michika Medha
+#https://www.youtube.com/feeds/videos.xml?channel_id=UCjtRpi8zMz5O54x-9qTPn1A    # Michika Medha
 
 
 # entertainment
@@ -69,7 +69,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCedsqpl7jaIb8BiaUFuC9KQ   #
 # drama
 http://blog.aktualne.cz/export-blog.php?blog_name=karel-schwarzenberg
 http://blog.aktualne.cz/export-blog.php?blog_name=milan-zeleny
-http://blog.aktualne.cz/export-blog.php?blog_name=radkin-honzak
+# http://blog.aktualne.cz/export-blog.php?blog_name=radkin-honzak
 https://dennikn.sk/autor/peter-breiner/feed/
 http://tiborjavor.blog.sme.sk/rss
 https://www.youtube.com/feeds/videos.xml?channel_id=UCwnKziETDbHJtx78nIkfYug

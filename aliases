@@ -59,3 +59,5 @@ alias exa="exa -l"
 alias pytest="pytest -rsxfE"
 
 alias pydev="pytest --dev -v"
+
+alias fd="fd -H"

@@ -159,7 +159,7 @@ function upgrade () {
     pip install -U youtube-dl
 }
 
-export PYTHONPATH=~/repos/Prusa-Connect-SDK-Printer
+export PYTHONPATH=~/repos/Prusa-Connect-SDK-Printer:~/repos/Prusa-Link
 
 function fe_deploy_dev () {
     cd ~/repos/Prusa-Connect-Web
@@ -175,3 +175,5 @@ fpath=(~/.zsh-completions $fpath)
 autoload -U compinit
 compinit
 zstyle ':completion:*' menu select=2
+
+export PATH=$PATH:~/.cargo/bin
