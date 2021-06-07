@@ -252,7 +252,8 @@ class TTT:
             dates = set()
             for entry in data:
                 dates.add(entry.date)
-            target_min = val - (len(dates) * norm * 60)
+            working_dates = [d for d in dates if d.isoweekday() <= 5]
+            target_min = val - (len(working_dates) * norm * 60)
             if target_min == 0:
                 return result
             if target_min > 0:
