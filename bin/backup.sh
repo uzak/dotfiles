@@ -10,7 +10,7 @@
 ## m h  dom mon dow   command
 # 30 09 * * * /home/m/repos/scripts/backup.sh
 
-dir=/martinuzak/backup/$(hostname)
+dir=$HOME/Dropbox/backup/$(hostname)
 mkdir -p $dir
 ~/repos/dotfiles/bin/backup_music.sh > $dir/music.txt
 pip3 freeze > $dir/pip_pkgs.txt
@@ -27,7 +27,7 @@ fi
 export GNUPGHOME=~/.gnupg
 export PASSWORD_STORE_DIR=/home/m/repos/password-store
 
-BACKUP_DIRS=`echo /martinuzak $PASSWORD_STORE_DIR ~/.mozilla/firefox/*/bookmarkbackups`
+BACKUP_DIRS=`echo $HOME/Dropbox ~/.mozilla/firefox/*/bookmarkbackups`
 
 # TAR to usb stick
 if [ -d /media/m/ADATA ] 

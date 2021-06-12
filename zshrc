@@ -91,7 +91,7 @@ export LC_CTYPE=en_US.utf8
 source $HOME/.aliases
 
 setopt auto_cd
-cdpath=($HOME $HOME/repos $HOME/Desktop /martinuzak)
+cdpath=($HOME $HOME/repos $HOME/Desktop $HOME/Dropbox)
 
 #export LC_ALL="fr_FR.UTF-8"
 
@@ -106,7 +106,7 @@ bindkey "^[a" beginning-of-line
 bindkey "^[e" end-of-line
 
 export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH:/martinuzak/dotfiles/bin"
+export PATH="$HOME/gems/bin:$PATH:$HOME/repos/dotfiles/bin"
 export PATH="$PATH:/snap/bin/"
 
 export PYTHONPATH=$PYTHONPATH:~/repos/
@@ -114,7 +114,7 @@ export PYTHONSTARTUP=~/.pystartup
 export MYVIMRC=~/.vimrc
 
 export GNUPGHOME="~/.gnupg"
-export PASSWORD_STORE_DIR="/martinuzak/password-store"
+export PASSWORD_STORE_DIR="$HOME/repos/password-store"
 export PASSWORD_STORE_GIT=$PASSWORD_STORE_DIR
 
 # Configure fzf, command line fuzzyf finder
@@ -141,32 +141,16 @@ function o {
     (cd $dir && open `fzf`)
 }
 
-export HISTFILE=/martinuzak/.zsh_history
 
-export CONFFILE=~/repos/Prusa-Connect-API/etc/application.ini
-
-export PATH="$(yarn global bin):$PATH"
 export PATH="/usr/lib/cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH" # pip installs
 export EDITOR=nvim
-
-export $(cat ~/repos/Prusa-Connect-API/env | grep -v '^#' | xargs)
 
 function upgrade () {
     sudo apt update
     sudo apt -y dist-upgrade 
     sudo apt -y autoremove
     pip install -U youtube-dl
-}
-
-export PYTHONPATH=~/repos/Prusa-Connect-SDK-Printer:~/repos/Prusa-Link
-
-function fe_deploy_dev () {
-    cd ~/repos/Prusa-Connect-Web
-    git checkout master
-    git checkout .
-    git pull
-    HOST=dev.connect.prusa make deploy
 }
 
 export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
@@ -177,3 +161,23 @@ compinit
 zstyle ':completion:*' menu select=2
 
 export PATH=$PATH:~/.cargo/bin
+
+
+if [[ $HOST == 't480s' || $HOST == 'l590' ]]; then
+    export HISTFILE=$HOME/Dropbox/.zsh_history
+    export CONFFILE=~/repos/Prusa-Connect-API/etc/application.ini
+    export $(cat ~/repos/Prusa-Connect-API/env | grep -v '^#' | xargs)
+    export PATH="$(yarn global bin):$PATH"
+    export PYTHONPATH=~/repos/Prusa-Farm-Harvester:~/repos/Prusa-Connect-SDK-Printer:~/repos/Prusa-Link
+    export MANIPULATOR_HOST=10.24.223.191
+    export PICKER_HOST=10.24.200.83
+
+    function fe_deploy_dev () {
+        cd ~/repos/Prusa-Connect-Web
+        git checkout master
+        git checkout .
+        git pull
+        HOST=dev.connect.prusa make deploy
+    }
+fi
+

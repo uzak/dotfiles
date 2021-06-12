@@ -4,8 +4,8 @@ alias rm="rm -f"
 alias python="python3 -b"
 alias pip=pip3
 
-alias ttt="ttt.py /martinuzak/work/prusa3d/tt_prusa_`date +%Y-%m`.txt -hr"
-alias tt="ttt.py /martinuzak/work/prusa3d/tt_prusa_`date +%Y-%m`.txt -hr --from_date `date +%Y-%m-%d`"
+alias ttt="ttt.py /home/m/Dropbox/work/prusa3d/tt_prusa_`date +%Y-%m`.txt -hr"
+alias tt="ttt.py /home/m/Dropbox/work/prusa3d/tt_prusa_`date +%Y-%m`.txt -hr --from_date `date +%Y-%m-%d`"
 
 alias vim=nvim
 alias vi=nvim

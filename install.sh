@@ -14,7 +14,7 @@ if [[ "DELETE" == "DELETE" ]]; then
     rm -f ~/.ssh
 fi
 
-DOTFILES=/martinuzak/dotfiles
+DOTFILES=$HOME/repos/dotfiles
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -33,14 +33,19 @@ ln -s $DOTFILES/newsboat ~/.newsboat
 mkdir -p ~/.config/nvim
 ln -s $DOTFILES/vim/vimrc ~/.config/nvim/init.vim
 
+if [[ $HOST == 't480s' || $HOST == 'l590' ]]; then
+    ln -s $HOME/Dropbox/{blog,dotfiles,password-store} $HOME/repos/
+fi
+
 # mpd, vimpc
-# ln -s  $DOTFILES/mpd.conf ~/.mpdconf
-# mkdir ~/.mpd
-# mkdir -p ~/.mpd/playlists
-# touch ~/.mpd/{mpd.db,mpd.log,mpd.pid,mpdstate}
-# mpc update
+ln -s  $DOTFILES/mpd.conf ~/.mpdconf
+mkdir ~/.mpd
+mkdir -p ~/.mpd/playlists
+touch ~/.mpd/{mpd.db,mpd.log,mpd.pid,mpdstate}
+mpc update
 ln -s $DOTFILES/vimpcrc ~/.vimpcrc
 
 # ssh
 rmdir ~/.ssh
-ln -s /martinuzak/.ssh ~
+ln -s $HOME/Dropbox/.ssh ~
+
