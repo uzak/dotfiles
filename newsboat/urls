@@ -9,7 +9,8 @@ http://calpaterson.com/calpaterson.rss
 https://blog.miguelgrinberg.com/feed
 https://blog.alexellis.io/rss/
 https://world.hey.com/jason/feed.atom       # jason fried (signal vs. noise)
-
+https://www.youtube.com/feeds/videos.xml?channel_id=UCV3alCf19e_sy7RFzKEuNpw    # l'Oberservatoire du Monde Cybernetique
+https://k47.cz/rss.xml
 
 # vedanta, sanskrit
 https://vediccafe.blogspot.com/feeds/posts/default
@@ -23,7 +24,7 @@ http://practicalphilosophy.in/feed/
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCcNGwmNaSxhdsB1ibjBTqdw # McComas Tayloer
 https://www.youtube.com/feeds/videos.xml?channel_id=UCgpYjFav9sk-v-l8-LAxo_w   # Bangaru Nageshwar Rao
 https://www.youtube.com/feeds/videos.xml?channel_id=UCoA1ubKGgJLkjlhaAQFtIwQ # Vedanta Adhyayana Kendram Kakinada
-# https://www.youtube.com/feeds/videos.xml?channel_id=UCwLj7OrlmFr98R-MTDVhNIA   # Vedanta Phoenix Camp
+https://www.youtube.com/feeds/videos.xml?channel_id=UCwLj7OrlmFr98R-MTDVhNIA   # Vedanta Phoenix Camp
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCMEaA_Ge_BAFxz35POmlZpA
 #https://www.youtube.com/feeds/videos.xml?channel_id=UCjtRpi8zMz5O54x-9qTPn1A    # Michika Medha
 
@@ -34,19 +35,22 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCpBQMibpipuqHsI_mJMVveA   #
 https://www.youtube.com/feeds/videos.xml?channel_id=UCngpdIYbl5REio0EaQjlHSA   # Crazy for Indian Food
 https://www.youtube.com/feeds/videos.xml?channel_id=UCmz-NT1dtjcVzigo8PylDBw   # Thundermist Lures
 https://www.youtube.com/feeds/videos.xml?channel_id=UCrfKGpvbEQXcbe68dzXgJuA   # Forgotten Weapons
+https://www.youtube.com/feeds/videos.xml?channel_id=UCsrKsXEAqCbZyVrCibkgpwQ   # 9 hole reviews
 https://www.youtube.com/feeds/videos.xml?channel_id=UC2I6Et1JkidnnbWgJFiMeHA   # Steve1989 MRE Info
 https://www.youtube.com/feeds/videos.xml?channel_id=UCT6Y5JJPKe_JDMivpKgVXew   # Fall of Civilizations
 https://www.youtube.com/feeds/videos.xml?channel_id=UCnXQJu45EMrCKBxvk5Sicpg   # Luca Stricagnoli
 https://www.youtube.com/feeds/videos.xml?channel_id=UClKIjbgtWGzHtXhBDS_I0pg   # State Azure
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCTsnTp-g5Rj3VY7Tlm2XQ6A    # Estas Tonne
-https://www.youtube.com/feeds/videos.xml?channel_id=UCBiPHqnZ3mwIqtraltox6jg    # Lain Civ 4 Deity
-https://www.youtube.com/feeds/videos.xml?channel_id=UCxpswodvdLpsD_XjJntvFBA    # Mozaika
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCBiPHqnZ3mwIqtraltox6jg    # Lain Civ 4 Deity
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCxpswodvdLpsD_XjJntvFBA    # Mozaika
 
 
 # misc
 
+https://krabice.wordpress.com/feed/
+
 https://t.co/v7NpcouK72         # marian kechlibar.net
-http://feeds.feedburner.com/zenhabits
+# http://feeds.feedburner.com/zenhabits
 https://www.youtube.com/feeds/videos.xml?channel_id=UCi0TFuqj6eND-mJRf8i2Tnw
 https://www.youtube.com/feeds/videos.xml?channel_id=UCS5tt2z_DFvG7-39J3aE-bQ  # life of boris
 https://www.youtube.com/feeds/videos.xml?channel_id=UCJZ94qp4dtCw0Q5UQqAkg7w
@@ -55,17 +59,18 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCi7dAxUH0aFgis7h2ouVhNQ # M
 https://www.youtube.com/feeds/videos.xml?channel_id=UC9ORxqKBywaO7fgflFJzHRw # Pinch of Yum
 https://www.youtube.com/feeds/videos.xml?channel_id=UCxYubGulNn1NPCzVIL6yPWA # kb5
 https://www.youtube.com/feeds/videos.xml?channel_id=UCKfMsmWq9cPBAuFLlff-rCA   # mrk.cz
-https://www.youtube.com/feeds/videos.xml?channel_id=UCW39zufHfsuGgpLviKh297Q   # DW documentaries
-https://www.youtube.com/feeds/videos.xml?channel_id=UCy4_zQ59zmS7zO4Dc6vbT_w   # SWR
-https://www.youtube.com/feeds/videos.xml?channel_id=UC9sXw4ZdPEIp6bYGvLW-_iA   # VPRO documentary
+#https://www.youtube.com/feeds/videos.xml?channel_id=UCW39zufHfsuGgpLviKh297Q   # DW documentaries
+#https://www.youtube.com/feeds/videos.xml?channel_id=UCy4_zQ59zmS7zO4Dc6vbT_w   # SWR
+# https://www.youtube.com/feeds/videos.xml?channel_id=UC9sXw4ZdPEIp6bYGvLW-_iA   # VPRO documentary
 https://www.youtube.com/feeds/videos.xml?channel_id=UCuw0GgMlZlAsWvpI8PgCN8g   # ENDEVR
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCpVm7bg6pXKo1Pr6k5kxG9A   # National Geographics
-#https://www.youtube.com/feeds/videos.xml?channel_id=UC_0Ycw3ZEG8xz1FcNG82R3g   # ECM BA Stare Mesto
-#https://www.youtube.com/feeds/videos.xml?channel_id=UC22PpoAHR7BZhx15etzFAow # Akademicka farnost Praha - Salvator
-#https://www.youtube.com/feeds/videos.xml?channel_id=UC1ASPUCPfhkyUW9RUX9RGHw    # Radio Svobodne universum
-https://www.youtube.com/feeds/videos.xml?channel_id=UC_yXGNJDvXRd7041L8Gkw9g   # Artger
+https://www.youtube.com/feeds/videos.xml?channel_id=UC_0Ycw3ZEG8xz1FcNG82R3g   # ECM BA Stare Mesto
+https://www.youtube.com/feeds/videos.xml?channel_id=UC22PpoAHR7BZhx15etzFAow # Akademicka farnost Praha - Salvator
+# https://www.youtube.com/feeds/videos.xml?channel_id=UC1ASPUCPfhkyUW9RUX9RGHw    # Radio Svobodne universum
+#https://www.youtube.com/feeds/videos.xml?channel_id=UC_yXGNJDvXRd7041L8Gkw9g   # Artger
 https://www.youtube.com/feeds/videos.xml?channel_id=UCedsqpl7jaIb8BiaUFuC9KQ   # pasta grannies
 
+https://www.youtube.com/feeds/videos.xml?channel_id=UCNNEMxGKV1LsKZRt4vaIbvw   # ZDF Magazine royalle
 
 # drama
 http://blog.aktualne.cz/export-blog.php?blog_name=karel-schwarzenberg

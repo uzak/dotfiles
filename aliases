@@ -61,3 +61,6 @@ alias pytest="pytest -rsxfE"
 alias pydev="pytest --dev -v"
 
 alias fd="fd -H"
+
+alias ssh="ssh -A"
+alias ncal="ncal -M"

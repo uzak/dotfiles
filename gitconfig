@@ -1,6 +1,6 @@
 [user]
 	email = uzak+git@mailbox.org
-	name = MU
+	name = Martin Užák
 [core]
 	excludesfile = /home/m/repos/dotfiles/gitignore
 [pull]

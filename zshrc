@@ -166,11 +166,16 @@ export PATH=$PATH:~/.cargo/bin
 if [[ $HOST == 't480s' || $HOST == 'l590' ]]; then
     export HISTFILE=$HOME/Dropbox/.zsh_history
     export CONFFILE=~/repos/Prusa-Connect-API/etc/application.ini
-    export $(cat ~/repos/Prusa-Connect-API/env | grep -v '^#' | xargs)
+    #export $(cat ~/repos/Prusa-Connect-API/env | grep -v '^#' | xargs)
     export PATH="$(yarn global bin):$PATH"
     export PYTHONPATH=~/repos/Prusa-Farm-Harvester:~/repos/Prusa-Connect-SDK-Printer:~/repos/Prusa-Link
     export MANIPULATOR_HOST=10.24.223.191
     export PICKER_HOST=10.24.200.83
+
+    export MANIPULATOR_HOST=localhost
+    export PICKER_HOST=localhost
+    export MANIPULATOR_PORT=2000
+    export PICKER_PORT=3000
 
     function fe_deploy_dev () {
         cd ~/repos/Prusa-Connect-Web
