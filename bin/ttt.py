@@ -296,7 +296,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--from_date")
     parser.add_argument("--to_date")
-    parser.add_argument("--norm", default=6, type=int, help="daily norm")
+    parser.add_argument("--norm", default=5, type=int, help="daily norm")
     parser.add_argument("filename", nargs="+", help="input text file")
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("-hr", dest="output_hr", action='store_true')
