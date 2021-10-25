@@ -3,6 +3,8 @@
 
 reload-threads 8
 
+browser "firefox %u"
+
 # bind keys - vim style
 bind-key j down
 bind-key k up

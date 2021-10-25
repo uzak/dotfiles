@@ -16,6 +16,7 @@ import datetime
 import collections
 import re
 
+# TODO introduce `time - break` format
 # TODO split formatting from computting
 
 
