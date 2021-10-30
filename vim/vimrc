@@ -180,7 +180,7 @@ augroup init
 
     au bufread,bufnewfile *.conf setf dosini
 
-    au focuslost * :wa
+    au focuslost * nested silent! wall
 augroup END
 
 " clear empty spaces at the end of lines on save of python files
