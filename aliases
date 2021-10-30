@@ -6,6 +6,7 @@ alias pip=pip3
 
 alias ttt="ttt.py /home/m/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -hr"
 alias tt="ttt.py /home/m/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -hr --from_date `date +%Y-%m-%d`"
+alias tttd="ttt.py /home/m/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -daily"
 
 alias vim=nvim
 alias vi=nvim

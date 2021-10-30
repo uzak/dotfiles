@@ -210,6 +210,17 @@ class TTT:
                 total  = functools.reduce(lambda a, b: a+b, values)
                 print("%d,%d,%s,%d" % (year, month, cc, total))
 
+    def output_daily(self):
+        for monthly in self.by_months(self.data).values():
+            days = {}
+            for entry in monthly:
+                if entry.date not in days:
+                    days[entry.date] = []
+                days[entry.date].append(entry)
+            for date in sorted(days.keys()):
+                fmt_val = self.sum(days[date])
+                print(f"{date} {fmt_val}")
+
     def output_human_readable(self, norm=None):
         "output read data in human readable form"
         data = self.data
@@ -301,6 +312,7 @@ def main():
     parser.add_argument("filename", nargs="+", help="input text file")
     group = parser.add_mutually_exclusive_group(required=True)
     group.add_argument("-hr", dest="output_hr", action='store_true')
+    group.add_argument("-daily", dest="output_daily", action='store_true')
     group.add_argument("-csv", dest="output_csv", action='store_true')
     args = parser.parse_args()
 
@@ -319,6 +331,8 @@ def main():
         ttt.output_human_readable(norm=args.norm)
     elif args.output_csv:
         ttt.output_csv()
+    elif args.output_daily:
+        ttt.output_daily()
 
 if __name__ == "__main__":
     main()
