@@ -5,11 +5,11 @@ alias python="python3 -b"
 alias pip=pip3
 
 alias ttt="ttt.py /home/m/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -hr"
-alias tt="ttt.py /home/m/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -hr --from_date `date +%Y-%m-%d`"
+alias tt="ttt.py /home/m/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -hr --from_date `date +%Y-%m-%d` --to_date `date -d "+1 days" +%Y-%m-%d`"
 alias tttd="ttt.py /home/m/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -daily"
 
-alias vim=nvim
-alias vi=nvim
+#alias vim=nvim
+#alias vi=nvim
 
 alias feedly=newsboat
 
@@ -55,6 +55,7 @@ unalias fd          # defined by the common-aliases zsh plugin
 alias dmesg="sudo dmesg -H"
 alias scp="scp -C"
 alias gqview=geeqie
+#alias ls=exa
 alias exa="exa -l"
 
 alias pytest="pytest -rsxfE"

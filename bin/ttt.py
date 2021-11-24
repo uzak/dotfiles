@@ -15,6 +15,7 @@ import logging
 import datetime
 import collections
 import re
+import sys
 
 # TODO introduce `time - break` format
 # TODO split formatting from computting
@@ -176,7 +177,7 @@ class TTT:
         if self.from_date:
             self.data = filter(lambda x: x.date >= self.from_date.date(), self.data)
         if self.to_date:
-            self.data = filter(lambda x: x.date < self.to_date, self.data)
+            self.data = filter(lambda x: x.date < self.to_date.date(), self.data)
 
     def parse_line(self, line, filename, line_no):
         "Parse `line` from `filename` and return an `Entry` object if possible"
@@ -282,6 +283,10 @@ class TTT:
             cc = row.cost_center
             if cc not in result:
                 result[cc] = []
+            if isinstance(row.value, Time_Interval):
+                if row.value.start > row.value.end:
+                    print(f"Invalid: {row}", file=sys.stderr)
+                    continue
             result[cc].append(row)
         return result
 

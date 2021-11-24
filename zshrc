@@ -150,6 +150,7 @@ function upgrade () {
     sudo apt update
     sudo apt -y dist-upgrade 
     sudo apt -y autoremove
+    sudo apt-get clean
     pip install -U youtube-dl
 }
 
