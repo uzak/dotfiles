@@ -32,6 +32,8 @@ ln -s $DOTFILES/ideavimrc ~/.ideavimrc
 ln -s $DOTFILES/newsboat ~/.newsboat
 mkdir -p ~/.config/nvim
 ln -s $DOTFILES/vim/vimrc ~/.config/nvim/init.vim
+mkdir -p ~/.config/kitty
+ln -s $DOTFILES/kitty.conf ~/.config/kitty/kitty.conf
 
 if [[ $HOST == 't480s' || $HOST == 'l590' ]]; then
     ln -s $HOME/Dropbox/{blog,dotfiles,password-store} $HOME/repos/
