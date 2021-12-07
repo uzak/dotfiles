@@ -1,5 +1,10 @@
 Here are the dotfiles I'm using. 
 
+Install guides:
+
+* [t480](ubuntu_install.md)
+* [raspi](raspi_install.md)
+
 Inspiration & Kudos:
 
 * [samoshkin](https://github.com/samoshkin/dotfiles) (tmux)

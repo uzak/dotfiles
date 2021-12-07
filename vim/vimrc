@@ -103,7 +103,7 @@ set wrap
 set wrapscan
 set background=dark
 set number
-set spelllang=en_us,de_at,sk,cs,pt_br
+set spelllang=en_us,de_at,sk
 
 colorscheme zellner
 
@@ -150,7 +150,7 @@ augroup init
     " spell correction on markdown files and mail (for mutt)
     autocmd FileType mail,markdown setlocal spell
     autocmd FileType mail,markdown setlocal wrap
-    autocmd FileType mail,markdown setlocal spelllang=en,sk,de,cs
+    autocmd FileType mail,markdown setlocal spelllang=en,sk,de
 
     " Spell-check Git messages
     " goto 1st line
@@ -202,7 +202,7 @@ nnoremap <leader>de :setlocal spell spelllang=de<cr>
 nnoremap <leader>en :setlocal spell spelllang=en<cr>
 nnoremap <leader>sk :setlocal spell spelllang=sk<cr>
 nnoremap <leader>cz :setlocal spell spelllang=cz<cr>
-nnoremap <leader>pt :setlocal spell spelllang=pt<cr>
+" nnoremap <leader>pt :setlocal spell spelllang=pt<cr>
 
 " Leaders {{{1
 

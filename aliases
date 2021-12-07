@@ -4,7 +4,7 @@ alias rm="rm -f"
 alias python="python3 -b"
 alias pip=pip3
 
-alias ttt="ttt.py /home/m/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -hr"
+alias ttt="ttt.py /home/m/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -hr --norm 8"
 alias tt="ttt.py /home/m/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -hr --from_date `date +%Y-%m-%d` --to_date `date -d "+1 days" +%Y-%m-%d`"
 alias tttd="ttt.py /home/m/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -daily"
 
