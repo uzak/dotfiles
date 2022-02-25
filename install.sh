@@ -35,7 +35,7 @@ ln -s $DOTFILES/vim/vimrc ~/.config/nvim/init.vim
 mkdir -p ~/.config/kitty
 ln -s $DOTFILES/kitty.conf ~/.config/kitty/kitty.conf
 
-if [[ $HOST == 't480s' || $HOST == 'l590' ]]; then
+if [[ $HOST == 't480s' || $HOST == 'air' ]]; then
     ln -s $HOME/Dropbox/{blog,dotfiles,password-store} $HOME/repos/
 fi
 
@@ -48,6 +48,6 @@ mpc update
 ln -s $DOTFILES/vimpcrc ~/.vimpcrc
 
 # ssh
-rmdir ~/.ssh
+rmdir ~/.ssh 2>/dev/null || true
 ln -s $HOME/Dropbox/.ssh ~
 

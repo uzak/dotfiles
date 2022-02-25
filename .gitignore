@@ -3,3 +3,4 @@ mail/mutt/cache
 mail/mutt/tmp
 newsboat/history.*
 newsboat/cache.db
+__pycache__

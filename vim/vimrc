@@ -254,8 +254,8 @@ let g:username='Martin Užák'
 " vimwiki {{{2
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.wiki': 'markdown'}
 
-let g:vimwiki_list = [{
-    \ 'path' : '/home/m/repos/blog/_wiki/it', 
+let g:vimwiki_list = [  
+    \ {'path' : '/home/m/repos/blog/_wiki/it', 
     \ 'syntax' : 'markdown', 
     \ 'auto_toc' : 1,
     \ 'ext' : '.md', 
