@@ -147,10 +147,15 @@ export PATH="$HOME/.local/bin:$PATH" # pip installs
 export EDITOR=nvim
 
 function upgrade () {
-    sudo apt update
-    sudo apt -y dist-upgrade 
-    sudo apt -y autoremove
-    sudo apt-get clean
+    if [[ $OSTYPE == linux-gnu ]]; then
+        sudo apt update
+        sudo apt -y dist-upgrade 
+        sudo apt -y autoremove
+        sudo apt-get clean
+    else
+        brew update
+        brew upgrade
+    fi
     pip install -U youtube-dl
 }
 
@@ -162,5 +167,7 @@ compinit
 zstyle ':completion:*' menu select=2
 
 export PATH=$PATH:~/.cargo/bin
+export PATH=/opt/homebrew/Cellar/python@3.10/3.10.2/bin/:$PATH
+export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"   # for gnu-grep
 
-
+export LC_ALL=en_US.UTF-8

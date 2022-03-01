@@ -4,12 +4,16 @@ alias rm="rm -f"
 alias python="python3 -b"
 alias pip=pip3
 
-alias ttt="ttt.py /home/m/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -hr --norm 8"
-alias tt="ttt.py /home/m/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -hr --from_date `date +%Y-%m-%d` --to_date `date -d "+1 days" +%Y-%m-%d`"
-alias tttd="ttt.py /home/m/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -daily"
+alias ttt="ttt.py $HOME/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -hr --norm 8"
+if [[ $OSTYPE == linux-gnu ]]; then
+    alias tt="ttt.py $HOME/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -hr --from_date `date +%Y-%m-%d` --to_date `date -d "+1 days" +%Y-%m-%d`"
+else
+    alias tt="ttt.py $HOME/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -hr --from_date `date +%Y-%m-%d` --to_date `date -v-1d +%Y-%m-%d`"
+fi
+alias tttd="ttt.py $HOME/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -daily"
 
-#alias vim=nvim
-#alias vi=nvim
+alias vim=nvim
+alias vi=nvim
 
 alias feedly=newsboat
 
