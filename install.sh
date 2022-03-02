@@ -40,7 +40,11 @@ if [[ $HOST == 't480s' || $HOST == 'air' ]]; then
 fi
 
 # mpd, vimpc
-ln -s  $DOTFILES/mpd.conf ~/.mpdconf
+if [[ $OSTYPE == 'darwin'* ]]; then
+    ln -s  $DOTFILES/mpd.conf.osx ~/.mpdconf
+else
+    ln -s  $DOTFILES/mpd.conf ~/.mpdconf
+fi
 mkdir ~/.mpd
 mkdir -p ~/.mpd/playlists
 touch ~/.mpd/{mpd.db,mpd.log,mpd.pid,mpdstate}

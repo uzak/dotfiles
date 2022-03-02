@@ -33,7 +33,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'vimwiki/vimwiki'
 
-Plug 'valloric/MatchTagAlways'          " highlight enclosing html/xml tags 
+"Plug 'valloric/MatchTagAlways'          " highlight enclosing html/xml tags 
 Plug 'google/vim-searchindex'           " shows  'M/N' matches found
 Plug 'Shougo/context_filetype.vim'      " Completion from other opened files
 Plug 'sheerun/vim-polyglot'             " Better language packs
