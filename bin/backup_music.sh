@@ -1,6 +1,8 @@
 #!/bin/bash
+#
+# Usage: MUSIC_DIR=~/m backup_music.sh > ~/Dropbox/music.txt
 
-MUSIC_DIR=~/Music
+MUSIC_DIR=${MUSIC_DIR:-~/Music}
 
 strip_n=$(echo $MUSIC_DIR | wc -c)
 strip_n=$(($strip_n + 1))  # add trailing `/`

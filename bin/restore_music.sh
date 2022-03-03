@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 if [ ! "$#" -eq 2 ]; then
+    # restore_music.sh ~/Dropbox/music.txt ~/Music
     echo "Usage: $0 backup.txt output_dir"
     exit 1
 fi
@@ -25,7 +26,7 @@ cat $INPUT_FILE | while read line; do
         mkdir -p "$dir"
         cd "$dir"
         # download if not yet present 
-        ls *$id*.mp3 || youtube-dl -i -x --audio-format mp3 https://www.youtube.com/watch\?v\=$id
+        ls *$id*.mp3 2>/dev/null || youtube-dl -i -x --audio-format mp3 https://www.youtube.com/watch\?v\=$id
     )
 done
 
