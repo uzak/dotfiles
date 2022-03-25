@@ -9,7 +9,7 @@ import os
 import os
 
 EDITOR = os.getenv('EDITOR', "vi")
-BLOG_DIR = os.path.expanduser('~/repos/blog/_posts')
+BLOG_DIR = os.path.expanduser('~/repos/blog/content/posts')
 
 date = time.strftime('%Y-%m-%d')
 
@@ -19,11 +19,8 @@ title: "%(title)s"
 lang: %(lang)s
 tags: ['diary']
 date: %(date)s
+toc: true
 ---
-
-Table of contents:
-* TOC
-{:toc}
 
 <!--
     vim:spell spelllang=%(lang)s
