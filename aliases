@@ -8,7 +8,7 @@ alias ttt="ttt.py $HOME/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -hr 
 if [[ $OSTYPE == linux-gnu ]]; then
     alias tt="ttt.py $HOME/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -hr --from_date `date +%Y-%m-%d` --to_date `date -d "+1 days" +%Y-%m-%d`"
 else
-    alias tt="ttt.py $HOME/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -hr --from_date `date +%Y-%m-%d` --to_date `date -v-1d +%Y-%m-%d`"
+    alias tt="ttt.py $HOME/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -hr --from_date `date +%Y-%m-%d` --to_date `date -v+1d +%Y-%m-%d`"
 fi
 alias tttd="ttt.py $HOME/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -daily"
 
@@ -20,7 +20,7 @@ alias feedly=newsboat
 alias lt="ls -lct"                      # override zsh/common-aliases
 alias ltr="ls -lctr"
 
-alias passmenu=/usr/share/doc/pass/examples/dmenu/passmenu
+#alias passmenu=/usr/share/doc/pass/examples/dmenu/passmenu
 
 if [ -n "$ZSH_VERSION" ]; then
 	alias -g F='| fzf'
@@ -31,21 +31,6 @@ alias halt=poweroff
 alias emacs="emacsclient -a '' -c"
 
 alias ydl=youtube-dl
-
-if [[ $OSTYPE == linux-gnu ]]; then
-    alias htop="TERM=linux htop"
-    alias df='df -x"squashfs"'
-    alias ls="ls --color -N"
-    alias mplayer=mpv
-    alias open=xdg-open
-    alias mpv=celluloid
-    alias balsamiq="wine-stable C:\\\\Program\\ Files\\ \\(x86\\)\\\\Balsamiq\\ Mockups\\ 3\\\\Balsamiq\\ Mockups\\ 3.exe "
-    alias googleearth="LIBGL_ALWAYS_SOFTWARE=1 /opt/google/earth/pro/googleearth"
-fi
-
-if [[ $OSTYPE == darwin* ]]; then
-    alias htop="TERM=iterm htop"
-fi
 
 alias ack="ack -i"
 
@@ -69,4 +54,19 @@ alias pydev="pytest --dev -v"
 alias fd="fd -H"
 
 alias ssh="ssh -A"
-alias ncal="ncal -M"
+
+if [[ $OSTYPE == darwin* ]]; then
+    alias htop="TERM=iterm htop"
+else
+    alias ncal="ncal -M"
+    alias htop="TERM=linux htop"
+    alias df='df -x"squashfs"'
+    alias ls="ls --color -N"
+    alias mplayer=mpv
+    alias open=xdg-open
+    alias mpv=celluloid
+    alias balsamiq="wine-stable C:\\\\Program\\ Files\\ \\(x86\\)\\\\Balsamiq\\ Mockups\\ 3\\\\Balsamiq\\ Mockups\\ 3.exe "
+    alias googleearth="LIBGL_ALWAYS_SOFTWARE=1 /opt/google/earth/pro/googleearth"
+fi
+
+unalias ipython

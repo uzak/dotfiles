@@ -21,7 +21,7 @@ cat $INPUT_FILE | while read line; do
     id=`echo $line | grep -oP '\-\K\S{11}\.mp3$' | cut -b-11`
     dir=`dirname "$line"`
 
-    # create the dir download the song
+    # create the dir, download the song
     (
         mkdir -p "$dir"
         cd "$dir"

@@ -171,3 +171,8 @@ export PATH=/opt/homebrew/Cellar/python@3.10/3.10.2/bin/:$PATH
 export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"   # for gnu-grep
 
 export LC_ALL=en_US.UTF-8
+
+export PATH="/opt/homebrew/Cellar/ruby/3.1.1/bin/:$PATH"
+export PATH="$HOME/.gem/ruby/3.1.1/bin:$PATH"
+
+eval "$(rbenv init - zsh)"

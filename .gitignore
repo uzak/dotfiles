@@ -4,3 +4,4 @@ mail/mutt/tmp
 newsboat/history.*
 newsboat/cache.db
 __pycache__
+.DS_Store

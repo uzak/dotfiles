@@ -1,5 +1,22 @@
 # Contents
 
+- [Install](#Install)
+- [Sudo](#Sudo)
+- [Environment](#Environment)
+- [Basic tools](#Basic tools)
+- [zsh](#zsh)
+- [firefox](#firefox)
+- [Slack](#Slack)
+- [Snap](#Snap)
+- [Docker](#Docker)
+- [vimpc](#vimpc)
+- [Jekyll/blog](#Jekyll/blog)
+- [Misc](#Misc)
+    - [Mute beeping](#Misc#Mute beeping)
+    - [Dispable touchpad](#Misc#Dispable touchpad)
+    - [Battery](#Misc#Battery)
+        - [Marble mouse](#Misc#Battery#Marble mouse)
+
 # Install
 
 * normal installation

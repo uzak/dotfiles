@@ -4,6 +4,7 @@ Install guides:
 
 * [t480](ubuntu_install.md)
 * [raspi](raspi_install.md)
+* [macbook](mac_install.md)
 
 Inspiration & Kudos:
 
