@@ -46,6 +46,8 @@ Plug 'SidOfc/mkdx'                      " useful markdown functions
 
 Plug 'tpope/vim-surround'
 
+Plug 'tpope/vim-fugitive'
+
 call plug#end()
 
 " Install plugins the first time vim runs

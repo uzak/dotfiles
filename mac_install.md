@@ -19,6 +19,7 @@
     brew install mpd vimpc
     brew install cloc
     brew install bandwhich iftop bmon
+    brew install pandoc
 
 ## Cask 
 
@@ -31,3 +32,8 @@
     brew install --cask easy-move-plus-resize
     brew install --cask libreoffice
     brew install --cask gimp
+    brew install --cask basictex
+    
+## Misc
+
+* http://www.remotemouse.net/

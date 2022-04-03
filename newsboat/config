@@ -10,8 +10,8 @@ refresh-on-startup yes
 reload-time 60
 auto-reload yes
 
-confirm-mark-feed-read no
-confirm-mark-all-feeds-read no
+# confirm-mark-feed-read no
+# confirm-mark-all-feeds-read no
 
 # bind keys - vim style
 bind-key j down
