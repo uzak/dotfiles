@@ -217,7 +217,7 @@ nnoremap <leader>vs :source $MYVIMRC<cr>
 nnoremap <leader>ve :e $MYVIMRC<cr>
 
 nnoremap <expr><leader>tt ':e $HOME/Dropbox/work/codecool/tt_codecool_' . strftime('%Y-%m') . '.txt<CR>'
-nnoremap <leader>td :e $HOME/Dropbox/todo.txt<CR>
+nnoremap <leader>td :e $HOME/Dropbox/todo.txt<cr>:set filetype=txt<cr>
 
 " Opens an edit command with the path of the currently edited file filled in
 nnoremap <leader>o :e <C-R>=expand("%:p:h") . "/" <CR>

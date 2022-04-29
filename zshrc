@@ -156,6 +156,7 @@ function upgrade () {
         brew update
         brew upgrade
     fi
+    omz update
     pip install -U youtube-dl
 }
 

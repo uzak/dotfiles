@@ -9,7 +9,7 @@ import os
 import os
 
 EDITOR = os.getenv('EDITOR', "vi")
-BLOG_DIR = os.path.expanduser('~/repos/blog/content/posts')
+BLOG_DIR = os.path.expanduser('~/repos/blog/content/post')
 
 date = time.strftime('%Y-%m-%d')
 
@@ -30,6 +30,7 @@ toc: true
 
 def blog_file_name(title):
     t = sanitize_filename(title)
+    t = t.replace("'", "")
     return "%s-%s.md" % (date, t.replace(" ", "_"))
 
 
@@ -39,7 +40,7 @@ def blog_file_name_abs(title):
 
 def main(title, lang):
     fn_abs = blog_file_name_abs(title)
-    cmd = "%s '%s'" % (EDITOR, fn_abs.replace("'", ""))
+    cmd = "%s '%s'" % (EDITOR, fn_abs)
     print(cmd)
 
     if os.path.exists(fn_abs):
