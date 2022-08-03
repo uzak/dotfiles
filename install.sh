@@ -1,6 +1,8 @@
 #! /bin/bash
 
-if [[ "DELETE" == "DELETE" ]]; then
+DOTFILES=$HOME/repos/dotfiles
+
+if [[ $DELETE == "DELETE" ]]; then
     rm -f ~/.zshrc
     rm -f ~/.vimrc
     rm -f ~/.aliases
@@ -13,8 +15,6 @@ if [[ "DELETE" == "DELETE" ]]; then
     rm -f ~/.newsboat
     rm -f ~/.ssh
 fi
-
-DOTFILES=$HOME/repos/dotfiles
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -36,7 +36,7 @@ mkdir -p ~/.config/kitty
 ln -s $DOTFILES/kitty.conf ~/.config/kitty/kitty.conf
 
 if [[ $HOST == 't480s' || $HOST == 'air' ]]; then
-    ln -s $HOME/Dropbox/{blog,dotfiles,password-store} $HOME/repos/
+    ln -s $HOME/Dropbox/repos/{blog,dotfiles,password-store} $HOME/repos/
 fi
 
 # mpd, vimpc

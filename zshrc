@@ -93,8 +93,6 @@ source $HOME/.aliases
 setopt auto_cd
 cdpath=($HOME $HOME/repos $HOME/Desktop $HOME/Dropbox)
 
-#export LC_ALL="fr_FR.UTF-8"
-
 # for gnu sed
 #   PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
@@ -141,23 +139,22 @@ function o {
     (cd $dir && open `fzf`)
 }
 
-
-export PATH="/usr/lib/cargo/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH" # pip installs
 export EDITOR=nvim
 
 function upgrade () {
-    if [[ $OSTYPE == linux-gnu ]]; then
+    if [[ $OSTYPE == linux-* ]]; then
         sudo apt update
         sudo apt -y dist-upgrade 
         sudo apt -y autoremove
         sudo apt-get clean
+        sudo snap refresh
     else
         brew update
         brew upgrade
     fi
     omz update
     pip install -U youtube-dl
+    python3 -m pip install --upgrade pip
 }
 
 export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
@@ -167,14 +164,13 @@ autoload -U compinit
 compinit
 zstyle ':completion:*' menu select=2
 
+export PATH="/usr/lib/cargo/bin:$PATH"
 export PATH=$PATH:~/.cargo/bin
+export PATH="$HOME/.local/bin:$PATH" # pip installs
 export PATH=/opt/homebrew/Cellar/python@3.10/3.10.2/bin/:$PATH
 export PATH="/opt/homebrew/opt/grep/libexec/gnubin:$PATH"   # for gnu-grep
 
 export LC_ALL=en_US.UTF-8
-
-export PATH="/opt/homebrew/Cellar/ruby/3.1.1/bin/:$PATH"
-export PATH="$HOME/.gem/ruby/3.1.1/bin:$PATH"
 
 function vifzf() {
     vi `fzf`

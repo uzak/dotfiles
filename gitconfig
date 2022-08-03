@@ -1,6 +1,6 @@
 [user]
 	email = uzak+git@mailbox.org
-	name = Martin Užák
+	name = Martin Uzak
 [core]
 	excludesfile = /home/m/repos/dotfiles/gitignore
 [pull]
@@ -11,3 +11,5 @@
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
+[push]
+	autoSetupRemote = true

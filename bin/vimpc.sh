@@ -6,7 +6,7 @@ cleanup() {
     exit $rv
 }
 
-systemctl --user start mpd
+[[ "$OSTYPE" == "linux-gnu"* ]] && systemctl --user start mpd
 mpc update
 vimpc
-trap "cleanup" INT TERM EXIT
+[[ "$OSTYPE" == "linux-gnu"* ]] && trap "cleanup" INT TERM EXIT

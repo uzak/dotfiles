@@ -20,6 +20,7 @@
     brew install cloc
     brew install bandwhich iftop bmon
     brew install pandoc
+    brew install inetutils
 
 ## Cask 
 
