@@ -1,0 +1,10 @@
+#! /bin/sh
+#
+# workon.sh
+# Copyright (C) 2022 Martin Užák <uzak+git@mailbox.org>
+#
+# Distributed under terms of the MIT license.
+#
+
+pkill --signal SIGTERM Discord
+pkill slack

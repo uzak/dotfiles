@@ -14,6 +14,7 @@ if [[ $DELETE == "DELETE" ]]; then
     rm -f ~/.ideavimrc
     rm -f ~/.newsboat
     rm -f ~/.ssh
+    rm -f ~/.phoenix.js
 fi
 
 # install oh-my-zsh
@@ -41,7 +42,8 @@ fi
 
 # mpd, vimpc
 if [[ $OSTYPE == 'darwin'* ]]; then
-    ln -s  $DOTFILES/mpd.conf.osx ~/.mpdconf
+    ln -s $DOTFILES/mpd.conf.osx ~/.mpdconf
+    ln -s $DOTFILES/phoenix.js ~/.phoenix.js
 else
     ln -s  $DOTFILES/mpd.conf ~/.mpdconf
 fi

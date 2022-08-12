@@ -34,6 +34,7 @@
     brew install --cask libreoffice
     brew install --cask gimp
     brew install --cask basictex
+    brew install --cask phoenix
     
 ## Misc
 
