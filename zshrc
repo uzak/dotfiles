@@ -142,12 +142,11 @@ function o {
 export EDITOR=nvim
 
 function upgrade () {
-    if [[ $OSTYPE == linux-* ]]; then
+    if [[ $OSTYPE == linux-gnu* ]]; then
         sudo apt update
         sudo apt -y dist-upgrade 
         sudo apt -y autoremove
         sudo apt-get clean
-        sudo snap refresh
     else
         brew update
         brew upgrade

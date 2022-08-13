@@ -5,7 +5,7 @@ alias python="python3 -b"
 alias pip=pip3
 
 alias ttt="ttt.py $HOME/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -hr --norm 7"
-if [[ $OSTYPE == linux-gnu ]]; then
+if [[ $OSTYPE == linux-* ]]; then
     alias tt="ttt.py $HOME/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -hr --from_date `date +%Y-%m-%d` --to_date `date -d "+1 days" +%Y-%m-%d`"
 else
     alias tt="ttt.py $HOME/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -hr --from_date `date +%Y-%m-%d` --to_date `date -v+1d +%Y-%m-%d`"
