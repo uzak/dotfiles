@@ -147,6 +147,7 @@ function upgrade () {
         sudo apt -y dist-upgrade 
         sudo apt -y autoremove
         sudo apt-get clean
+        sudo snap refresh
     else
         brew update
         brew upgrade
