@@ -107,7 +107,8 @@ set background=dark
 set number
 set spelllang=en_us,de_at,sk
 
-colorscheme zellner
+"colorscheme zellner
+colorscheme morning
 
 " deactivate syntax highlighting when diffing
 if &diff
@@ -163,6 +164,7 @@ augroup init
     autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
     autocmd FileType json setlocal ts=2 sts=2 sw=2 expandtab
     autocmd FileType html setlocal ts=2 sts=2 sw=2 expandtab
+    autocmd FileType javascript   setlocal ts=2 sts=2 sw=2 expandtab
     autocmd FileType xml  setlocal ts=2 sts=2 sw=2 expandtab
     autocmd FileType vue  setlocal ts=2 sts=2 sw=2 expandtab
     autocmd FileType sql  setlocal ts=2 sts=2 sw=2 expandtab
@@ -265,7 +267,7 @@ let g:vimwiki_list = [
     \ 'template_path' : '$HOME/repos/blog/wiki', 
     \ 'template_default' : 'default', 
     \ 'path_html' : '$HOME/repos/blog/wiki/it', 
-    \ 'customwiki2html': 'vimwiki_markdown'},  
+    \ 'custom_wiki2html': 'vimwiki_markdown'},  
     \ {'path' : '$HOME/repos/blog/wiki/vedanta', 
     \ 'syntax' : 'markdown', 
     \ 'auto_toc' : 1,
@@ -273,16 +275,7 @@ let g:vimwiki_list = [
     \ 'template_path' : '$HOME/repos/blog/wiki', 
     \ 'template_default' : 'default', 
     \ 'path_html' : '$HOME/repos/blog/wiki/vedanta', 
-    \ 'customwiki2html': 'vimwiki_markdown',  
-    \ 'ext' : '.md'},
-    \ {'path' : '$HOME/repos/blog/wiki/lang', 
-    \ 'syntax' : 'markdown', 
-    \ 'auto_toc' : 1,
-    \ 'template_ext' : '.tpl', 
-    \ 'template_path' : '$HOME/repos/blog/wiki', 
-    \ 'template_default' : 'default', 
-    \ 'path_html' : '$HOME/repos/blog/wiki/lang', 
-    \ 'customwiki2html': 'vimwiki_markdown',  
+    \ 'custom_wiki2html': 'vimwiki_markdown',  
     \ 'ext' : '.md'},
     \ {'path' : '$HOME/repos/blog/wiki/cooking', 
     \ 'syntax' : 'markdown', 
@@ -291,7 +284,7 @@ let g:vimwiki_list = [
     \ 'template_path' : '$HOME/repos/blog/wiki', 
     \ 'template_default' : 'default', 
     \ 'path_html' : '$HOME/repos/blog/wiki/cooking', 
-    \ 'customwiki2html': 'vimwiki_markdown',  
+    \ 'custom_wiki2html': 'vimwiki_markdown',  
     \ 'ext' : '.md'},
     \ {'path' : '$HOME/repos/blog/wiki/body', 
     \ 'syntax' : 'markdown', 
@@ -300,7 +293,7 @@ let g:vimwiki_list = [
     \ 'template_path' : '$HOME/repos/blog/wiki', 
     \ 'template_default' : 'default', 
     \ 'path_html' : '$HOME/repos/blog/wiki/body', 
-    \ 'customwiki2html': 'vimwiki_markdown',  
+    \ 'custom_wiki2html': 'vimwiki_markdown',  
     \ 'ext' : '.md'}
     \ ]
 

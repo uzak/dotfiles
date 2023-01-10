@@ -175,3 +175,4 @@ export LC_ALL=en_US.UTF-8
 function vifzf() {
     vi `fzf`
 }
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"

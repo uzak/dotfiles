@@ -1,4 +1,6 @@
 alias s="cd .."
+alias ss="cd ../.."
+alias sss="cd ../../.."
 alias rm="rm -f"
 #alias python="python3 -Wd -b"         # Wd = warnings default
 alias python="python3 -b"

@@ -21,6 +21,7 @@
     brew install bandwhich iftop bmon
     brew install pandoc
     brew install inetutils
+    brew install basictex texlive
 
 ## Cask 
 

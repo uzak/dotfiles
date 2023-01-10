@@ -1,6 +1,7 @@
 # IT
+https://blog.eischmann.cz/feed/
 http://charlesleifer.com/blog/rss/
-#https://dagblog.cz/feed                 # Roman Pichlik alias dagi
+https://dagblog.cz/feed                 # Roman Pichlik alias dagi
 https://www.youtube.com/feeds/videos.xml?channel_id=UCxkMDXQ5qzYOgXPRnOBrp1w   # Mike Zamansky
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCaT4I7hjX9iH1YFvNvuu84A   # SF Python
 https://martinheinz.dev/rss/  
@@ -9,6 +10,7 @@ http://calpaterson.com/calpaterson.rss
 https://blog.miguelgrinberg.com/feed
 https://blog.alexellis.io/rss/
 https://world.hey.com/jason/feed.atom       # jason fried (signal vs. noise)
+https://world.hey.com/dhh/feed.atom         # ddh
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCV3alCf19e_sy7RFzKEuNpw    # l'Oberservatoire du Monde Cybernetique
 # https://k47.cz/rss.xml
 # https://ivanitlearning.wordpress.com/feed/
@@ -26,12 +28,12 @@ https://vediccafe.blogspot.com/feeds/posts/default
 #http://heritageinwords.blogspot.com/feeds/posts/default?alt=rss
 #http://nynjbengali.com/feed/
 http://practicalphilosophy.in/feed/
-#https://www.youtube.com/feeds/videos.xml?channel_id=UCyurta_Rz_12SQqQE_hbBTg # arsha vidya gurukulam
-https://www.youtube.com/feeds/videos.xml?channel_id=UC1IebQP1egDkI7Cy8LhSRyA # Arsha Vidya Parampara - Swami Sarvananda
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCyurta_Rz_12SQqQE_hbBTg # arsha vidya gurukulam
+#https://www.youtube.com/feeds/videos.xml?channel_id=UC1IebQP1egDkI7Cy8LhSRyA # Arsha Vidya Parampara - Swami Sarvananda
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCcNGwmNaSxhdsB1ibjBTqdw # McComas Tayloer
-https://www.youtube.com/feeds/videos.xml?channel_id=UCgpYjFav9sk-v-l8-LAxo_w   # Bangaru Nageshwar Rao
-https://www.youtube.com/feeds/videos.xml?channel_id=UCoA1ubKGgJLkjlhaAQFtIwQ # Vedanta Adhyayana Kendram Kakinada
-#https://www.youtube.com/feeds/videos.xml?channel_id=UCwLj7OrlmFr98R-MTDVhNIA   # Vedanta Phoenix Camp
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCgpYjFav9sk-v-l8-LAxo_w   # Bangaru Nageshwar Rao
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCoA1ubKGgJLkjlhaAQFtIwQ # Vedanta Adhyayana Kendram Kakinada
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCwLj7OrlmFr98R-MTDVhNIA   # Vedanta Phoenix Camp
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCMEaA_Ge_BAFxz35POmlZpA
 #https://www.youtube.com/feeds/videos.xml?channel_id=UCjtRpi8zMz5O54x-9qTPn1A    # Michika Medha
 #https://laitman.blog.idnes.cz/rss.aspx # Michael Laitman
@@ -40,11 +42,11 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCoA1ubKGgJLkjlhaAQFtIwQ # V
 
 
 # entertainment
-# https://www.youtube.com/feeds/videos.xml?channel_id=UC5rT7F0PGNuD54rJ9kzgWzw    # Kris Harbour Natural Building
+https://www.youtube.com/feeds/videos.xml?channel_id=UC5rT7F0PGNuD54rJ9kzgWzw    # Kris Harbour Natural Building
 https://www.youtube.com/feeds/videos.xml?channel_id=UCYk2jATrFhL5bpHkkvJlBuA   # Kocafilm
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCpBQMibpipuqHsI_mJMVveA   # Coastal foraging with Craig Ivans
-# https://www.youtube.com/feeds/videos.xml?channel_id=UCngpdIYbl5REio0EaQjlHSA   # Crazy for Indian Food
-# https://www.youtube.com/feeds/videos.xml?channel_id=UCmz-NT1dtjcVzigo8PylDBw   # Thundermist Lures
+https://www.youtube.com/feeds/videos.xml?channel_id=UCngpdIYbl5REio0EaQjlHSA   # Crazy for Indian Food
+https://www.youtube.com/feeds/videos.xml?channel_id=UCmz-NT1dtjcVzigo8PylDBw   # Thundermist Lures
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCCi_yf4nkVmWaE0IoNweTlw   # Happy Huhn Robert Hoeck
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCPdk3JuQGxOCMlZLLt4drhw # binkov
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCrfKGpvbEQXcbe68dzXgJuA   # Forgotten Weapons
@@ -52,7 +54,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCYk2jATrFhL5bpHkkvJlBuA   #
 # https://www.youtube.com/feeds/videos.xml?channel_id=UC2I6Et1JkidnnbWgJFiMeHA   # Steve1989 MRE Info
 https://www.youtube.com/feeds/videos.xml?channel_id=UCT6Y5JJPKe_JDMivpKgVXew   # Fall of Civilizations
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCnXQJu45EMrCKBxvk5Sicpg   # Luca Stricagnoli
-#https://www.youtube.com/feeds/videos.xml?channel_id=UClKIjbgtWGzHtXhBDS_I0pg   # State Azure
+https://www.youtube.com/feeds/videos.xml?channel_id=UClKIjbgtWGzHtXhBDS_I0pg   # State Azure
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCTsnTp-g5Rj3VY7Tlm2XQ6A    # Estas Tonne
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCBiPHqnZ3mwIqtraltox6jg    # Lain Civ 4 Deity
 # https://www.youtube.com/feeds/videos.xml?channel_id=UC_ghhcr70fDTp6BcJOrdH9w    # Mozayka
@@ -60,18 +62,25 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCT6Y5JJPKe_JDMivpKgVXew   #
 
 
 # misc
+https://tedgioia.substack.com/feed
+https://nitter.cz/kamilkazani/rss
+https://nitter.cz/GlobeElement/rss
+https://nitter.cz/srigi/rss
+
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2Jkwv9ipt68SF6Pqq6avCw   # Reznik Jiri Duchon
+
 # http://blog.sme.sk/valchar/rss # Jan Valchar
 
 #https://www.youtube.com/feeds/videos.xml?channel_id=UCkWhDIBApvF6CZnAh9CVz2g   # Yuri Gorodetsky - singer
 
 # https://krabice.wordpress.com/feed/       # Smutna Krabice
-# https://acoup.blog/feed/      # a collection of unimaginated pedanntry
+# https://acoup.blog/feed/      # a collection of unimaginated pedantry
 
 https://t.co/v7NpcouK72         # marian kechlibar.net
-# http://feeds.feedburner.com/zenhabits
-#https://www.youtube.com/feeds/videos.xml?channel_id=UCi0TFuqj6eND-mJRf8i2Tnw # John Buttler
-#https://www.youtube.com/feeds/videos.xml?channel_id=UCS5tt2z_DFvG7-39J3aE-bQ  # life of boris
-# https://www.youtube.com/feeds/videos.xml?channel_id=UCJZ94qp4dtCw0Q5UQqAkg7w # Lars Andersen
+http://feeds.feedburner.com/zenhabits
+https://www.youtube.com/feeds/videos.xml?channel_id=UCi0TFuqj6eND-mJRf8i2Tnw # John Buttler
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCS5tt2z_DFvG7-39J3aE-bQ  # life of boris
+https://www.youtube.com/feeds/videos.xml?channel_id=UCJZ94qp4dtCw0Q5UQqAkg7w # Lars Andersen
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCSC8SLylGt1v6lbrutdH9Bw # The Easy Vegan
 #https://www.youtube.com/feeds/videos.xml?channel_id=UCi7dAxUH0aFgis7h2ouVhNQ # Martin Y/oga
 # https://www.youtube.com/feeds/videos.xml?channel_id=UC9ORxqKBywaO7fgflFJzHRw # Pinch of Yum
@@ -92,13 +101,18 @@ https://t.co/v7NpcouK72         # marian kechlibar.net
 # drama
 # http://blog.aktualne.cz/export-blog.php?blog_name=karel-schwarzenberg
 # http://blog.aktualne.cz/export-blog.php?blog_name=milan-zeleny
-# http://blog.aktualne.cz/export-blog.php?blog_name=radkin-honzak
+http://blog.aktualne.cz/export-blog.php?blog_name=radkin-honzak
 # https://dennikn.sk/autor/peter-breiner/feed/
 # http://tiborjavor.blog.sme.sk/rss
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCwnKziETDbHJtx78nIkfYug   # Caspian Report
-# https://blisty.cz/feeds/authors/2394    # Jan Molic
-# http://medium.com/feed/@x_TomCooper_x
+https://blisty.cz/feeds/authors/2394    # Jan Molic
+https://mastodon.1984.cz/@mig.rss
+https://mastodon.1984.cz/tags/teacher.rss
+http://medium.com/feed/@x_TomCooper_x
 
+https://phillipspobrien.substack.com/feed
+
+https://social.linux.pizza/@domm.rss    # domm.plix.at
 
 # news
 # https://denikn.cz/autor/ondrej-stindl/feed/ 
