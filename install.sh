@@ -15,10 +15,12 @@ if [[ $DELETE == "DELETE" ]]; then
     rm -f ~/.newsboat
     rm -f ~/.ssh
     rm -f ~/.phoenix.js
+    rm -rf ~/.config/nvim
+    rm -rf ~/.config/kitty
 fi
 
 # install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+# sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 ln -s $DOTFILES/zshrc ~/.zshrc
 ln -s $DOTFILES/vim/vimrc ~/.vimrc
@@ -40,20 +42,9 @@ if [[ $HOST == 't480s' || $HOST == 'air' ]]; then
     ln -s $HOME/Dropbox/repos/{blog,dotfiles,password-store} $HOME/repos/
 fi
 
-# mpd, vimpc
-if [[ $OSTYPE == 'darwin'* ]]; then
-    ln -s $DOTFILES/mpd.conf.osx ~/.mpdconf
-    ln -s $DOTFILES/phoenix.js ~/.phoenix.js
-else
-    ln -s  $DOTFILES/mpd.conf ~/.mpdconf
-fi
-mkdir ~/.mpd
-mkdir -p ~/.mpd/playlists
-touch ~/.mpd/{mpd.db,mpd.log,mpd.pid,mpdstate}
-mpc update
-ln -s $DOTFILES/vimpcrc ~/.vimpcrc
-
 # ssh
 rmdir ~/.ssh 2>/dev/null || true
 ln -s $HOME/Dropbox/.ssh ~
-
+ssh-add
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/*

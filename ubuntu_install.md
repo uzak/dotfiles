@@ -57,7 +57,7 @@
     sudo apt install -y python3 python3-pip pipenv python3-sphinx ipython3
     sudo apt install -y pass gnupg upass 
     sudo apt install -y newsboat
-    sudo apt install -y aria2
+    sudo apt install -y aria2 youtube-dl
     sudo apt install -y neofetch 
     sudo apt install -y influxdb-client
     sudo apt install -y nodejs node-typescript
@@ -79,11 +79,11 @@
     
     sudo apt autoremove
 
-# zsh
+# zsh and dotfiles
 
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     ~/repos/dotfiles/install.sh
-    
+    # import gpg key
     
 # firefox
 
@@ -100,12 +100,11 @@ Install manually and not from snap. Snap is slower and has problem opening links
     sudo snap install insomnia 
     sudo snap install --classic chromium
     sudo snap install --classic skype
-    sudo snap install --classic code
+    sudo snap install --classic codium
     sudo snap install --classic kotlin
     sudo snap install --classic pycharm-community
     sudo snap install --classic intellij-idea-community
     sudo snap install asciiquarium
-
 
 # Docker
     
@@ -122,7 +121,7 @@ Install manually and not from snap. Snap is slower and has problem opening links
 Then go to `org/gnome/desktop/sound` and disable `event-sounds`.
 
 
-## Dispable touchpad
+## Disable touchpad
 https://askubuntu.com/questions/1085390/how-do-i-disable-the-touchpad-while-typing-ubuntu-18-04
 
     sudo apt remove xserver-xorg-input-synaptics
