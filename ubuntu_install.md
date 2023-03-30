@@ -48,7 +48,7 @@
     sudo apt dist-upgrade
     sudo apt install -y zsh catimg autojump        # zsh + tools for plugins
     sudo apt install -y vim neovim 
-    sudo apt install -y git tig universal-ctags cloc bat ack fzf ripgrep cscope
+    sudo apt install -y git tig universal-ctags cloc bat ack fzf ripgrep cscope # git-delta
     sudo apt install -y tmux mc tree curl net-tools jq fd-find tldr
     sudo apt install -y iotop iftop htop bmon
     sudo apt install -y gimp geeqie 
@@ -75,12 +75,14 @@
     sudo apt install -y httpie exa
     sudo apt install -y traceroute
     sudo apt install -y pwgen
+    sudo apt install -y cmus
     
     sudo apt autoremove
 
 # zsh
 
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    ~/repos/dotfiles/install.sh
     
     
 # firefox
@@ -106,47 +108,10 @@ Install manually and not from snap. Snap is slower and has problem opening links
 
 
 # Docker
-https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04
-
-    sudo apt update
-    sudo apt install apt-transport-https ca-certificates curl software-properties-common
-    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-    sudo -E add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
-    sudo apt update
-    sudo apt install docker-ce
-    sudo systemctl status docker
-    sudo usermod -aG docker ${USER}
-    sudo apt install docker-compose
-
-# vimpc
-
-    cd ~/repos
-    git clone https://github.com/boysetsfrog/vimpc
-    sudo apt install -y libcurl4-gnutls-dev libpcre++-dev 
-    sudo apt install -y build-essential autoconf \
-        libmpdclient2 libmpdclient-dev libpcre3 libpcre3-dev \
-        libncursesw5 libncursesw5-dev libncurses5-dev \
-        libtagc0 libtagc0-dev
-    cd vimpc
-    ./autogen.sh
-    ./configure
-    make -j 8
-    sudo make install clean
     
-    sudo apt install -y mpd mpc
-    sudo service mpd stop
-    sudo update-rc.d mpd disable
+    sudo apt install docker.io
+    sudo usermod -a -G docker $USER
 
-    
-# Jekyll/blog
-
-    sudo apt -y install ruby-dev ruby-bundler
-    cd ~/repos/blog
-    bundler install
-    bundle exec jekyll serve
-    
-    gem install vimwiki_markdown        # for vimwiki
-    
 # Misc
 
 ## Mute beeping
