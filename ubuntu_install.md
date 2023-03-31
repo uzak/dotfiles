@@ -9,7 +9,6 @@
 - [Slack](#Slack)
 - [Snap](#Snap)
 - [Docker](#Docker)
-- [vimpc](#vimpc)
 - [Jekyll/blog](#Jekyll/blog)
 - [Misc](#Misc)
     - [Mute beeping](#Misc#Mute beeping)
@@ -76,6 +75,7 @@
     sudo apt install -y traceroute
     sudo apt install -y pwgen
     sudo apt install -y cmus
+    sudo apt install -y hugo
     
     sudo apt autoremove
 

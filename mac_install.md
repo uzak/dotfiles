@@ -8,7 +8,7 @@
     brew install neovim
     brew install gpg gpg2 pinentry-mac pass
     brew install newsboat
-    brew install fd ack
+    brew install fd ack git-delta
     brew install tig
     brew install postgresql
     brew install npm yarn
@@ -16,16 +16,16 @@
     brew install coreutils
     brew install grep
     brew install ffmpeg
-    brew install mpd vimpc
     brew install cloc
     brew install bandwhich iftop bmon
     brew install pandoc
     brew install inetutils
     brew install basictex texlive
+    brew install cmus
 
 ## Cask 
 
-    brew install --cask pycharm-ce docker insomnia visual-studio-code
+    brew install --cask pycharm-ce docker insomnia 
     brew install --cask google-chrome firefox
     brew install --cask telegram-desktop skype slack discord
     brew install --cask dropbox
@@ -35,7 +35,7 @@
     brew install --cask libreoffice
     brew install --cask gimp
     brew install --cask basictex
-    brew install --cask phoenix
+    brew install --cask vscodium && xattr -r -d com.apple.quarantine /Applications/VSCodium.app
     
 ## Misc
 
