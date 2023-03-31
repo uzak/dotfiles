@@ -1,0 +1,36 @@
+{
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll": true
+  },
+  "vim.visualstar": true,
+  "vim.useSystemClipboard": true,
+  "workbench.colorTheme": "Quiet Light",
+  "vim.hlsearch": true,
+  "vim.vimrc.enable": true,
+  "editor.accessibilitySupport": "off",
+  // "terminal.integrated.fontSize": 16,
+  // "editor.fontSize": 16,
+  // "scm.inputFontSize": 16,
+  // "debug.console.fontSize": 16,
+  //"editor.formatOnSave": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "git.autofetch": true,
+  "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.acceptSuggestionOnCommitCharacter": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.wordWrap": "on",
+  "npm.keybindingsChangedWarningShown": true,
+  "eslint.alwaysShowStatus": true,
+  "editor.tabSize": 2,
+  "git.mergeEditor": true,
+  "[python]": {
+    "editor.formatOnType": true
+  }
+}

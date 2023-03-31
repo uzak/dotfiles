@@ -17,6 +17,7 @@ if [[ $DELETE == "DELETE" ]]; then
     rm -f ~/.phoenix.js
     rm -rf ~/.config/nvim
     rm -rf ~/.config/kitty
+    rm -f ~/Library/Application\ Support/VSCodium/User/settings.json
 fi
 
 # install oh-my-zsh
@@ -37,6 +38,7 @@ mkdir -p ~/.config/nvim
 ln -s $DOTFILES/vim/vimrc ~/.config/nvim/init.vim
 mkdir -p ~/.config/kitty
 ln -s $DOTFILES/kitty.conf ~/.config/kitty/kitty.conf
+ln -s $DOTFILES/VSCodium/settings.json ~/Library/Application\ Support/VSCodium/User/settings.json # XXX this might work only for mac
 
 if [[ $HOST == 't480s' || $HOST == 'air' ]]; then
     ln -s $HOME/Dropbox/repos/{blog,dotfiles,password-store} $HOME/repos/
