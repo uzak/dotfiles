@@ -50,3 +50,15 @@ ln -s $HOME/Dropbox/.ssh ~
 ssh-add
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/*
+
+# mpd, vimpc
+if [[ $OSTYPE == 'darwin'* ]]; then
+    ln -s  $DOTFILES/mpd.conf.osx ~/.mpdconf
+else
+    ln -s  $DOTFILES/mpd.conf ~/.mpdconf
+fi
+mkdir ~/.mpd
+mkdir -p ~/.mpd/playlists
+touch ~/.mpd/{mpd.db,mpd.log,mpd.pid,mpdstate}
+mpc update
+ln -s $DOTFILES/vimpcrc ~/.vimpcrc
