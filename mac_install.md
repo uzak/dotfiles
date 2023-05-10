@@ -21,7 +21,8 @@
     brew install pandoc
     brew install inetutils
     brew install basictex texlive
-    brew install cmus
+    brew install mpd vimpc
+    brew install youtube-dl
 
 ## Cask 
 

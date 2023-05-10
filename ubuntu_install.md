@@ -43,41 +43,44 @@
 
 # Basic tools
 
-    sudo apt update
-    sudo apt dist-upgrade
-    sudo apt install -y zsh catimg autojump        # zsh + tools for plugins
-    sudo apt install -y vim neovim 
-    sudo apt install -y git tig universal-ctags cloc bat ack fzf ripgrep cscope # git-delta
-    sudo apt install -y tmux mc tree curl net-tools jq fd-find tldr
-    sudo apt install -y iotop iftop htop bmon
-    sudo apt install -y gimp geeqie 
-    sudo apt install -y gnome-mpv mpv
-    sudo apt install -y gnome-tweaks gnome-shell-extension-suspend-button
-    sudo apt install -y python3 python3-pip pipenv python3-sphinx ipython3
-    sudo apt install -y pass gnupg upass 
-    sudo apt install -y newsboat
-    sudo apt install -y aria2 youtube-dl
-    sudo apt install -y neofetch 
-    sudo apt install -y influxdb-client
-    sudo apt install -y nodejs node-typescript
-    sudo apt install -y colordiff
-    sudo apt install -y csvtool
-    sudo apt install -y lm-sensors
-    sudo apt install -y plantuml asciio         # drawio
-    sudo apt install -y mythes-sk libreoffice-l10n-sk hyphen-sk
-    sudo apt install -y texlive-fonts-recommended texlive-latex-recommended 
-    sudo apt install -y pandoc texlive-latex-base texlive-xetex
-    # sudo apt install -y neomutt w3m isync msmtp urlscan ripmime mime-support 
-    # sudo apt install -y postix mailutils       # local mail cfg
-    sudo apt install -y fonts-firacode
-    sudo apt install -y fonts-ancient-scripts 
-    sudo apt install -y httpie exa
-    sudo apt install -y traceroute
-    sudo apt install -y pwgen
-    sudo apt install -y cmus
-    sudo apt install -y hugo
-    
-    sudo apt autoremove
+
+```sh
+sudo apt update
+sudo apt dist-upgrade
+sudo apt install -y zsh catimg autojump        # zsh + tools for plugins
+sudo apt install -y vim neovim 
+sudo apt install -y git tig universal-ctags cloc bat ack fzf ripgrep cscope # git-delta
+sudo apt install -y tmux mc tree curl net-tools jq fd-find tldr
+sudo apt install -y iotop iftop htop bmon
+sudo apt install -y gimp geeqie 
+sudo apt install -y gnome-mpv mpv
+sudo apt install -y gnome-tweaks
+sudo apt install -y python3 python3-pip pipenv python3-sphinx ipython3
+sudo apt install -y pass gnupg upass 
+sudo apt install -y newsboat
+sudo apt install -y aria2 youtube-dl
+sudo apt install -y neofetch 
+sudo apt install -y influxdb-client
+sudo apt install -y nodejs node-typescript
+sudo apt install -y colordiff
+sudo apt install -y csvtool
+sudo apt install -y lm-sensors
+sudo apt install -y plantuml asciio         # drawio
+sudo apt install -y mythes-sk libreoffice-l10n-sk hyphen-sk
+sudo apt install -y texlive-fonts-recommended texlive-latex-recommended 
+sudo apt install -y pandoc texlive-latex-base texlive-xetex
+# sudo apt install -y neomutt w3m isync msmtp urlscan ripmime mime-support 
+# sudo apt install -y postix mailutils       # local mail cfg
+sudo apt install -y fonts-firacode
+sudo apt install -y fonts-ancient-scripts 
+sudo apt install -y httpie exa
+sudo apt install -y traceroute
+sudo apt install -y pwgen
+sudo apt install -y cmus
+sudo apt install -y hugo
+
+sudo apt autoremove
+```
 
 # zsh and dotfiles
 
