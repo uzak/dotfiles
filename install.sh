@@ -38,7 +38,11 @@ mkdir -p ~/.config/nvim
 ln -s $DOTFILES/vim/vimrc ~/.config/nvim/init.vim
 mkdir -p ~/.config/kitty
 ln -s $DOTFILES/kitty.conf ~/.config/kitty/kitty.conf
-ln -s $DOTFILES/VSCodium/settings.json ~/Library/Application\ Support/VSCodium/User/settings.json # XXX this might work only for mac
+if [[ $OSTYPE == 'darwin'* ]]; then
+    ln -s $DOTFILES/VSCodium/settings.json ~/Library/Application\ Support/VSCodium/User/settings.json 
+else
+    ln -s $DOTFILES/VSCodium/settings.json ~/.config/VSCodium/User/settings.json 
+fi
 
 if [[ $HOST == 't480s' || $HOST == 'air' ]]; then
     ln -s $HOME/Dropbox/repos/{blog,dotfiles,password-store} $HOME/repos/

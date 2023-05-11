@@ -1,5 +1,5 @@
 {
-  "eslint.format.enable": true,
+  //"eslint.format.enable": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.fixAll": true
@@ -9,7 +9,7 @@
   "workbench.colorTheme": "Quiet Light",
   "vim.hlsearch": true,
   "vim.vimrc.enable": true,
-  "editor.accessibilitySupport": "off",
+  //"editor.accessibilitySupport": "off",
   // "terminal.integrated.fontSize": 16,
   // "editor.fontSize": 16,
   // "scm.inputFontSize": 16,
@@ -25,12 +25,13 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.wordWrap": "on",
   "npm.keybindingsChangedWarningShown": true,
   "eslint.alwaysShowStatus": true,
   "editor.tabSize": 2,
   "git.mergeEditor": true,
   "[python]": {
     "editor.formatOnType": true
-  }
+  },
+  "editor.wordWrap": "on",
+  "window.zoomLevel": 1
 }
