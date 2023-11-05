@@ -1,15 +1,41 @@
 [user]
 	email = uzak+git@mailbox.org
-	name = Martin Uzak
+	name = Martin Užák
 [core]
 	excludesfile = /home/m/repos/dotfiles/gitignore
-[pull]
-	ff = only
-	rebase = true
+	autocrlf = input
+    ;pager = delta
+; [pull]
+; 	ff = only
+; 	rebase = true
 [merge]
-	ff = only
+    #ff = only
+    conflictstyle = diff3
+
+; [interactive]
+;     diffFilter = delta --color-only
+
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [push]
 	autoSetupRemote = true
+
+[diff]
+    colorMoved = default
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[delta]
+    navigate = true    # use n and N to move between diff sections
+    light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+    features = decorations
+
+[delta "interactive"]
+    keep-plus-minus-markers = true
+
+[delta "decorations"]
+    commit-style = raw
+    file-style = omit
+    hunk-header-style = file line-number syntax

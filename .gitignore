@@ -3,5 +3,8 @@ mail/mutt/cache
 mail/mutt/tmp
 newsboat/history.*
 newsboat/cache.db
+newsboat/cache.db.lock
+newsboat/newsboat
+newsboat/queue
 __pycache__
 .DS_Store

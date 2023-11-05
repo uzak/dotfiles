@@ -1,0 +1,9 @@
+#compdef pytest
+
+_pytest_complete() {
+    local curcontext="$curcontext" state line
+    typeset -A opt_args
+    compadd "$@" $( python ~/repos/pytest-zsh/autocomplete.py )
+}
+
+_pytest_complete "$@"

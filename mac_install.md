@@ -8,12 +8,9 @@
     brew install neovim
     brew install gpg gpg2 pinentry-mac pass
     brew install newsboat
-    brew install fd ack git-delta
+    brew install fd ack git-delta rg
     brew install tig
-    brew install postgresql
-    brew install npm yarn
-    brew install python@3.10
-    brew install coreutils
+    brew install npm yarn node
     brew install grep
     brew install ffmpeg
     brew install cloc
@@ -21,14 +18,18 @@
     brew install pandoc
     brew install inetutils
     brew install basictex texlive
-    brew install mpd vimpc
-    brew install youtube-dl
+    brew install mpd vimpc mpc
+    brew install yt-dlp
+    brew install awscli docker-buildx
+    brew install go hugo
+    brew install gnu-sed 
+
 
 ## Cask 
 
     brew install --cask pycharm-ce docker insomnia 
     brew install --cask google-chrome firefox
-    brew install --cask telegram-desktop skype slack discord
+    brew install --cask telegram-desktop slack 
     brew install --cask dropbox
     brew install --cask iterm2
     brew install --cask mpv
@@ -37,7 +38,18 @@
     brew install --cask gimp
     brew install --cask basictex
     brew install --cask vscodium && xattr -r -d com.apple.quarantine /Applications/VSCodium.app
+    brew install --cask discord
     
 ## Misc
 
 * http://www.remotemouse.net/
+  
+### Sudo
+
+    sudo dseditgroup -o edit -a $USER -t user admin
+    sudo dseditgroup -o edit -a $USER -t user wheel
+
+Adapt `/etc/sudoers` to:
+
+    %admin		ALL = (ALL) NOPASSWD: ALL
+

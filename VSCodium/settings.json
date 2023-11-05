@@ -27,11 +27,11 @@
   },
   "npm.keybindingsChangedWarningShown": true,
   "eslint.alwaysShowStatus": true,
-  "editor.tabSize": 2,
   "git.mergeEditor": true,
   "[python]": {
     "editor.formatOnType": true
   },
   "editor.wordWrap": "on",
-  "window.zoomLevel": 1
+  "explorer.confirmDelete": false,
+  "workbench.startupEditor": "none"
 }

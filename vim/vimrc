@@ -26,6 +26,9 @@ endif
 "
 call plug#begin("~/.vim/plugged") 
 
+"Plug 'dstein64/vim-startuptime'     " :StartupTime
+Plug 'preservim/vim-wordy'
+
 Plug 'aperezdc/vim-template'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': './install --bin' }
@@ -64,7 +67,7 @@ set autoindent
 set autoread
 set autowrite
 set backspace=indent,eol,start
-set clipboard=unnamed,unnamedplus       " use system clipboard
+set clipboard=unnamedplus       " use system clipboard
 set colorcolumn=80
 set complete+=kspell
 set completeopt=menuone,preview
@@ -105,7 +108,7 @@ set wrap
 set wrapscan
 set background=dark
 set number
-set spelllang=en_us,de_at,sk
+set spelllang=en_us,de_at,sk,es
 
 "colorscheme zellner
 colorscheme morning
@@ -206,6 +209,7 @@ nnoremap <leader>de :setlocal spell spelllang=de<cr>
 nnoremap <leader>en :setlocal spell spelllang=en<cr>
 nnoremap <leader>sk :setlocal spell spelllang=sk<cr>
 nnoremap <leader>cz :setlocal spell spelllang=cz<cr>
+nnoremap <leader>es :setlocal spell spelllang=es<cr>
 " nnoremap <leader>pt :setlocal spell spelllang=pt<cr>
 
 " Leaders {{{1
@@ -218,9 +222,13 @@ nnoremap <leader>_ <C-w>s<C-w>j
 nnoremap <leader>vs :source $MYVIMRC<cr>
 nnoremap <leader>ve :e $MYVIMRC<cr>
 
+" make
+nnoremap <leader>m :silent !make<cr>
+nnoremap <leader>M :make<cr>
+
 nnoremap <expr><leader>tt ':e $HOME/Dropbox/work/codecool/tt_codecool_' . strftime('%Y-%m') . '.txt<CR>'
 nnoremap <leader>td :e $HOME/Dropbox/todo.txt<cr>:set filetype=txt<cr>
-
+nnoremap <leader>tw :Files $HOME/Dropbox/work/prontohousing<cr>
 " Opens an edit command with the path of the currently edited file filled in
 nnoremap <leader>o :e <C-R>=expand("%:p:h") . "/" <CR>
 
@@ -310,8 +318,29 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " Misc Functions {{{1
+"
+" let g:loaded_matchparen=1   " turn off matching parentheses
 
 let g:netrw_banner = 0 " No header in dir mode
 let g:netrw_liststyle = 3 " Tree style
+
+noremap <silent> <F8> :<C-u>NextWordy<cr>
+xnoremap <silent> <F8> :<C-u>NextWordy<cr>
+inoremap <silent> <F8> <C-o>:NextWordy<cr>
+let g:wordy#ring = [
+  \ 'weak',
+  \ ['being', 'passive-voice', ],
+  \ 'business-jargon',
+  \ 'weasel',
+  \ 'puffery',
+  \ ['problematic', 'redundant', ],
+  \ ['colloquial', 'idiomatic', 'similies', ],
+  \ 'art-jargon',
+  \ ['contractions', 'opinion', 'vague-time', 'said-synonyms', ],
+  \ 'adjectives',
+  \ 'adverbs',
+  \ ]
+
+set guifont=DejaVu\ Sans\ Mono\ 12
 
 "}}} vim: fdm=marker foldlevel=2

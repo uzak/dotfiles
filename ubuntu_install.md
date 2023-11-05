@@ -50,7 +50,7 @@ sudo apt dist-upgrade
 sudo apt install -y zsh catimg autojump        # zsh + tools for plugins
 sudo apt install -y vim neovim 
 sudo apt install -y git tig universal-ctags cloc bat ack fzf ripgrep cscope # git-delta
-sudo apt install -y tmux mc tree curl net-tools jq fd-find tldr
+sudo apt install -y tmux mc tree curl net-tools jq fd-find tldr iproute2
 sudo apt install -y iotop iftop htop bmon
 sudo apt install -y gimp geeqie 
 sudo apt install -y gnome-mpv mpv
@@ -78,6 +78,19 @@ sudo apt install -y traceroute
 sudo apt install -y pwgen
 sudo apt install -y cmus
 sudo apt install -y hugo
+sudo apt install -y mpd mpc
+sudo apt install -y yarnpkg npm
+sudo apt install -y awscli
+
+sudo apt install ttf-mscorefonts-installer
+ln -s ~/Dropbox/backup/fonts ~/.fonts
+
+
+# fingerprint magic
+sudo add-apt-repository ppa:uunicorn/open-fprintd   
+# s/lunar/kinetic:
+# sudo vi /etc/apt/sources.list.d/uunicorn-ubuntu-open-fprintd-lunar.list
+sudo apt install open-fprintd fprintd-clients python3-validity
 
 sudo apt autoremove
 ```
@@ -111,7 +124,7 @@ Install manually and not from snap. Snap is slower and has problem opening links
 
 # Docker
     
-    sudo apt install docker.io
+    sudo apt install docker.io docker-compose
     sudo usermod -a -G docker $USER
 
 # Misc

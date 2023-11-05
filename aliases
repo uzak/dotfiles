@@ -3,8 +3,9 @@ alias ss="cd ../.."
 alias sss="cd ../../.."
 alias rm="rm -f"
 #alias python="python3 -Wd -b"         # Wd = warnings default
-alias python="python3 -b"
+#alias python="python3 -b"
 alias pip=pip3
+#alias pip3=pip3.9
 
 alias ttt="ttt.py $HOME/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -hr --norm 7"
 if [[ $OSTYPE == linux-* ]]; then
@@ -29,7 +30,7 @@ if [ -n "$ZSH_VERSION" ]; then
 	alias -g F='| fzf'
 fi
 
-alias halt=poweroff
+alias halt="sudo shutdown -P now"
 
 alias emacs="emacsclient -a '' -c"
 
@@ -75,4 +76,6 @@ fi
 alias ipython=foobar
 unalias ipython
 
-alias code=codium
+alias code="NODE_OPTIONS= codium"
+alias u=upgrade
+alias m=make

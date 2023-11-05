@@ -28,7 +28,8 @@ DATETIME_FMT = DATE_FMT + " " + TIME_FMT
 
 
 class Time_Interval:
-    """ Model a time interval on the same day.
+    """ Model a time interval within the same day. Passing it as an argument
+    to int() returns the amount of minutes within the interval.
 
     >>> ti = Time_Interval("2016-11-21", "11:11", "14:04")
     >>> ti
