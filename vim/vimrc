@@ -26,8 +26,9 @@ endif
 "
 call plug#begin("~/.vim/plugged") 
 
-"Plug 'dstein64/vim-startuptime'     " :StartupTime
+Plug 'dstein64/vim-startuptime'     " :StartupTime
 Plug 'preservim/vim-wordy'
+Plug 'dstein64/vim-win'     " <leader>w
 
 Plug 'aperezdc/vim-template'
 Plug 'itchyny/lightline.vim'
@@ -252,7 +253,7 @@ let g:lightline = {
       \ }
 
 " fzf {{{2
-nnoremap <leader>f :Files <C-R>=expand("%:p:h")."/" <cr>
+nnoremap <leader>f :Files <C-R>=expand("%:p:h")."/"<cr><cr>
 nnoremap <leader>b :Buffers<cr>
 nnoremap <leader>rg :Rg<cr>
 nnoremap <leader>l :Lines<cr>

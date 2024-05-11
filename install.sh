@@ -16,7 +16,6 @@ if [[ $DELETE == "DELETE" ]]; then
     rm -f ~/.newsboat
     rm -f ~/.psqlrc
     rm -f ~/.ssh
-    rm -f ~/.phoenix.js
     rm -rf ~/.config/nvim
     rm -rf ~/.config/kitty
     rm -f ~/Library/Application\ Support/VSCodium/User/settings.json
@@ -45,6 +44,7 @@ mkdir -p ~/.config/kitty
 ln -s $DOTFILES/kitty.conf ~/.config/kitty/kitty.conf
 if [[ $OSTYPE == 'darwin'* ]]; then
     ln -s $DOTFILES/VSCodium/settings.json ~/Library/Application\ Support/VSCodium/User/settings.json 
+    ln -s $DOTFILES/Brewfile ~/.Brewfile
 else
     mkdir -p ~/.config/VSCodium/User
     ln -s $DOTFILES/VSCodium/settings.json ~/.config/VSCodium/User/settings.json 

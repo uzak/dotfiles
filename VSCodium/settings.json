@@ -1,8 +1,8 @@
 {
   //"eslint.format.enable": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll": true
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll": "explicit"
   },
   "vim.visualstar": true,
   "vim.useSystemClipboard": true,
@@ -33,5 +33,6 @@
   },
   "editor.wordWrap": "on",
   "explorer.confirmDelete": false,
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "explorer.confirmDragAndDrop": false
 }

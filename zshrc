@@ -46,6 +46,16 @@ COMPLETION_WAITING_DOTS="true"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="yyyy-mm-dd"
 
+HISTORY_IGNORE="(ls|cd|pwd|exit|cd)*"
+setopt EXTENDED_HISTORY      # Write the history file in the ':start:elapsed;command' format.
+setopt SHARE_HISTORY         # Share history between all sessions.
+setopt HIST_IGNORE_DUPS      # Do not record an event that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS  # Delete an old recorded event if a new event is a duplicate.
+setopt HIST_IGNORE_SPACE     # Do not record an event starting with a space.
+setopt HIST_SAVE_NO_DUPS     # Do not write a duplicate event to the history file.
+setopt HIST_NO_STORE         # Don't store history commands
+setopt HIST_REDUCE_BLANKS    # Remove superfluous blanks from each command line being added to the history.
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -135,7 +145,7 @@ export WORDCHARS='*?_-.[]~=&;!#$%^(){}<>:\"'\'
 zstyle ':completion:*' show-ambiguity true
 zstyle ':completion:*' show-ambiguity "$color[bg-white]"
 
-export EDITOR=vim
+export EDITOR=nvim
 
 # open
 function o {
@@ -154,6 +164,7 @@ function upgrade () {
         brew update
         brew upgrade
         brew cleanup
+        brew doctor
     fi
     omz update
     cleanup
@@ -220,5 +231,15 @@ export NODE_OPTIONS=--openssl-legacy-provider
 function thor () {
     cd ~/development/pronto-thor
     source project_env.sh
-    workon thor
+    source ~/.virtualenvs/thor/bin/activate
+    # workon thor
 }
+
+function sam_forms () {
+    cd ~/development/sam_forms
+    source project_env.sh
+    source ~/.virtualenvs/sam_forms/bin/activate
+    # workon sam_forms
+}
+
+export SOPS_KMS_ARN="arn:aws:kms:us-east-1:091647877719:key/11da7ed8-01c7-4443-91f5-081d73c12913"

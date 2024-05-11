@@ -21,15 +21,18 @@
     brew install mpd vimpc mpc
     brew install yt-dlp
     brew install awscli docker-buildx
+    brew install awslogs
     brew install go hugo
     brew install gnu-sed 
+    brew install pv
+    # brew install stats
 
 
 ## Cask 
 
     brew install --cask pycharm-ce docker insomnia 
     brew install --cask google-chrome firefox
-    brew install --cask telegram-desktop slack 
+    brew install --cask telegram-desktop slack whatsapp
     brew install --cask dropbox
     brew install --cask iterm2
     brew install --cask mpv
@@ -38,7 +41,8 @@
     brew install --cask gimp
     brew install --cask basictex
     brew install --cask vscodium && xattr -r -d com.apple.quarantine /Applications/VSCodium.app
-    brew install --cask discord
+    brew install --cask meetingbar
+    brew install --cask dbeaver-community
     
 ## Misc
 

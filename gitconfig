@@ -23,6 +23,7 @@
 
 [diff]
     colorMoved = default
+	algorithm = histogram
 
 [interactive]
     diffFilter = delta --color-only --features=interactive
@@ -39,3 +40,6 @@
     commit-style = raw
     file-style = omit
     hunk-header-style = file line-number syntax
+[status]
+	short = true
+	branch = true

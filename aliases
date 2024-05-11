@@ -79,3 +79,6 @@ unalias ipython
 alias code="NODE_OPTIONS= codium"
 alias u=upgrade
 alias m=make
+
+alias devops="cd ~/development/devops"
+alias Grep=grep
