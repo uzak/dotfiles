@@ -16,6 +16,7 @@ https://www.elidourado.com/feed
 #https://unchartedterritories.tomaspueyo.com/feed
 https://t.co/v7NpcouK72         "~kechlibar.net"
 https://blisty.cz/feeds/authors/2394    "~Jan Molic @ blisty"
+https://blisty.cz/feeds/authors/3559    "~Marek Benes @ blisty"
 
 https://world.hey.com/jason/feed.atom       # jason fried (signal vs. noise)
 https://world.hey.com/dhh/feed.atom         # ddh
@@ -65,13 +66,16 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCT6Y5JJPKe_JDMivpKgVXew   #
 https://www.youtube.com/feeds/videos.xml?channel_id=UC5rT7F0PGNuD54rJ9kzgWzw   # Kris Harbour Natural Building
 https://www.youtube.com/feeds/videos.xml?channel_id=UCM9GINWV_KHqNDKzQhHZ1ig    # Farmarska Revue
 https://www.youtube.com/feeds/videos.xml?channel_id=UCCAOP1y9lH4GSzAmBhLqBaA   # Jan Slinksy Agrokruh
-# https://www.youtube.com/feeds/videos.xml?channel_id=UCgT_HmP4nlz5wECKOkIlj9Q # Absolute Zero
+https://www.youtube.com/feeds/videos.xml?channel_id=UCgT_HmP4nlz5wECKOkIlj9Q # Absolute Zero
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCBiPHqnZ3mwIqtraltox6jg   # Lain Civ 4 Deity
 # "query:Henrik CIV:(tags # \"only_civ\") and (title =~ \"Civilization\")"
 https://www.youtube.com/feeds/videos.xml?channel_id=UCW3UaxOXKdBU-o6HLjO927w # only_civ ! filter: "title ~ Civilization" # Henrik
+https://www.youtube.com/feeds/videos.xml?channel_id=UC74u0LJKAwO4WsZquvo-G8A # Mozayka
+
 # http://feeds.feedburner.com/zenhabits
+https://www.youtube.com/feeds/videos.xml?channel_id=UCcMjLgeWNwqL2LBGS-iPb1A # Bishop Robert Baron
 https://www.youtube.com/feeds/videos.xml?channel_id=UCi0TFuqj6eND-mJRf8i2Tnw # John Buttler
-# https://www.youtube.com/feeds/videos.xml?channel_id=UCJZ94qp4dtCw0Q5UQqAkg7w # Lars Andersen
+https://www.youtube.com/feeds/videos.xml?channel_id=UCJZ94qp4dtCw0Q5UQqAkg7w # Lars Andersen
 https://www.youtube.com/feeds/videos.xml?channel_id=UCxYubGulNn1NPCzVIL6yPWA # kb5
  # https://www.youtube.com/feeds/videos.xml?channel_id=UCW39zufHfsuGgpLviKh297Q   # DW documentaries
  # https://www.youtube.com/feeds/videos.xml?channel_id=UC9sXw4ZdPEIp6bYGvLW-_iA   # VPRO documentary
@@ -93,7 +97,10 @@ https://blog.aktualne.cz/export-blog.php?blog_name=petr-robejsek
 
 https://dennikn.sk/autor/peter-breiner/feed/
 http://tiborjavor.blog.sme.sk/rss
+http://jozefkurty.blog.sme.sk/rss
+http://franek.blog.sme.sk/rss
 https://valchar.blog.sme.sk/rss
+https://rebro.blog.sme.sk/rss
 
 
 # news
@@ -127,7 +134,7 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UC2Jkwv9ipt68SF6Pqq6avCw  # 
 # https://www.youtube.com/feeds/videos.xml?channel_id=UC9ORxqKBywaO7fgflFJzHRw # Pinch of Yum
 # https://www.youtube.com/feeds/videos.xml?channel_id=UC_yXGNJDvXRd7041L8Gkw9g   # Artger
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCedsqpl7jaIb8BiaUFuC9KQ   # pasta grannies
-# https://www.youtube.com/feeds/videos.xml?channel_id=UC2I6Et1JkidnnbWgJFiMeHA   # Steve1989 MRE Info
+https://www.youtube.com/feeds/videos.xml?channel_id=UC2I6Et1JkidnnbWgJFiMeHA   # Steve1989 MRE Info
 
 # misc
 https://solar.lowtechmagazine.com/feeds/all-en.rss.xml 

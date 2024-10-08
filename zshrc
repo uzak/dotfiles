@@ -156,7 +156,7 @@ function o {
 function upgrade () {
     if [[ $OSTYPE == linux-gnu* ]]; then
         sudo apt update
-        sudo apt -y dist-upgrade 
+        sudo apt -y upgrade 
         sudo apt -y autoremove
         sudo apt-get clean
         sudo snap refresh
@@ -178,7 +178,8 @@ function dl_mp3 () {
     if [[ $OSTYPE == 'darwin'* ]]; then
         yt-dlp --extract-audio --audio-format mp3 $1
     else
-        ~/venv/bin/yt-dlp --extract-audio --audio-format mp3 $1
+        #~/venv/bin/yt-dlp --extract-audio --audio-format mp3 $1
+        yt-dlp --extract-audio --audio-format mp3 $1
     fi
 }
 
@@ -239,7 +240,23 @@ function sam_forms () {
     cd ~/development/sam_forms
     source project_env.sh
     source ~/.virtualenvs/sam_forms/bin/activate
-    # workon sam_forms
+}
+
+function sqfu () {
+    cd ~/development/sam-questionnaire-file-upload
+    source project_env.sh
+    source ~/.virtualenvs/sqfu/bin/activate
 }
 
 export SOPS_KMS_ARN="arn:aws:kms:us-east-1:091647877719:key/11da7ed8-01c7-4443-91f5-081d73c12913"
+
+export DEFAULT_BROWSER=google-chrome slack
+
+function venv () {
+    source ~/venv/bin/activate
+}
+
+function rescale() {
+    gsettings set org.gnome.desktop.interface text-scaling-factor 1.1
+    gsettings set org.gnome.desktop.interface text-scaling-factor 1.2
+}

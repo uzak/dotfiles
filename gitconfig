@@ -43,3 +43,10 @@
 [status]
 	short = true
 	branch = true
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+[pull]
+	rebase = true

@@ -3,7 +3,7 @@ alias ss="cd ../.."
 alias sss="cd ../../.."
 alias rm="rm -f"
 #alias python="python3 -Wd -b"         # Wd = warnings default
-#alias python="python3 -b"
+alias python="python3 -b"
 alias pip=pip3
 #alias pip3=pip3.9
 
@@ -55,15 +55,15 @@ alias pytest="pytest -rsxfE"
 
 alias pydev="pytest --dev -v"
 
-alias fd="fd -H"
-
 alias ssh="ssh -A"
 
 if [[ $OSTYPE == darwin* ]]; then
     alias htop="TERM=iterm htop"
+    alias fd="fd -H"
 else
+    alias fd=fdfind
     alias ncal="ncal -M"
-    alias htop="TERM=linux htop"
+    # alias htop="TERM=linux htop"
     alias df='df -x"squashfs"'
     alias ls="ls --color -N"
     alias mplayer=mpv
@@ -82,3 +82,5 @@ alias m=make
 
 alias devops="cd ~/development/devops"
 alias Grep=grep
+alias htop="sudo htop"
+alias iotop="sudo sysctl -w kernel.task_delayacct=1; sudo iotop"

@@ -56,4 +56,3 @@
 Adapt `/etc/sudoers` to:
 
     %admin		ALL = (ALL) NOPASSWD: ALL
-

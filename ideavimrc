@@ -1,4 +1,4 @@
-set clipboard+=ideaput
+" set clipboard+=ideaput
 
 " center current search result
 nmap n nzz
@@ -7,3 +7,5 @@ nmap N Nzz
 nmap <tab> <C-w><C-w>
 
 source ~/.vimrc
+
+set clipboard^=ideaput
