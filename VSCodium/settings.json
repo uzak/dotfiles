@@ -35,5 +35,6 @@
   "explorer.confirmDelete": false,
   "workbench.startupEditor": "none",
   "explorer.confirmDragAndDrop": false,
-  "git.confirmSync": false
+  "git.confirmSync": false,
+  "files.autoSave": "afterDelay"
 }

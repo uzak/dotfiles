@@ -175,12 +175,8 @@ function cleanup () {
 }
 
 function dl_mp3 () {
-    if [[ $OSTYPE == 'darwin'* ]]; then
-        yt-dlp --extract-audio --audio-format mp3 $1
-    else
-        #~/venv/bin/yt-dlp --extract-audio --audio-format mp3 $1
-        yt-dlp --extract-audio --audio-format mp3 $1
-    fi
+    # ~/venv/bin/yt-dlp --extract-audio --audio-format mp3 $1
+    yt-dlp -f bestaudio -x --audio-format mp3 --audio-quality 320k --embed-thumbnail --add-metadata --postprocessor-args "-id3v2_version 3" $1
 }
 
 # unalias egrep
@@ -217,46 +213,32 @@ export NVM_DIR="$HOME/.nvm"
 
 PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 
-#
-# current work setup
-# 
-export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/development
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
-source /opt/homebrew/bin/virtualenvwrapper.sh 2>/dev/null
-export VIRTUALENVWRAPPER_VIRTUALENV=/opt/homebrew/bin/virtualenv
-export NVM_DIR="$HOME/.nvm"
-export NODE_OPTIONS=--openssl-legacy-provider
-[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && . "/opt/homebrew/opt/nvm/nvm.sh" [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && . "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"
-
-function thor () {
-    cd ~/development/pronto-thor
-    source project_env.sh
-    source ~/.virtualenvs/thor/bin/activate
-    # workon thor
-}
-
-function sam_forms () {
-    cd ~/development/sam_forms
-    source project_env.sh
-    source ~/.virtualenvs/sam_forms/bin/activate
-}
-
-function sqfu () {
-    cd ~/development/sam-questionnaire-file-upload
-    source project_env.sh
-    source ~/.virtualenvs/sqfu/bin/activate
-}
-
-export SOPS_KMS_ARN="arn:aws:kms:us-east-1:091647877719:key/11da7ed8-01c7-4443-91f5-081d73c12913"
-
-export DEFAULT_BROWSER=google-chrome slack
+export BROWSER=firefox
 
 function venv () {
     source ~/venv/bin/activate
 }
 
 function rescale() {
-    gsettings set org.gnome.desktop.interface text-scaling-factor 1.1
+    # gsettings set org.gnome.desktop.interface text-scaling-factor 1.1
     gsettings set org.gnome.desktop.interface text-scaling-factor 1.2
 }
+
+function bat_save() {
+    if [[ $OSTYPE == linux-gnu* ]]; then
+        sudo su -c "echo 90 > /sys/class/power_supply/BAT0/charge_stop_threshold"
+        sudo su -c "echo 40 > /sys/class/power_supply/BAT0/charge_start_threshold"
+    fi
+}
+
+function bak() {
+    rsync -avhL --delete ~/backup/ /media/m/disk4s2/backup
+}
+
+function turn_off_power_light() {
+    echo 0 | sudo tee /sys/devices/platform/thinkpad_acpi/leds/tpacpi::power/brightness
+}
+
+export AWS_MFA=arn:aws:iam::091647877719:mfa/OnePlus
+
+# bat_save

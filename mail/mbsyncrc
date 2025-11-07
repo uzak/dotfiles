@@ -1,0 +1,81 @@
+Create Near
+SyncState *
+
+####################
+# Gmail: martinuzak136@gmail.com
+####################
+
+IMAPAccount gmail
+Host imap.gmail.com
+User martinuzak136@gmail.com
+PassCmd "pass show gmail-mbsync"
+SSLType IMAPS
+AuthMechs LOGIN
+
+IMAPStore gmail-remote
+Account gmail
+
+MaildirStore gmail-local
+Path ~/Dropbox/Mail/martinuzak136@gmail.com/
+Inbox ~/Dropbox/Mail/martinuzak136@gmail.com/Inbox
+Subfolders Verbatim
+
+Channel gmail
+Far :gmail-remote:
+Near :gmail-local:
+Patterns INBOX "[Gmail]/Sent Mail" "[Gmail]/Drafts"
+Sync Full
+Expunge Both
+
+
+####################
+# Mailbox: uzak@mailbox.org
+####################
+IMAPAccount mailbox
+Host imap.mailbox.org
+User uzak@mailbox.org
+PassCmd "pass show mailbox.org | head -1"
+SSLType IMAPS
+AuthMechs LOGIN
+
+IMAPStore mailbox-remote
+Account mailbox
+
+MaildirStore mailbox-local
+Path ~/Dropbox/Mail/uzak@mailbox.org/
+Inbox ~/Dropbox/Mail/uzak@mailbox.org/Inbox
+Subfolders Verbatim
+
+Channel mailbox
+Far :mailbox-remote:
+Near :mailbox-local:
+Patterns *      
+Sync Full
+Expunge Both
+
+
+####################
+# Gmail: martin.uzak@prontohousing.com
+####################
+
+# IMAPAccount prontohousing
+# Host imap.gmail.com
+# User martin.uzak@prontohousing.com
+# PassCmd "pass show prontohousing/gmail-mbsync"
+# SSLType IMAPS
+# AuthMechs LOGIN
+
+# IMAPStore prontohousing-remote
+# Account prontohousing
+
+# MaildirStore prontohousing-local
+# Path ~/Dropbox/Mail/martin.uzak@prontohousing.com/
+# Inbox ~/Dropbox/Mail/martin.uzak@prontohousing.com/Inbox
+# Subfolders Verbatim
+
+# Channel prontohousing
+# Far :prontohousing-remote:
+# Near :prontohousing-local:
+# Patterns INBOX "[Gmail]/Drafts" "[Gmail]/Sent Mail"
+# Sync Full
+# Expunge Both

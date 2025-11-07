@@ -1,6 +1,5 @@
 .pyhistory
-mail/mutt/cache
-mail/mutt/tmp
+mail/abook/addressbook
 newsboat/history.*
 newsboat/cache.db
 newsboat/cache.db.lock

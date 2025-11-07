@@ -1,1 +1,13 @@
---python-kinds=-i
+--recurse=yes
+--exclude=venv
+--exclude=migrations
+--exclude=*.json
+--languages=Python
+--python-kinds=+m-v
+--tag-relative=yes
+--sort=yes
+--exclude=.git
+--exclude=log
+--exclude=tmp
+--exclude=node_modules
+--exclude=.aws-sam

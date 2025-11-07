@@ -18,7 +18,6 @@ alias tttd="ttt.py $HOME/Dropbox/work/codecool/tt_codecool_`date +%Y-%m`.txt -da
 alias vim=nvim
 alias vi=nvim
 
-alias newsboat="newsboat -C ~/.newsboat/config.$(hostname -s)"
 alias feedly=newsboat
 
 alias lt="ls -lct"                      # override zsh/common-aliases
@@ -66,9 +65,9 @@ else
     # alias htop="TERM=linux htop"
     alias df='df -x"squashfs"'
     alias ls="ls --color -N"
-    alias mplayer=mpv
+    #alias mplayer=mpv
     alias open=xdg-open
-    alias mpv=celluloid
+    #alias mpv=celluloid
     alias balsamiq="wine-stable C:\\\\Program\\ Files\\ \\(x86\\)\\\\Balsamiq\\ Mockups\\ 3\\\\Balsamiq\\ Mockups\\ 3.exe "
     alias googleearth="LIBGL_ALWAYS_SOFTWARE=1 /opt/google/earth/pro/googleearth"
 fi
@@ -84,3 +83,6 @@ alias devops="cd ~/development/devops"
 alias Grep=grep
 alias htop="sudo htop"
 alias iotop="sudo sysctl -w kernel.task_delayacct=1; sudo iotop"
+alias ctags=ctags-exuberant
+alias mux=tmuxinator
+alias temp="watch -n 1 sensors"

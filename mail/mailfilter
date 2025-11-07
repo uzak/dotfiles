@@ -1,0 +1,15 @@
+MAILDIR="$HOME/Dropbox/Mail"
+DEFAULT="$MAILDIR/Inbox"
+
+# Filter linux-mm emails
+if (/^List-Id:.*linux-mm/) {
+    to "$MAILDIR/linux-mm/"
+}
+
+# Filter linux-patches emails
+if (/^Subject:.*linux-patches/) {
+    to "$MAILDIR/linux-patches/"
+}
+
+# Filter all other emails to Inbox
+to "$DEFAULT"

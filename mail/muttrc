@@ -1,0 +1,86 @@
+
+# set pager_index_lines=8
+set mark_old = no
+
+# TBD notmuch virtual mailboxes (requires neomutt)
+# mailboxes ~/Dropbox/Mail/uzak@mailbox.org/Inbox ~/Dropbox/Mail/martinuzak136@gmail.com/Inbox ~/Dropbox/Mail/martin.uzak@prontohousing.com/Inbox
+# virtual-mailboxes unified "maildir:~/Dropbox/Mail/uzak@mailbox.org/Inbox ~/Dropbox/Mail/martin.uzak@prontohousing.com/Inbox ~/Dropbox/Mail/martinuzak136@gmail.com/Inbox"
+
+set folder=~/Dropbox/Mail
+set mbox_type = Maildir
+mailboxes = +uzak@mailbox/Inbox +martinuzak136@gmail.com/Inbox +martin.uzak@prontohousing.com
+set record = +Sent
+set postponed = +Drafts
+set spoolfile = +uzak@mailbox.org/Inbox 
+
+set sort = threads
+set sort_aux = reverse-last-date-received
+set date_format="%y/%m/%d %I:%M%p"
+
+# Composition
+set editor = "nvim +':set textwidth=0'"
+set edit_headers = yes
+set charset = UTF-8
+set send_charset="us-ascii:utf-8"
+
+# sending emails
+set my_smtp_pass = `pass show mailbox.org | head -1`
+set smtp_url="smtp://uzak@mailbox.org:$my_smtp_pass@smtp.mailbox.org:587"
+set ssl_starttls = yes
+
+# Personal information
+set use_from = yes
+set envelope_from = yes
+set from = "martin.uzak@mailbox.org"
+set realname = "Martin Užák"
+set signature = "~/repos/dotfiles/mail/signature"
+
+# html mail
+auto_view text/html
+auto_view application/pdf
+auto_view image/*
+set implicit_autoview = yes
+set mailcap_path = ~/.mailcap
+alternative_order text/plain text/enriched text/html 
+ 
+##############
+#  Contacts  #
+##############
+
+# When looking for contacts, use this command
+set query_command= "abook --mutt-query '%s'"
+# Add current sender to address book
+macro index,pager  a "<pipe-message>abook --add-email-quiet<return>" "Add this sender to Abook"
+# Auto-complete email addresses by pushing tab
+bind editor <Tab> complete-query
+
+# folder-hook inbox "macro index A <tag-prefix><save-message>=Archive<enter>"
+# macro index S "<save-message>=Archive<enter><delete-message><enter>" "Save to Archive and delete immediately"
+# macro pager S "<save-message>=Archive<enter><delete-message><enter>" "Save to Archive and delete immediately"
+
+# shortcuts: * and =
+macro index G "<end>" "Go to the end of the index"
+
+# theme
+color normal black brightwhite
+color status brightwhite blue
+color attachment black white
+color tree bold red brightwhite
+color indicator black brightred
+
+color index brightblack white ~N
+color index red brightwhite ~D
+
+color hdrdefault blue white
+color header blue white "^to:"
+color header blue white "^cc:"
+color header blue white "^date:"
+color header underline brightblue white "^subject:"
+color header bold brightblue white "^from:"
+color prompt black brightwhite
+color search black brightwhite
+color error brightred white
+color body brightblue white [_a-z\.\$A-Z0-9-]+@[a-zA-Z0-9\./\-]+
+color body blue white (https?|ftp)://[_a-zA-Z0-9\;\+\?\=\&\@\%\#\:\,\./~\-]+
+
+# vim: filetype=muttrc

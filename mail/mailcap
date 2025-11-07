@@ -1,0 +1,10 @@
+text/html; $BROWSER %s
+text/html; w3m -I %{charset} -T text/html; copiousoutput;
+
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; pandoc --from docx --to markdown %s; copiousoutput
+application/vnd.oasis.opendocument.text; pandoc --from odt --to markdown %s; copiousoutput
+
+application/pdf; evince %s
+application/pdf; pdftotext -layout %s -; copiousoutput;
+
+image/*; feh %s

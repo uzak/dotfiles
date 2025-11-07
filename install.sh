@@ -18,7 +18,7 @@ rm -f ~/.pystartup
 rm -f ~/.tmux.conf
 rm -f ~/.ackrc
 rm -f ~/.ideavimrc
-rm -f ~/.newsboat
+rm -rf ~/.newsboat
 rm -f ~/.mpdconf
 rm -f ~/.vimpcrc
 rm -f ~/.psqlrc
@@ -29,6 +29,8 @@ rm -rf ~/.ssh
 rm -rf ~/.aws
 rm -rf ~/.mpd 
 rm -rf ~/.ctags
+rm -rf ~/.Brewfile
+rm -rf ~/.muttrc ~/.mbsyncrc ~/.mailcap ~/.mailfilter ~/.abook ~/.imapfilter
 
 echo "* Add config symlinks"
 ln -s $DOTFILES/zshrc ~/.zshrc
@@ -42,7 +44,9 @@ ln -s $DOTFILES/tmux.conf ~/.tmux.conf
 ln -s $DOTFILES/ackrc ~/.ackrc
 ln -s $DOTFILES/psqlrc ~/.psqlrc
 ln -s $DOTFILES/ideavimrc ~/.ideavimrc
-ln -s $DOTFILES/newsboat ~/.newsboat
+mkdir -p ~/.newsboat
+ln -s $DOTFILES/newsboat/config.$(hostname -s) ~/.newsboat/config
+ln -s $DOTFILES/newsboat/urls ~/.newsboat/urls
 ln -s $DOTFILES/ctags ~/.ctags
 mkdir -p ~/.config/nvim
 ln -s $DOTFILES/vim/vimrc ~/.config/nvim/init.vim
@@ -53,6 +57,12 @@ else
     mkdir -p ~/.config/VSCodium/User
     ln -s $DOTFILES/VSCodium/settings.json ~/.config/VSCodium/User/settings.json 
 fi
+ln -s $DOTFILES/mail/muttrc ~/.muttrc
+ln -s $DOTFILES/mail/mbsyncrc ~/.mbsyncrc
+ln -s $DOTFILES/mail/mailcap ~/.mailcap
+ln -s $DOTFILES/mail/mailfilter ~/.mailfilter
+ln -s $DOTFILES/mail/abook ~/.abook
+ln -s $DOTFILES/mail/imapfilter ~/.imapfilter
 
 # mpd, vimpc
 echo "* mpd, mpc, vimpc"

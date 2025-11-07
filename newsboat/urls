@@ -2,6 +2,9 @@
 
 # IT
 
+# https://bernheisel.com/rss.xml
+# https://jonathanh.co.uk/feed.rss
+# https://raymii.org/s/feed.xml
 https://scottlocklin.wordpress.com/feed/
 https://litoschmitt.substack.com/feed
 https://martinheinz.dev/rss/  
@@ -10,9 +13,9 @@ https://blog.alexellis.io/rss/
 https://adamj.eu/tech/atom.xml      # Adam Johnson - Django
 https://lucumr.pocoo.org/feed.atom
 https://jmcglock.substack.com/feed
-https://www.youtube.com/feeds/videos.xml?channel_id=UCpJsnrZE2z1PPD9DnuN3Hmg    # jmcglock
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCpJsnrZE2z1PPD9DnuN3Hmg    # jmcglock
 https://aliquote.org/index.xml 
-https://www.elidourado.com/feed
+# https://www.elidourado.com/feed
 #https://unchartedterritories.tomaspueyo.com/feed
 https://t.co/v7NpcouK72         "~kechlibar.net"
 https://blisty.cz/feeds/authors/2394    "~Jan Molic @ blisty"
@@ -23,24 +26,22 @@ https://world.hey.com/dhh/feed.atom         # ddh
 # https://inkdroid.org/feed.xml
 # http://tinysubversions.com/feed.xml
 # https://www.romanzolotarev.com/rss.xml
-https://www.perrygeo.com/atom.xml
+# https://www.perrygeo.com/atom.xml
 https://thehftguy.com/feed/
 https://blog.jpalardy.com/atom.xml
-https://www.williamperdue.com/index.xml
 
 https://blog.eischmann.cz/feed/
 http://charlesleifer.com/blog/rss/
 https://www.youtube.com/feeds/videos.xml?channel_id=UCxkMDXQ5qzYOgXPRnOBrp1w   # Mike Zamansky
-https://blog.viktomas.com/index.xml
+# https://blog.viktomas.com/index.xml
 
 https://www.regisphilibert.com/blog/index.xml
 # https://pakstech.com/blog/index.xml
-https://chenhuijing.com/feed.xml
-https://davidisaksson.dev/index.xml
-https://www.dannyguo.com/blog/feed.xml
-https://www.engraved.blog/rss/
+# https://chenhuijing.com/feed.xml
+#https://davidisaksson.dev/index.xml
+#https://www.dannyguo.com/blog/feed.xml
 # https://machinelearningmastery.com/feed/
-https://amauryborgessouza.substack.com/feed         # devops from Brasil
+#https://amauryborgessouza.substack.com/feed         # devops from Brasil
 
 # culture
 https://tedgioia.substack.com/feed          # The Honest Broker
@@ -48,8 +49,8 @@ https://tedgioia.substack.com/feed          # The Honest Broker
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCTsnTp-g5Rj3VY7Tlm2XQ6A # Estas Tonne
 
 # vedanta, sanskrit, civilization
-https://vediccafe.blogspot.com/feeds/posts/default
-http://practicalphilosophy.in/feed/
+# https://vediccafe.blogspot.com/feeds/posts/default
+# http://practicalphilosophy.in/feed/
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCoA1ubKGgJLkjlhaAQFtIwQ # Vedanta Adhyayana Kendram Kakinada
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCwLj7OrlmFr98R-MTDVhNIA   # Vedanta Phoenix Camp
 # http://decodehindumythology.blogspot.com/feeds/posts/default
@@ -63,25 +64,22 @@ http://practicalphilosophy.in/feed/
 https://www.youtube.com/feeds/videos.xml?channel_id=UCT6Y5JJPKe_JDMivpKgVXew   # Fall of Civilizations
 
 # entertainment
-https://www.youtube.com/feeds/videos.xml?channel_id=UC5rT7F0PGNuD54rJ9kzgWzw   # Kris Harbour Natural Building
-https://www.youtube.com/feeds/videos.xml?channel_id=UCM9GINWV_KHqNDKzQhHZ1ig    # Farmarska Revue
+# https://www.youtube.com/feeds/videos.xml?channel_id=UC5rT7F0PGNuD54rJ9kzgWzw   # Kris Harbour Natural Building
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCjogndegjBFEK4lm_Vg5m4w   # Farmarska Revue
 https://www.youtube.com/feeds/videos.xml?channel_id=UCCAOP1y9lH4GSzAmBhLqBaA   # Jan Slinksy Agrokruh
-https://www.youtube.com/feeds/videos.xml?channel_id=UCgT_HmP4nlz5wECKOkIlj9Q # Absolute Zero
-# https://www.youtube.com/feeds/videos.xml?channel_id=UCBiPHqnZ3mwIqtraltox6jg   # Lain Civ 4 Deity
-# "query:Henrik CIV:(tags # \"only_civ\") and (title =~ \"Civilization\")"
-https://www.youtube.com/feeds/videos.xml?channel_id=UCW3UaxOXKdBU-o6HLjO927w # only_civ ! filter: "title ~ Civilization" # Henrik
-https://www.youtube.com/feeds/videos.xml?channel_id=UC74u0LJKAwO4WsZquvo-G8A # Mozayka
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCgT_HmP4nlz5wECKOkIlj9Q    # Absolute Zero
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCBiPHqnZ3mwIqtraltox6jg  # Lain Civ 4 Deity
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCW3UaxOXKdBU-o6HLjO927w    #  Henrik
+# https://www.youtube.com/feeds/videos.xml?channel_id=UC74u0LJKAwO4WsZquvo-G8A    # Mozayka
 
 # http://feeds.feedburner.com/zenhabits
 https://www.youtube.com/feeds/videos.xml?channel_id=UCcMjLgeWNwqL2LBGS-iPb1A # Bishop Robert Baron
 https://www.youtube.com/feeds/videos.xml?channel_id=UCi0TFuqj6eND-mJRf8i2Tnw # John Buttler
+https://www.youtube.com/feeds/videos.xml?channel_id=UCV-JxEZtPli28fJ31ZlXPSw # motivational catalyst
 https://www.youtube.com/feeds/videos.xml?channel_id=UCJZ94qp4dtCw0Q5UQqAkg7w # Lars Andersen
-https://www.youtube.com/feeds/videos.xml?channel_id=UCxYubGulNn1NPCzVIL6yPWA # kb5
- # https://www.youtube.com/feeds/videos.xml?channel_id=UCW39zufHfsuGgpLviKh297Q   # DW documentaries
- # https://www.youtube.com/feeds/videos.xml?channel_id=UC9sXw4ZdPEIp6bYGvLW-_iA   # VPRO documentary
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCxYubGulNn1NPCzVIL6yPWA # kb5
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCuw0GgMlZlAsWvpI8PgCN8g   # ENDEVR
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCpVm7bg6pXKo1Pr6k5kxG9A   # National Geographics
-# https://www.youtube.com/feeds/videos.xml?channel_id=UC_0Ycw3ZEG8xz1FcNG82R3g   # ECM BA Stare Mesto
 
 
 # misc
@@ -90,25 +88,26 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCxYubGulNn1NPCzVIL6yPWA # k
 # https://nitter.cz/srigi/rss
 
 # drama
-# http://blog.aktualne.cz/export-blog.php?blog_name=karel-schwarzenberg
-# http://blog.aktualne.cz/export-blog.php?blog_name=milan-zeleny
-http://blog.aktualne.cz/export-blog.php?blog_name=radkin-honzak
-https://blog.aktualne.cz/export-blog.php?blog_name=petr-robejsek
+#http://blog.aktualne.cz/export-blog.php?blog_name=karel-schwarzenberg
+#http://blog.aktualne.cz/export-blog.php?blog_name=milan-zeleny
+https://nazory.aktualne.cz/rss/radkin-honzak/l~i:keyword:114591/
+https://nazory.aktualne.cz/rss/petr-robejsek/l~i:keyword:109584/
+#https://blog.aktualne.cz/export-blog.php?blog_name=petr-robejsek
 
 https://dennikn.sk/autor/peter-breiner/feed/
 http://tiborjavor.blog.sme.sk/rss
 http://jozefkurty.blog.sme.sk/rss
 http://franek.blog.sme.sk/rss
 https://valchar.blog.sme.sk/rss
-https://rebro.blog.sme.sk/rss
-
+# https://blog.aktualne.cz/export-blog.php?blog_name=max-kasparu
 
 # news
 https://denikn.cz/autor/ondrej-stindl/feed/ 
+https://servis.lidovky.cz/rss.aspx?idnov=4422
 
 # fish
 https://www.youtube.com/feeds/videos.xml?channel_id=UCYk2jATrFhL5bpHkkvJlBuA   # Kocafilm
-# https://www.youtube.com/feeds/videos.xml?channel_id=UCpBQMibpipuqHsI_mJMVveA   # Coastal foraging with Craig Ivans
+https://www.youtube.com/feeds/videos.xml?channel_id=UCpBQMibpipuqHsI_mJMVveA   # Coastal foraging with Craig Ivans
 https://www.youtube.com/feeds/videos.xml?channel_id=UCKfMsmWq9cPBAuFLlff-rCA   # mrk.cz
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCmz-NT1dtjcVzigo8PylDBw   # Thundermist Lures
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCWXcW2AkrvhwzaV9LKT5Gxg   # Mexangler
@@ -117,24 +116,21 @@ https://www.youtube.com/feeds/videos.xml?channel_id=UCKfMsmWq9cPBAuFLlff-rCA   #
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCrfKGpvbEQXcbe68dzXgJuA   # Forgotten Weapons
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCeUNM9NqJqZXfRNeuW4_2sg   # InRangeTV
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCsrKsXEAqCbZyVrCibkgpwQ # 9 hole reviews
-# https://www.youtube.com/feeds/videos.xml?channel_id=UCANk4DCsImDX3wlXQ6M1Jdg   # Red Effect
 
 # Politics / War
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCPdk3JuQGxOCMlZLLt4drhw   # Binkov
-https://www.youtube.com/feeds/videos.xml?channel_id=UCPPfK7Nq_yQR84rn1wcTXBg # Anders Puck Nielsen (Conflict & War)
-# https://xxtomcooperxx.substack.com/feed      # Sarcastosaurus
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCwnKziETDbHJtx78nIkfYug   # Caspian Report
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCANk4DCsImDX3wlXQ6M1Jdg   # Red Effect
 
 # Food
-https://www.youtube.com/feeds/videos.xml?channel_id=UCngpdIYbl5REio0EaQjlHSA "~Crazy for Indian Food"
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCngpdIYbl5REio0EaQjlHSA "~Crazy for Indian Food"
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCSC8SLylGt1v6lbrutdH9Bw "~The Easy Vegan"
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCaLfMkkHhSA_LaCta0BzyhQ "~Munchies"
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCRzPUBhXUZHclB7B5bURFXw "~Eater"
-https://www.youtube.com/feeds/videos.xml?channel_id=UC2Jkwv9ipt68SF6Pqq6avCw  # Reznik Jiri Duchon
+# https://www.youtube.com/feeds/videos.xml?channel_id=UC2Jkwv9ipt68SF6Pqq6avCw  # Reznik Jiri Duchon
 # https://www.youtube.com/feeds/videos.xml?channel_id=UC9ORxqKBywaO7fgflFJzHRw # Pinch of Yum
-# https://www.youtube.com/feeds/videos.xml?channel_id=UC_yXGNJDvXRd7041L8Gkw9g   # Artger
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCedsqpl7jaIb8BiaUFuC9KQ   # pasta grannies
-https://www.youtube.com/feeds/videos.xml?channel_id=UC2I6Et1JkidnnbWgJFiMeHA   # Steve1989 MRE Info
+# https://www.youtube.com/feeds/videos.xml?channel_id=UC2I6Et1JkidnnbWgJFiMeHA   # Steve1989 MRE Info
 
 # misc
 https://solar.lowtechmagazine.com/feeds/all-en.rss.xml 
@@ -143,29 +139,16 @@ https://uzak.github.io/index.xml
 
 http://karpathy.github.io/feed.xml
 # https://ondřej.v.nizozemsku.nl/feed.xml
-# https://stephenramsay.net/rss.xml
-# https://www.youtube.com/feeds/videos.xml?channel_id=UCGzXtNdhjPxvCNWFme1bG0g    # Serpa design
-
-# https://www.osel.cz/rss/rss.php
-# https://www.joshwcomeau.com/rss.xml # Josh Comeau blog (web)
 
 https://wmbriggs.substack.com/feed
-https://jvns.ca/atom.xml
-# https://www.youtube.com/feeds/videos.xml?channel_id=UCNW7HDseZb6N3nKUEP6uLag   # Scrimba YT
 
-# https://reaxionario.substack.com/feed
+https://reaxionario.substack.com/feed
 
 # https://www.youtube.com/feeds/videos.xml?channel_id=UCcjhYlL1WRBjKaJsMH_h7Lg   # Epicurious
 
-# https://kamilkazani.substack.com/feed
-https://landangelsarastro.substack.com/feed
+https://kamilkazani.substack.com/feed
 
 http://ratfactor.com/atom.xml
-
-# https://ericmjl.github.io/blog.xml
-
-# https://pluralistic.net/feed/
-# https://popey.com/blog/index.xml
 
 https://medium.com/feed/@wilderko
 
@@ -173,21 +156,92 @@ https://kracekumar.com/index.xml
 https://datagubbe.se/atom.xml
 https://sylvaindurand.org/rss.xml
 #https://boston.conman.org/bostondiaries.rss
-https://100r.co/links/rss.xml
 https://schmud.de/feed.rss
-https://neustadt.fr/rss.xml
 https://brandur.org/fragments.atom
 https://brandur.org/articles.atom
 
-https://accelerationist.substack.com/feed
-# https://treeofwoe.substack.com/feed
-https://bsago.me/tech-notes/feed.atom
-
 https://gagor.pro/index.xml
 
-https://www.youtube.com/feeds/videos.xml?channel_id=UCS5tt2z_DFvG7-39J3aE-bQ # Boris The Slav King
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCS5tt2z_DFvG7-39J3aE-bQ # Boris The Slav King
 
 # Wood
 # https://www.youtube.com/feeds/videos.xml?channel_id=UC0sRl2S63hoAbceXOakJ9UA   # Marmota Wood Works
 # https://www.youtube.com/feeds/videos.xml?channel_id=UClaEdLrmti779-tyovta8zw   # Grandpa Amu
 
+
+https://freedomissomethingyoutake.substack.com/feed
+
+https://servis.idnes.cz/rss.aspx?idnov=4793
+https://mtlynch.io/index.xml
+https://successfulsoftware.net/feed/
+https://www.itsgoodtobeaman.com/feed
+https://feeds.buzzsprout.com/1068361.rss
+https://feeds.buzzsprout.com/1941285.rss
+https://fangpenlin.com/feed.xml
+# https://www.youtube.com/feeds/videos.xml?channel_id=UCdfKbRkzM-SN3HPgPCX2AaQ   # Brian Suave
+
+# https://honzajavorek.cz/feed.xml        # junior.guru
+https://willspencerpod.substack.com/feed/
+https://www.thegrovestead.com/feed/     # Rory Groves
+https://shenviapologetics.com/feed/
+https://www.youtube.com/feeds/videos.xml?channel_id=UCYlUEQgfMiHucodgzGQrl7Q       # cost of glory
+# https://cosmographia.substack.com/feed/
+
+https://maximilian-schwarzmueller.com/articles/rss.xml
+
+https://nomoremrniceguy.com/feed/
+https://blog.jsbarretto.com/rss.xml
+
+https://blog.pkh.me/rss.xml
+https://programmingpraxis.com/feed/
+https://www.sumsar.net/index.xml
+https://andregarzia.com/feeds/all.rss.xml
+https://ane.iki.fi/feed.xml
+https://austinhenley.com/blog/feed.rss
+https://beej.us/blog/rss.xml
+https://benhoyt.com/writings/rss.xml
+https://refl.blog/feed/
+https://danieljharvey.github.io/rss.xml
+https://chrispenner.ca/atom.xml
+https://chris-martin.org/rss.xml
+https://calpaterson.com/calpaterson.rss
+https://funloop.org/atom.xml
+https://etienne.pflieger.bzh/a-ecrit/feeds/index.xml
+https://elangocheran.com/feed/
+https://drewdevault.com/blog/index.xml
+https://davidvujic.blogspot.com/feeds/posts/default?alt=rss
+https://julien.danjou.info/feed
+https://jao.io/blog/rss.xml
+https://obryant.dev/feed.xml
+https://huyenchip.com/feed.xml
+https://hynek.me/index.xml
+https://her.esy.fun/rss.xml
+https://mostlymaths.net/index.xml
+https://matklad.github.io/feed.xml
+https://lukeplant.me.uk/blog/atom/index.xml
+https://lambdaland.org/index.xml
+https://nedbatchelder.com/blog/rss.xml
+https://ntietz.com/atom.xml
+https://pythonspeed.com/atom.xml
+https://www.netmeister.org/blog/rss.xml
+https://www.snellman.net/blog/rss-index.xml
+https://www.thecodedmessage.com/index.xml
+https://www.trickster.dev/post/index.xml
+https://yosefk.com/blog/feed
+https://www.fast.ai/index.xml
+https://unixdigest.com/feed.rss
+https://tech.marksblogg.com/feeds/all.atom.xml
+https://simonsafar.com/index.xml
+https://ryxcommar.com/feed/
+https://rushter.com/blog/feed/
+https://randomascii.wordpress.com/feed/
+
+https://www.youtube.com/feeds/videos.xml?channel_id=UCdngmbVKX1Tgre699-XLlUA    # techworld with nana
+
+https://weakty.com/posts/atom.xml
+
+# pca
+https://mick-cooper.squarespace.com/new-blog?format=rss 
+https://pluralisticpractice.com/feed/
+https://pca-nwa.com/feed/
+https://www.the-pca.org.uk/blog.feed?type=rss
