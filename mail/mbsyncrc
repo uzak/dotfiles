@@ -16,8 +16,8 @@ IMAPStore gmail-remote
 Account gmail
 
 MaildirStore gmail-local
-Path ~/Dropbox/Mail/martinuzak136@gmail.com/
-Inbox ~/Dropbox/Mail/martinuzak136@gmail.com/Inbox
+Path ~/Mail/martinuzak136@gmail.com/
+Inbox ~/Mail/martinuzak136@gmail.com/Inbox
 Subfolders Verbatim
 
 Channel gmail
@@ -42,8 +42,8 @@ IMAPStore mailbox-remote
 Account mailbox
 
 MaildirStore mailbox-local
-Path ~/Dropbox/Mail/uzak@mailbox.org/
-Inbox ~/Dropbox/Mail/uzak@mailbox.org/Inbox
+Path ~/Mail/uzak@mailbox.org/
+Inbox ~/Mail/uzak@mailbox.org/Inbox
 Subfolders Verbatim
 
 Channel mailbox

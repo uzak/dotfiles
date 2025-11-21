@@ -1,11 +1,27 @@
+source ~/.vimrc
+
+set clipboard+=ideaput
+set ideajoin
+set smartcase
+set hlsearch
+
+nmap ]c <Action>(VcsShowNextChangeMarker)
+nmap [c <Action>(VcsShowPrevChangeMarker)
+
+nmap gb <Action>(Back)
+nmap gf <Action>(Forward)
+
+nmap <leader>s <Action>(ShowUsages)
+nmap <leader>u <Action>(FindUsages)
+
+nmap <TAB> <Action>(NextTab)
+
 " set clipboard+=ideaput
 
 " center current search result
 nmap n nzz
 nmap N Nzz
 
-nmap <tab> <C-w><C-w>
+" nmap <tab> <C-w><C-w>
 
-source ~/.vimrc
-
-set clipboard^=ideaput
+" set clipboard^=ideaput
